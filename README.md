@@ -40,95 +40,82 @@ FastAPI · Docker · Deployment · Monitoring · MLOps/LLMOps · Reliability · 
 
 # Featured Projects
 
-This portfolio is structured around five increasingly complex projects designed to demonstrate practical AI product and strategy capability.
+This portfolio is structured around three flagship projects and two supporting projects.
 
-## 1. AI Support Triage & Prioritization System
-
-**Focus:** Python → Data → Applied Machine Learning
-
-Build a support operations system that starts with deterministic business rules and evolves into an ML-supported classification and prioritization workflow.
-
-### Capabilities Demonstrated
-
-- Python data processing
-- Data validation
-- Business-rule logic
-- Feature engineering
-- Classification models
-- Precision, recall, F1, confusion matrix
-- Error analysis
-- Rule-based vs. ML comparison
-- API exposure
-- Product metrics
-
-### Product Questions
-
-- When is a rules-based system sufficient?
-- When does ML create measurable value?
-- Which classification errors matter most?
-- How should confidence thresholds be established?
-- When should a human remain in the loop?
+The flagship projects are designed to demonstrate AI product judgment, evaluation, experimentation, prioritization, and technical fluency. The supporting projects reinforce foundational technical capability and practical understanding of AI system behavior.
 
 ---
 
-## 2. AI Workflow Opportunity Analyzer
+## 1. AI Workflow Opportunity & ROI Analyzer
 
-**Focus:** AI Strategy → Product Prioritization → Decision Support
+**Type:** Flagship  
+**Focus:** AI Strategy · Product Prioritization · Decision Support
 
-Build a system that evaluates business workflows and identifies where AI automation or augmentation is most likely to create value.
+Build a system that evaluates business workflows and recommends where AI automation or augmentation is most likely to create value.
 
 ### Capabilities Demonstrated
 
-- Structured data analysis
+- Structured business analysis
 - Workflow scoring
 - ROI modeling
-- Automation suitability analysis
-- Risk scoring
+- Automation suitability
+- Risk assessment
 - Explainability
-- Decision frameworks
 - Product prioritization
+- Decision frameworks
+- Requirements definition
 
 ### Example Inputs
 
 - Process volume
 - Labor hours
-- Variability
+- Process variability
 - Data availability
 - Error cost
 - Regulatory risk
-- Automation feasibility
+- Customer impact
+- Implementation complexity
 
 ### Example Outputs
 
-The system classifies workflows as:
+The system recommends:
 
 - Automate
 - Augment
-- Monitor
-- Keep manual
+- Experiment
+- Keep Manual
 
-The objective is not simply to produce a score, but to make the recommendation explainable.
+The objective is not simply to generate a score, but to explain the recommendation and surface the trade-offs behind it.
+
+### Product Questions
+
+- Where should AI be applied?
+- Which workflows have the highest potential value?
+- Which opportunities are technically feasible but strategically weak?
+- How should implementation risk affect prioritization?
+- When is augmentation more appropriate than automation?
 
 ---
 
-## 3. RAG Knowledge Assistant with Evaluation
+## 2. RAG Product Quality & Launch Readiness Lab
 
-**Focus:** Applied GenAI → Retrieval → Evaluation
+**Type:** Flagship  
+**Focus:** Applied GenAI · Retrieval · Evaluation · Launch Decisions
 
-Build a retrieval-augmented generation system that answers questions against a controlled knowledge base.
+Build a retrieval-augmented generation product and evaluate whether it is ready for launch using measurable quality criteria.
 
 ### Capabilities Demonstrated
 
 - Document ingestion
 - Chunking strategies
 - Embeddings
-- Vector search
-- Retrieval
-- Prompt and context construction
+- Semantic retrieval
+- Context construction
 - LLM generation
 - Grounded responses
-- Citation handling
-- RAG evaluation
+- Failure analysis
+- Human escalation
+- Product-quality evaluation
 
 ### Evaluation Dimensions
 
@@ -138,39 +125,43 @@ Build a retrieval-augmented generation system that answers questions against a c
 - Hallucination rate
 - Latency
 - Cost
+- Failure rate
 
 ### Product Questions
 
-- When is RAG preferable to fine-tuning?
+- Is the system ready to launch?
+- What quality threshold is acceptable?
+- When should the product escalate to a human?
 - What happens when retrieval succeeds but generation fails?
-- How much context is too much?
-- What quality threshold is required before launch?
 - How should retrieval failures be diagnosed?
+- When is RAG preferable to a simpler approach?
 
 ---
 
-## 4. LLM Evaluation & Model Selection Platform
+## 3. AI Experimentation & Model Selection Lab
 
-**Focus:** AI Evaluation → Experimentation → Product Decision-Making
+**Type:** Flagship  
+**Focus:** AI Evaluation · Experimentation · Product Decision-Making
 
-Build a lightweight evaluation system that compares multiple LLMs, prompts, or configurations against a shared test set.
+Build an evaluation framework that compares multiple model, prompt, or retrieval configurations against a shared test set.
 
 ### Capabilities Demonstrated
 
+- Evaluation dataset design
 - Golden datasets
-- Prompt versioning
+- Prompt comparison
+- Model comparison
 - Structured evaluation
 - Human evaluation
 - LLM-as-judge
 - Task-success metrics
 - Latency measurement
-- Token usage
 - Cost analysis
-- Model comparison
+- Product recommendations
 
 ### Example Evaluation Framework
 
-| Metric | Model A | Model B | Model C |
+| Metric | Configuration A | Configuration B | Configuration C |
 |---|---:|---:|---:|
 | Task Success | TBD | TBD | TBD |
 | Groundedness | TBD | TBD | TBD |
@@ -178,41 +169,70 @@ Build a lightweight evaluation system that compares multiple LLMs, prompts, or c
 | Cost / Request | TBD | TBD | TBD |
 | Failure Rate | TBD | TBD | TBD |
 
-The objective is to support a real product decision rather than simply declare which model is "best."
+The objective is to make a defensible product recommendation rather than simply identify the most capable model.
 
 ### Product Questions
 
-- Is a more capable model worth additional cost?
+- Is higher model quality worth additional cost?
 - Which failure modes are unacceptable?
-- How should an evaluation dataset be designed?
-- When should a model be replaced?
-- How should quality, cost, and latency be balanced?
+- How should an evaluation set be designed?
+- When should a model or prompt be replaced?
+- How should quality, latency, and cost be balanced?
 
 ---
 
-## 5. Agentic Operations Assistant
+## 4. AI Support Triage System
 
-**Focus:** Applied AI Systems → Tool Use → Reliability
+**Type:** Supporting  
+**Focus:** Python · Data · Applied ML · Human-in-the-Loop
 
-Build a controlled AI assistant that receives an operational request, retrieves relevant context, uses approved tools, produces structured output, and logs the result for evaluation.
+Build a support-ticket prioritization system that progresses from deterministic business rules to a simple ML-supported classifier.
 
-### High-Level Architecture
+### Capabilities Demonstrated
+
+- Python data processing
+- Data validation
+- Rule-based logic
+- Basic feature engineering
+- Classification
+- Precision and recall
+- F1 score
+- Confusion matrix
+- Error analysis
+- Human escalation thresholds
+
+### Product Questions
+
+- When is a deterministic system sufficient?
+- When does ML add measurable value?
+- Which classification errors matter most?
+- How should confidence thresholds be established?
+- When should a human remain in the loop?
+
+---
+
+## 5. Agentic Workflow Guardrail Simulator
+
+**Type:** Supporting  
+**Focus:** Agentic AI · Tool Use · Governance · Reliability
+
+Build a controlled agentic workflow that demonstrates how an AI system should handle tool permissions, human approval, failure handling, escalation, and auditability.
+
+### High-Level Flow
 
 ```text
 User Request
     ↓
-Input Validation
+Intent / Task Decision
     ↓
-Intent / Task Routing
+Permission Check
     ↓
-Context Retrieval
+Approved Tool?
     ↓
-LLM
+Human Approval Required?
     ↓
-Tool Calling
+Tool Execution
     ↓
-Structured Response
+Result / Escalation
     ↓
-Evaluation
-    ↓
-Monitoring
+Audit Log
