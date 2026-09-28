@@ -41,16 +41,14 @@ The purpose is to maintain an accurate record of effort, project progression, an
 
 ### 2026-09-27 — Day 1: Ticket Triage Foundations
 
-**Area:** Python Foundations  
-**Project:** AI Support Triage System  
-**Duration:** 50 minutes
+## Area: Python Foundations  
+## Project: AI Support Triage System  
+## Duration: 50 minutes
 
 ### Objective
-
 Build a simple deterministic support-ticket classification system using Python.
 
 ### Work Completed
-
 - Created ticket dataset
 - Built `classify_ticket()` function
 - Used `if / elif / else`
@@ -63,7 +61,6 @@ Build a simple deterministic support-ticket classification system using Python.
 - Opened and merged pull request
 
 ### Technical Concepts
-
 - Dictionaries
 - Functions
 - Conditionals
@@ -84,6 +81,44 @@ A deterministic rules-based system can provide a transparent baseline before int
 ### Interview Translation
 
 Built a rule-based support triage prototype to establish a deterministic baseline before introducing ML. The exercise reinforced how product requirements translate into executable decision logic and how rule precedence affects system behavior.
+
+### 2026-09-27 — Day 2: Variables, Booleans & SLA Logic
+
+## Area: Python Foundations  
+## Project: AI Support Triage System  
+## Duration: 30 minutes
+
+## Objective:
+Understand variables, data types, comparison operators, Boolean values, and function return behavior by adding SLA breach detection.
+
+## Work Completed:
+- Added `is_sla_breached()` function
+- Retrieved values from ticket dictionaries
+- Defined an SLA business-rule threshold
+- Returned Boolean SLA status
+- Integrated SLA status into ticket output
+- Debugged a missing dictionary brace and indentation issues
+
+## Technical Concepts:
+- Variables
+- Dictionaries
+- Integers
+- Booleans
+- Comparison operators
+- Functions
+- `return`
+- Type hints
+- Indentation
+- Syntax debugging
+
+## Lessons Learned: 
+Comparison expressions return Boolean values. Business-rule thresholds should be separated from record-specific data so they can be reused and changed cleanly.
+
+## Product & Strategy Application:**  
+Priority and SLA compliance represent different product dimensions. Keeping them separate makes the system easier to reason about, modify, and evaluate.
+
+## Interview Translation: 
+Extended a rule-based triage prototype by separating prioritization logic from SLA compliance and implementing reusable Boolean decision logic.
 
 ---
 

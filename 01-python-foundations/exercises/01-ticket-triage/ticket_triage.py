@@ -19,17 +19,31 @@ def classify_ticket(ticket: dict) -> str:
 
     else:
         return "NORMAL"
-for ticket in tickets:
-    result = classify_ticket(ticket)
-    print(ticket["id"], "->", result)
+
 counts = {
     "CRITICAL": 0,
     "HIGH": 0,
     "NORMAL": 0
 }
 
+def is_sla_breached(ticket: dict) -> bool:
+    age_hours = ticket["age_hours"]
+    sla_limit = 24
+    is_breached = age_hours > sla_limit
+    
+    return is_breached
+
 for ticket in tickets:
     result = classify_ticket(ticket)
+    sla_status = is_sla_breached(ticket)
     counts[result] += 1
+    
+    print(
+        ticket["id"],
+        "->",
+        result,
+        "| SLA Breached:",
+        sla_status
+    )
 
 print(counts)
