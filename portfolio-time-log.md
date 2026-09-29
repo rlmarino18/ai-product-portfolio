@@ -10,7 +10,7 @@ Progress is tracked by **session number rather than calendar day**. Multiple ses
 
 # Summary
 
-## Learning Area Hours
+## Technical Learning Area
 
 | Category | Hours |
 |---|---:|
@@ -28,7 +28,7 @@ Progress is tracked by **session number rather than calendar day**. Multiple ses
 
 ---
 
-# Featured Project Summary
+# Portfolio Investment by Project 
 
 | Project | Status | Hours |
 |---|---|---:|
@@ -237,7 +237,7 @@ Built a reusable ticket-processing pipeline that applies independent classificat
 
 ---
 
-# Weekly Totals
+# Actual Time by Week
 
 ## Week Ending September 27, 2026
 
@@ -249,6 +249,17 @@ Built a reusable ticket-processing pipeline that applies independent classificat
 | Weekly Assessment | 0.0 |
 | Interview Practice | 0.0 |
 | **Total Focused Time** | **1.33** |
+
+## Week Ending October 4, 2026
+
+| Activity | Hours |
+|---|---:|
+| Python / Technical Learning | 0.50 |
+| Product / Jira | 0.0 |
+| Dedicated Portfolio Build Block | 0.0 |
+| Weekly Assessment | 0.0 |
+| Interview Practice | 0.0 |
+| **Total Focused Time** | **0.50** |
 
 > Portfolio project hours overlap with technical-learning hours and are therefore tracked separately rather than added again to the weekly total.
 
