@@ -178,6 +178,63 @@ Keeping these dimensions separate makes the system easier to reason about, modif
 
 Extended a rule-based support triage prototype by separating prioritization logic from SLA compliance and implementing reusable Boolean decision logic. This allowed business urgency and service-level performance to be evaluated independently.
 
+### Session 3 — Loops, Collections & Reusable Decision Logic
+
+**Date:** September 29, 2026  
+**Area:** Python Foundations  
+**Project:** AI Support Triage System  
+**Duration:** 30 minutes
+
+**Concept Tags:** PCEP Core · Practical / Portfolio · Interview-Relevant
+
+### Objective
+
+Understand how Python lists and `for` loops can repeatedly apply reusable decision logic across multiple support-ticket records.
+
+### Work Completed
+
+- Reviewed variables, Booleans, dictionary access, functions, and `return`
+- Reinforced the distinction between values and data types
+- Distinguished lists from dictionaries
+- Practiced tracing `for` loops manually
+- Applied `is_sla_breached()` across multiple tickets
+- Added SLA-based review routing
+- Consolidated classification and SLA logic into one ticket-processing loop
+- Verified classification counts remained correct
+- Identified a potential stale-variable / execution-scope failure mode
+
+### Technical Concepts
+
+- Lists
+- Dictionaries
+- `for` loops
+- Iteration
+- Dictionary key access
+- Function reuse
+- Boolean conditions
+- `if`
+- Variable scope
+- Execution frequency
+- Aggregation
+- Code tracing
+- Logical debugging
+
+### Lessons Learned
+
+A `for` loop processes one item from a collection at a time, with the loop variable representing the current item. Logic that must execute for every record needs to remain inside the loop.
+
+Code can be syntactically valid while still producing incorrect behavior if logic executes at the wrong scope or frequency.
+
+### Product & Strategy Application
+
+The triage prototype now behaves as a simple decision pipeline: each ticket is classified, evaluated for SLA status, conditionally routed for review, and included in aggregate metrics.
+
+This provides a deterministic baseline that can later be compared against ML-assisted classification or routing approaches.
+
+### Interview Translation
+
+Built a reusable ticket-processing pipeline that applies independent classification and SLA rules across multiple records, routes breached tickets for review, and aggregates outcomes while maintaining separation between business urgency and service-level compliance.
+
 ---
 
 # Weekly Totals

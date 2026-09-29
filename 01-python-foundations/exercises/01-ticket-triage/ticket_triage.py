@@ -36,8 +36,12 @@ def is_sla_breached(ticket: dict) -> bool:
 for ticket in tickets:
     result = classify_ticket(ticket)
     sla_status = is_sla_breached(ticket)
+
     counts[result] += 1
-    
+
+    if sla_status: 
+        print(ticket["id"], "requires SLA review")
+
     print(
         ticket["id"],
         "->",
