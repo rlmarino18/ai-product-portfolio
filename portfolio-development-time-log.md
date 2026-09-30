@@ -19,49 +19,35 @@ Multiple sessions may be completed on the same day, and gaps between sessions do
 
 # Summary
 
-## Technical Learning Area
+## Technical Learning by Area
 
 | Category | Hours |
 |---|---:|
 | Foundations | 0.0 |
-| Python | 1.33 |
+| Python | 3.83 |
 | Data Analysis | 0.0 |
 | Machine Learning | 0.0 |
 | Applied AI | 0.0 |
 | AI Systems | 0.0 |
-| Assessments | 0.0 |
 | Interview Preparation | 0.0 |
-| **Total Learning Time** | **1.33** |
+| **Total Learning Time** | **3.83** |
 
-> Project hours are tracked separately below because portfolio sessions may simultaneously count as Python, data, ML, or Applied AI learning. This avoids double-counting total time.
+> Learning-area hours represent the technical capability developed during portfolio work. Project hours are tracked separately below because the same session may simultaneously contribute to both technical learning and a featured project. These totals should not be added together.
 
 ---
 
-# Portfolio Investment by Project 
+# Portfolio Investment by Project
 
 | Project | Status | Hours |
 |---|---|---:|
 | AI Workflow Opportunity & ROI Analyzer | Not Started | 0.0 |
 | RAG Product Quality & Launch Readiness Lab | Not Started | 0.0 |
 | AI Experimentation & Model Selection Lab | Not Started | 0.0 |
-| AI Support Triage System | In Progress | 1.33 |
+| AI Support Triage System | In Progress | 3.83 |
 | Agentic Workflow Guardrail Simulator | Not Started | 0.0 |
-| **Total Portfolio Project Time** |  | **1.33** |
+| **Total Portfolio Project Time** |  | **3.83** |
 
----
-
-# Certification Progress
-
-| Certification | Status | Target |
-|---|---|---|
-| PCEP — Certified Entry-Level Python Programmer | In Progress | October 2026 |
-| PCAP — Certified Associate Python Programmer | Planned | November 1, 2026 |
-
-Python sessions are designed to support both certification readiness and portfolio development.
-
-The learning model is:
-
-**Explain → Demonstrate → You Try → Diagnose → Repeat → Apply → Explain Back → Spaced Repetition**
+> Portfolio project hours represent time invested in building, testing, evaluating, and documenting each featured project. They are another view of the same underlying session time and should not be added to Technical Learning hours.
 
 ---
 
