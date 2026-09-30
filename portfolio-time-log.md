@@ -254,12 +254,12 @@ Built a reusable ticket-processing pipeline that applies independent classificat
 
 | Activity | Hours |
 |---|---:|
-| Python / Technical Learning | 0.50 |
+| Python / Technical Learning | 2.50 |
 | Product / Jira | 0.0 |
 | Dedicated Portfolio Build Block | 0.0 |
 | Weekly Assessment | 0.0 |
 | Interview Practice | 0.0 |
-| **Total Focused Time** | **0.50** |
+| **Total Focused Time** | **2.50** |
 
 > Portfolio project hours overlap with technical-learning hours and are therefore tracked separately rather than added again to the weekly total.
 

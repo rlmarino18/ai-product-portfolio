@@ -33,6 +33,11 @@ def is_sla_breached(ticket: dict) -> bool:
     
     return is_breached
 
+def should_escalate(result: str, sla_status: bool) -> bool:
+    return result == "HIGH" and sla_status
+
+escalation_queue = []
+
 for ticket in tickets:
     result = classify_ticket(ticket)
     sla_status = is_sla_breached(ticket)
@@ -41,6 +46,12 @@ for ticket in tickets:
 
     if sla_status: 
         print(ticket["id"], "requires SLA review")
+
+    if should_escalate(result, sla_status):
+        if ticket ["id"] not in escalation_queue:
+            escalation_queue.append(ticket["id"])
+        
+        print(ticket ["id"], "requires escalation")    
 
     print(
         ticket["id"],
@@ -51,3 +62,5 @@ for ticket in tickets:
     )
 
 print(counts)
+print("Escalation Queue:", escalation_queue)
+print("Escalation Count:", len(escalation_queue))
