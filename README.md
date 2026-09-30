@@ -1,238 +1,217 @@
-# Ralph Marino — Applied AI Product & Strategy Portfolio
+# Ralph Marino — AI/ML Product Portfolio
 
-This portfolio demonstrates hands-on technical fluency across Python, data analysis, machine learning, generative AI, evaluation, APIs, and production-style AI systems.
+This portfolio demonstrates hands-on product and technical fluency across Python, data analysis, machine learning, generative AI, evaluation, APIs, retrieval-augmented generation, agentic workflows, and AI system design.
 
-The goal is not to replicate the depth of a dedicated ML engineer or AI researcher. The goal is to build enough technical capability to make strong AI product and strategy decisions: identifying valuable problems, defining requirements, evaluating technical approaches, understanding trade-offs, and translating AI capabilities into useful products and workflows.
+The objective is to develop enough technical capability to make strong AI/ML product decisions: identifying valuable problems, translating business needs into requirements, understanding system architecture, prototyping technical approaches, evaluating quality, identifying failure modes, reasoning about cost and latency, and determining whether an AI capability creates enough value to justify its complexity.
+
+The portfolio is built around a central principle:
+
+> A technically functional AI system is not necessarily a good product.
+
+Each project therefore emphasizes both **how the system works** and **why a particular product or technical decision should be made**.
 
 ---
 
-## Focus Areas
+# What This Portfolio Is Designed to Prove
+
+This portfolio is designed to demonstrate the ability to operate across product, engineering, data, and business contexts.
+
+Specifically, the work is intended to show that I can:
+
+- identify workflows and problems where AI/ML may create measurable value
+- distinguish strong AI opportunities from weak or unnecessary ones
+- translate business problems into product and technical requirements
+- understand the architecture of AI/ML systems at product depth
+- build working prototypes to test assumptions
+- reason about deterministic rules versus machine learning
+- evaluate models, prompts, retrieval systems, and workflows
+- define success metrics before implementation
+- design experiments and evaluation datasets
+- analyze quality, latency, cost, reliability, and failure modes
+- determine where human review should remain in the system
+- communicate technical decisions to non-technical stakeholders
+- communicate product requirements and trade-offs to technical teams
+- make evidence-based product recommendations rather than relying on model capability alone
+
+The portfolio is not intended to demonstrate:
+
+> “I can build the most technically sophisticated model.”
+
+It is intended to demonstrate:
+
+> “I can understand, prototype, evaluate, and make disciplined product decisions around AI/ML systems.”
+
+---
+
+# Focus Areas
 
 - AI Product Management
 - Applied AI Product
-- AI Strategy
-- AI Solutions / Product Strategy
+- AI Product Strategy
+- AI Product Discovery
+- AI Evaluation & Experimentation
+- AI Workflow Automation
 - AI Technical Program Management
-- AI Evaluation and Experimentation
-- AI Systems and Product Architecture
+- Human-in-the-Loop AI
+- AI Systems & Product Architecture
+- AI Reliability & Governance
+- Technical Product Development
 
 ---
 
-## Technical Scope
+# Technical Scope
 
-### Foundations
+The portfolio intentionally spans the technical domains required to understand, prototype, and evaluate modern AI/ML products without attempting to reproduce ML-engineer-level specialization.
 
-Python · Linux · Git/GitHub · SQL · REST APIs · JSON
+## Foundations
 
-### Data & Machine Learning
+Python · Linux · Git/GitHub · SQL · REST APIs · JSON · CLI Workflows · Debugging
 
-Pandas · NumPy · Data Analysis · Statistics · scikit-learn · Feature Engineering · Model Evaluation
+### Purpose
 
-### Applied AI
+These skills provide the technical foundation required to:
 
-LLM Applications · Prompt Engineering · Context Engineering · Embeddings · RAG · Tool Calling · Agents · LLM Evaluation
-
-### AI Systems
-
-FastAPI · Docker · Deployment · Monitoring · MLOps/LLMOps · Reliability · Latency · Cost Optimization · Security
-
----
-
-# Featured Projects
-
-This portfolio is structured around three flagship projects and two supporting projects.
-
-The flagship projects are designed to demonstrate AI product judgment, evaluation, experimentation, prioritization, and technical fluency. The supporting projects reinforce foundational technical capability and practical understanding of AI system behavior.
+- inspect and manipulate data
+- understand application behavior
+- work with APIs and external systems
+- collaborate effectively with engineers
+- debug basic application logic
+- understand how AI components connect into larger systems
 
 ---
 
-## 1. AI Workflow Opportunity & ROI Analyzer
+## Data & Analytics
 
-**Type:** Flagship  
-**Focus:** AI Strategy · Product Prioritization · Decision Support
+Pandas · NumPy · Data Cleaning · Data Validation · Exploratory Analysis · Descriptive Statistics · Aggregation · Basic Visualization
 
-Build a system that evaluates business workflows and recommends where AI automation or augmentation is most likely to create value.
+### Purpose
 
-### Capabilities Demonstrated
+Data quality and structure directly affect AI product quality.
 
-- Structured business analysis
-- Workflow scoring
-- ROI modeling
-- Automation suitability
-- Risk assessment
-- Explainability
-- Product prioritization
-- Decision frameworks
-- Requirements definition
+This area develops the ability to:
 
-### Example Inputs
-
-- Process volume
-- Labor hours
-- Process variability
-- Data availability
-- Error cost
-- Regulatory risk
-- Customer impact
-- Implementation complexity
-
-### Example Outputs
-
-The system recommends:
-
-- Automate
-- Augment
-- Experiment
-- Keep Manual
-
-The objective is not simply to generate a score, but to explain the recommendation and surface the trade-offs behind it.
-
-### Product Questions
-
-- Where should AI be applied?
-- Which workflows have the highest potential value?
-- Which opportunities are technically feasible but strategically weak?
-- How should implementation risk affect prioritization?
-- When is augmentation more appropriate than automation?
+- inspect datasets
+- identify missing or malformed data
+- summarize operational patterns
+- understand feature distributions
+- validate assumptions before model development
+- support product decisions with evidence
 
 ---
 
-## 2. RAG Product Quality & Launch Readiness Lab
+## Machine Learning
 
-**Type:** Flagship  
-**Focus:** Applied GenAI · Retrieval · Evaluation · Launch Decisions
+scikit-learn · Feature Engineering · Classification · Training / Validation Concepts · Precision · Recall · F1 Score · Confusion Matrices · Error Analysis · Model Comparison
 
-Build a retrieval-augmented generation product and evaluate whether it is ready for launch using measurable quality criteria.
+### Purpose
 
-### Capabilities Demonstrated
+The goal is not advanced model development.
 
-- Document ingestion
-- Chunking strategies
-- Embeddings
-- Semantic retrieval
-- Context construction
-- LLM generation
-- Grounded responses
-- Failure analysis
-- Human escalation
-- Product-quality evaluation
+The goal is to understand:
 
-### Evaluation Dimensions
-
-- Retrieval relevance
-- Groundedness
-- Answer completeness
-- Hallucination rate
-- Latency
-- Cost
-- Failure rate
-
-### Product Questions
-
-- Is the system ready to launch?
-- What quality threshold is acceptable?
-- When should the product escalate to a human?
-- What happens when retrieval succeeds but generation fails?
-- How should retrieval failures be diagnosed?
-- When is RAG preferable to a simpler approach?
+- when machine learning is appropriate
+- how simple models are trained
+- how predictions should be evaluated
+- which errors matter most
+- when deterministic logic may outperform unnecessary ML complexity
+- how to compare model performance against product requirements
 
 ---
 
-## 3. AI Experimentation & Model Selection Lab
+## Generative AI
 
-**Type:** Flagship  
-**Focus:** AI Evaluation · Experimentation · Product Decision-Making
+LLM Applications · Prompt Engineering · Context Engineering · Structured Outputs · Embeddings · Semantic Search · RAG · Tool Calling · Agentic Workflows
 
-Build an evaluation framework that compares multiple model, prompt, or retrieval configurations against a shared test set.
+### Purpose
 
-### Capabilities Demonstrated
+This area develops practical understanding of:
 
-- Evaluation dataset design
-- Golden datasets
-- Prompt comparison
-- Model comparison
-- Structured evaluation
-- Human evaluation
-- LLM-as-judge
-- Task-success metrics
-- Latency measurement
-- Cost analysis
-- Product recommendations
-
-### Example Evaluation Framework
-
-| Metric | Configuration A | Configuration B | Configuration C |
-|---|---:|---:|---:|
-| Task Success | TBD | TBD | TBD |
-| Groundedness | TBD | TBD | TBD |
-| Latency | TBD | TBD | TBD |
-| Cost / Request | TBD | TBD | TBD |
-| Failure Rate | TBD | TBD | TBD |
-
-The objective is to make a defensible product recommendation rather than simply identify the most capable model.
-
-### Product Questions
-
-- Is higher model quality worth additional cost?
-- Which failure modes are unacceptable?
-- How should an evaluation set be designed?
-- When should a model or prompt be replaced?
-- How should quality, latency, and cost be balanced?
+- how LLM applications are constructed
+- how context affects model behavior
+- how external knowledge is retrieved
+- how tool use expands model capability
+- how agentic workflows differ from simple generation
+- where additional capability introduces operational risk
 
 ---
 
-## 4. AI Support Triage System
+## AI Evaluation
 
-**Type:** Supporting  
-**Focus:** Python · Data · Applied ML · Human-in-the-Loop
+Golden Datasets · Human Evaluation · LLM-as-Judge · Task Success · Groundedness · Hallucination Analysis · Retrieval Evaluation · Failure Analysis · Cost / Latency Evaluation
 
-Build a support-ticket prioritization system that progresses from deterministic business rules to a simple ML-supported classifier.
+### Purpose
 
-### Capabilities Demonstrated
+Evaluation is one of the core themes of the portfolio.
 
-- Python data processing
-- Data validation
-- Rule-based logic
-- Basic feature engineering
-- Classification
-- Precision and recall
-- F1 score
-- Confusion matrix
-- Error analysis
-- Human escalation thresholds
+The objective is to answer questions such as:
 
-### Product Questions
-
-- When is a deterministic system sufficient?
-- When does ML add measurable value?
-- Which classification errors matter most?
-- How should confidence thresholds be established?
-- When should a human remain in the loop?
+- Does the system accomplish the intended task?
+- How consistently does it work?
+- What types of failures occur?
+- How serious are those failures?
+- Is increased quality worth increased cost?
+- Is the product reliable enough to launch?
 
 ---
 
-## 5. Agentic Workflow Guardrail Simulator
+## AI Systems
 
-**Type:** Supporting  
-**Focus:** Agentic AI · Tool Use · Governance · Reliability
+FastAPI · API Integration · Docker Concepts · Deployment Concepts · Monitoring · Reliability · Latency · Cost Optimization · Security · MLOps / LLMOps Concepts
 
-Build a controlled agentic workflow that demonstrates how an AI system should handle tool permissions, human approval, failure handling, escalation, and auditability.
+### Purpose
 
-### High-Level Flow
+This area provides enough systems understanding to reason about:
+
+- how AI products are exposed through APIs
+- how applications are deployed
+- where latency enters the architecture
+- how failures are monitored
+- how cost scales with usage
+- what operational concerns appear after a prototype becomes a product
+
+---
+
+## Product & Architecture
+
+Requirements · Product Metrics · Experiment Design · Human Escalation · Technical Trade-Offs · Build-vs-Buy Thinking · Risk Analysis · Launch Readiness · Product Recommendations
+
+### Purpose
+
+This is where technical capability connects to product judgment.
+
+The objective is to understand not only:
+
+> How does this system work?
+
+but also:
+
+> Why should it work this way?
+
+---
+
+# Product Development Approach
+
+Projects generally follow the same development and decision-making sequence:
 
 ```text
-User Request
-    ↓
-Intent / Task Decision
-    ↓
-Permission Check
-    ↓
-Approved Tool?
-    ↓
-Human Approval Required?
-    ↓
-Tool Execution
-    ↓
-Result / Escalation
-    ↓
-Audit Log
+Problem Discovery
+        ↓
+User / Workflow Understanding
+        ↓
+Requirements
+        ↓
+Baseline
+        ↓
+Technical Approach
+        ↓
+Prototype / Build
+        ↓
+Evaluation
+        ↓
+Failure Analysis
+        ↓
+Product & Architecture Trade-Offs
+        ↓
+Recommendation
+        ↓
+Iteration

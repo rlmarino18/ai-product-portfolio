@@ -1,54 +1,844 @@
-# Applied AI Engineering Learning Roadmap
+# AI/ML Product Learning Roadmap
 
-## Phase 1 — Foundations
+## Product Vision
+
+Build an **AI/ML Product Portfolio** that demonstrates the ability to identify valuable AI/ML opportunities, understand the underlying technology, evaluate technical approaches, and make evidence-based product decisions.
+
+The portfolio is designed to show that I can operate across product, engineering, data, and business contexts without positioning myself as a ML engineer or AI researcher.
+
+The long-term capability being developed is:
+
+> Identify the right AI/ML problem, select an appropriate technical approach, validate it with evidence, understand its limitations, and determine whether it should be launched, iterated, simplified, or stopped.
+
+---
+
+# Target User
+
+The primary audience for this portfolio is:
+
+- AI Product Management teams
+- Applied AI Product teams
+- AI Product Strategy teams
+- Technical Product organizations
+- AI Technical Program Management teams
+- hiring managers evaluating technically fluent product talent
+
+The portfolio should provide evidence that I can:
+
+- translate business problems into product requirements
+- understand AI/ML architectures at product depth
+- prototype enough to test assumptions
+- evaluate models and AI systems
+- identify failure modes
+- reason about quality, cost, latency, risk, and human oversight
+- communicate effectively with technical and non-technical stakeholders
+
+---
+
+# Core Problem Areas
+
+The portfolio is organized around five recurring AI product problems.
+
+## 1. Where Should AI Be Applied?
+
+Organizations often begin with AI capabilities rather than business problems.
+
+The portfolio should demonstrate the ability to identify:
+
+- high-value workflows
+- weak AI opportunities
+- automation versus augmentation opportunities
+- implementation risks
+- expected business value
+
+This problem is addressed primarily through the **AI Workflow Opportunity & ROI Analyzer**.
+
+---
+
+## 2. When Does ML Add Value?
+
+Machine learning introduces additional complexity that is not always justified.
+
+The portfolio should demonstrate the ability to:
+
+- establish deterministic baselines
+- evaluate ML against simpler approaches
+- identify meaningful performance improvements
+- analyze classification errors
+- determine when human review remains necessary
+
+This problem is addressed primarily through the **AI Support Triage System**.
+
+---
+
+## 3. Is a Generative AI Product Reliable Enough to Launch?
+
+A functioning LLM or RAG prototype does not automatically represent a launch-ready product.
+
+The portfolio should demonstrate the ability to evaluate:
+
+- retrieval quality
+- groundedness
+- hallucination
+- completeness
+- failure behavior
+- human escalation
+- latency
+- cost
+
+This problem is addressed primarily through the **RAG Product Quality & Launch Readiness Lab**.
+
+---
+
+## 4. Which AI Configuration Should the Product Use?
+
+AI teams frequently have several technically viable choices.
+
+The portfolio should demonstrate the ability to compare:
+
+- models
+- prompts
+- retrieval configurations
+- system architectures
+- quality
+- latency
+- cost
+- reliability
+
+This problem is addressed primarily through the **AI Experimentation & Model Selection Lab**.
+
+---
+
+## 5. Where Should AI Autonomy Stop?
+
+Agentic systems introduce product risks beyond simple generation.
+
+The portfolio should demonstrate understanding of:
+
+- tool permissions
+- approval boundaries
+- retries
+- failure handling
+- human intervention
+- auditability
+- governance
+
+This problem is addressed primarily through the **Agentic Workflow Guardrail Simulator**.
+
+---
+
+# Strategic Themes
+
+The roadmap is organized around six strategic capability areas.
+
+## Theme 1 — Technical Foundations
+
+Develop enough software fluency to understand and prototype product behavior.
+
+Core areas:
+
 - Python
 - Linux / CLI
 - Git / GitHub
 - SQL
-- HTTP / REST APIs / JSON
+- HTTP / REST APIs
+- JSON
 
-## Phase 2 — Data Analysis
+The objective is not programming specialization.
+
+The objective is to independently understand:
+
+- application logic
+- data flow
+- API behavior
+- implementation constraints
+- basic debugging
+- technical trade-offs
+
+---
+
+## Theme 2 — Data-Informed Product Decisions
+
+Develop the ability to inspect and analyze the data underlying an AI/ML opportunity.
+
+Core areas:
+
 - NumPy
 - Pandas
-- Data cleaning
-- Exploratory data analysis
-- Statistics
-- Experimentation
+- data cleaning
+- exploratory data analysis
+- statistics
+- experimentation
 
-## Phase 3 — Machine Learning
-- Supervised learning
-- Unsupervised learning
-- Feature engineering
-- Model training
-- Model evaluation
-- Error analysis
+The objective is to answer:
 
-## Phase 4 — Applied AI
+- What is actually happening?
+- How large is the problem?
+- What does the baseline look like?
+- Is the data reliable?
+- Is the data representative?
+- Is the data sufficient to support ML?
+
+---
+
+## Theme 3 — ML Product Judgment
+
+Understand predictive ML sufficiently to determine when it creates product value.
+
+Core areas:
+
+- supervised learning
+- unsupervised learning
+- feature engineering
+- model training
+- model evaluation
+- error analysis
+
+Key product trade-offs include:
+
+```text
+Precision       ↔ Recall
+Performance     ↔ Explainability
+Complexity      ↔ Maintainability
+Automation      ↔ Human Review
+Quality         ↔ Cost
+```
+
+The objective is not to maximize model performance.
+
+The objective is to determine whether ML meaningfully improves the product.
+
+---
+
+## Theme 4 — Applied AI Product Architecture
+
+Develop practical understanding of modern LLM-based product systems.
+
+Core areas:
+
 - LLM APIs
-- Prompt engineering
-- Context engineering
-- Embeddings
-- Vector search
+- prompt engineering
+- context engineering
+- embeddings
+- vector search
 - RAG
-- Tool calling
-- Agents
+- tool calling
+- agents
 - LLM evaluation
 
-## Phase 5 — AI Systems
+The objective is to understand when each architecture is appropriate and when simpler approaches are preferable.
+
+---
+
+## Theme 5 — AI Systems & Production Readiness
+
+Understand the requirements that emerge when an AI prototype becomes an operational product.
+
+Core areas:
+
 - FastAPI
 - Docker
-- Deployment
-- Observability
+- deployment
+- observability
 - MLOps / LLMOps
-- Reliability
-- Latency
-- Cost optimization
-- Security
-- Governance
+- reliability
+- latency
+- cost optimization
+- security
+- governance
 
-## Phase 6 — Featured Projects
-1. AI Support Triage & Prioritization System
-2. AI Workflow Opportunity Analyzer
-3. RAG Knowledge Assistant with Evaluation
-4. LLM Evaluation & Model Selection Platform
-5. Agentic Operations Assistant
+The objective is to reason about:
+
+- scalability
+- reliability
+- monitoring
+- operational failure
+- cost
+- security
+- human control
+
+---
+
+## Theme 6 — Evaluation & Experimentation
+
+Build the ability to determine whether an AI/ML system is actually good enough to use.
+
+Core areas:
+
+- evaluation datasets
+- golden datasets
+- controlled experiments
+- human evaluation
+- LLM-as-judge
+- failure analysis
+- cost analysis
+- latency analysis
+- launch criteria
+
+Evaluation should influence product decisions throughout development rather than being treated as a final testing step.
+
+---
+
+# Desired Outcomes
+
+The roadmap should produce measurable improvement across four capability levels.
+
+## Product Discovery Outcome
+
+Demonstrate the ability to identify and frame valuable AI/ML product opportunities.
+
+Evidence should include:
+
+- clear problem statements
+- defined users
+- workflow understanding
+- measurable outcomes
+- prioritization logic
+
+---
+
+## Technical Fluency Outcome
+
+Demonstrate enough technical capability to understand and prototype AI/ML product behavior.
+
+Evidence should include:
+
+- working Python implementations
+- data analysis
+- APIs
+- simple ML systems
+- RAG systems
+- evaluation pipelines
+- agentic workflows
+
+---
+
+## Evaluation Outcome
+
+Demonstrate that technical decisions are based on measurable evidence.
+
+Evidence should include:
+
+- baselines
+- evaluation datasets
+- success thresholds
+- controlled experiments
+- error analysis
+- failure taxonomies
+
+---
+
+## Product Decision Outcome
+
+Demonstrate the ability to translate technical findings into clear product recommendations.
+
+Recommendations should be able to conclude:
+
+- launch
+- iterate
+- simplify
+- change architecture
+- retain human review
+- run another experiment
+- keep the existing process
+- stop development
+
+---
+
+# Success Metrics
+
+Progress should be measured at multiple levels.
+
+## Portfolio Outcomes
+
+- 3 completed flagship projects
+- 2 completed supporting projects
+- each project contains a clear product problem
+- each project contains measurable success criteria
+- each project contains a baseline
+- each flagship contains an evaluation framework
+- each flagship contains failure analysis
+- each flagship ends with a defensible product recommendation
+
+---
+
+## Technical Capability
+
+Progress is demonstrated through practical ability to:
+
+- write and explain Python
+- inspect and manipulate data
+- query structured data
+- use APIs
+- train and evaluate a basic ML model
+- build a basic RAG workflow
+- evaluate LLM outputs
+- understand tool calling and agentic workflows
+- explain deployment and reliability considerations
+
+---
+
+## Product Quality
+
+Depending on the project, metrics may include:
+
+- accuracy
+- precision
+- recall
+- F1 score
+- retrieval relevance
+- groundedness
+- hallucination rate
+- task success
+- latency
+- failure rate
+- human escalation rate
+- cost per request
+
+Thresholds should be defined by the use case rather than treated as universal targets.
+
+---
+
+## Business / Workflow Value
+
+Where applicable, projects should evaluate:
+
+- time saved
+- labor reduction
+- cost reduction
+- workflow throughput
+- error reduction
+- automation rate
+- decision quality
+- implementation ROI
+
+---
+
+# Strategic Initiatives
+
+| Initiative | Type | Strategic Purpose |
+|---|---|---|
+| AI Support Triage System | Supporting | Establish technical baseline and compare rules vs. ML |
+| AI Workflow Opportunity & ROI Analyzer | Flagship | Demonstrate AI opportunity discovery and prioritization |
+| RAG Product Quality & Launch Readiness Lab | Flagship | Demonstrate GenAI evaluation and launch decisions |
+| AI Experimentation & Model Selection Lab | Flagship | Demonstrate controlled experimentation and model selection |
+| Agentic Workflow Guardrail Simulator | Supporting | Demonstrate autonomy, governance, and human oversight |
+
+
+---
+
+# Prioritization Logic
+
+Portfolio work should be prioritized based on:
+
+1. **Product relevance** — Does the work strengthen AIML product judgment?
+2. **Learning value** — Does it build a capability required by later projects?
+3. **Evidence value** — Will it produce something meaningful to discuss or demonstrate?
+4. **Technical dependency** — Is the capability required before more advanced work can proceed?
+5. **Evaluation value** — Does the work help measure whether an approach actually works?
+6. **Effort** — Is the expected learning or portfolio value worth the time required?
+
+A simple prioritization model is:
+
+```text
+Priority =
+(Product Relevance × Learning Value × Evidence Value × Confidence)
+÷ Effort
+```
+
+The formula is directional rather than mathematically absolute.
+
+The important question is:
+
+> Why is this the highest-value capability or product problem to work on now?
+
+---
+
+# Roadmap Horizons
+
+The roadmap uses **Now / Next / Later** rather than fixed feature dates.
+
+## Now — Establish Technical & Product Baselines
+
+**Confidence: High**
+
+Primary focus:
+
+- Python foundations
+- Linux / CLI
+- Git / GitHub
+- SQL and APIs
+- deterministic product logic
+- data structures
+- functions
+- debugging
+- AI Support Triage System
+
+Primary outcomes:
+
+- establish core technical fluency
+- build a deterministic product baseline
+- connect technical learning directly to product decisions
+- establish repeatable GitHub and Jira workflows
+
+Primary learning questions:
+
+- Can I independently explain the code I am writing?
+- Can I translate business rules into working logic?
+- Can I establish a baseline before using ML?
+
+---
+
+## Next — Develop Data, ML & Product Evaluation Capability
+
+**Confidence: Medium-High**
+
+Primary focus:
+
+- Pandas
+- NumPy
+- data analysis
+- statistics
+- simple ML
+- model evaluation
+- error analysis
+- AI Workflow Opportunity & ROI Analyzer
+
+Primary outcomes:
+
+- analyze datasets
+- build simple ML baselines
+- understand model metrics
+- compare ML against deterministic approaches
+- make evidence-based AI opportunity recommendations
+
+Primary learning questions:
+
+- What does the data actually show?
+- Does ML improve the product?
+- Which errors matter?
+- Where can AI create enough value to justify investment?
+
+---
+
+## Later — Build & Evaluate Generative and Agentic AI Products
+
+**Confidence: Medium**
+
+Primary focus:
+
+- LLM APIs
+- embeddings
+- RAG
+- context engineering
+- evaluation
+- model selection
+- tool calling
+- agents
+- AI systems
+- deployment concepts
+- monitoring
+- reliability
+- governance
+
+Primary initiatives:
+
+- RAG Product Quality & Launch Readiness Lab
+- AI Experimentation & Model Selection Lab
+- Agentic Workflow Guardrail Simulator
+
+Primary outcomes:
+
+- evaluate generative AI quality
+- understand RAG architecture
+- compare models and configurations
+- make launch-readiness decisions
+- reason about AI autonomy and governance
+- understand production trade-offs
+
+Primary learning questions:
+
+- Is the system reliable enough to launch?
+- Which configuration best satisfies the requirements?
+- Where should human control remain?
+- What happens when the system fails in production?
+
+---
+
+# Dependencies
+
+Progress depends on several capability relationships.
+
+```text
+Python Foundations
+        ↓
+Data Analysis
+        ↓
+Machine Learning
+        ↓
+ML Evaluation
+```
+
+```text
+Python + APIs
+        ↓
+LLM Applications
+        ↓
+RAG / Tool Calling
+        ↓
+Evaluation
+        ↓
+AI Systems
+```
+
+```text
+Evaluation Fundamentals
+        ↓
+RAG Launch Readiness
+        ↓
+Model Selection
+        ↓
+Agentic Reliability
+```
+
+Later projects should not bypass foundational understanding simply to produce more impressive-looking applications.
+
+---
+
+# Key Risks
+
+## Building Before Understanding the Problem
+
+Risk:
+
+Creating technically interesting projects without a meaningful product problem.
+
+Mitigation:
+
+Every featured project begins with:
+
+- target user
+- problem
+- desired outcome
+- measurable success criteria
+
+---
+
+## Using AI Where Simpler Logic Is Better
+
+Risk:
+
+Introducing ML or LLM complexity without proving that it adds value.
+
+Mitigation:
+
+Establish a baseline before adding complexity.
+
+---
+
+## Optimizing for Portfolio Appearance
+
+Risk:
+
+Building visually impressive demos that cannot be explained deeply.
+
+Mitigation:
+
+Prioritize projects that can be defended technically and from a product perspective.
+
+---
+
+## Learning Tools Without Product Application
+
+Risk:
+
+Accumulating disconnected technical knowledge.
+
+Mitigation:
+
+Whenever practical, technical learning should contribute directly to an active project.
+
+---
+
+## Evaluating Only Successful Examples
+
+Risk:
+
+Overestimating system capability because testing focuses on happy paths.
+
+Mitigation:
+
+Evaluation datasets should include:
+
+- edge cases
+- failure cases
+- ambiguous cases
+- invalid inputs
+- difficult examples
+
+---
+
+## Over-Automating
+
+Risk:
+
+Removing human review before system reliability supports it.
+
+Mitigation:
+
+Treat human-in-the-loop design as an intentional product architecture decision.
+
+---
+
+# Learning & Validation
+
+Every major initiative should explicitly test assumptions.
+
+Examples:
+
+## AI Support Triage System
+
+Assumption:
+
+> ML will improve triage quality enough to justify added complexity.
+
+Validation:
+
+Compare deterministic rules against a simple classifier using the same evaluation set.
+
+---
+
+### AI Workflow Opportunity & ROI Analyzer
+
+Assumption:
+
+> Workflow characteristics can support useful AI investment recommendations.
+
+Validation:
+
+Run multiple scenarios and test whether the recommendation logic remains consistent and explainable.
+
+---
+
+### RAG Product Quality & Launch Readiness Lab
+
+Assumption:
+
+> Retrieval-augmented generation can provide sufficiently grounded answers for the selected use case.
+
+Validation:
+
+Measure retrieval relevance, groundedness, completeness, failures, latency, and cost.
+
+---
+
+### AI Experimentation & Model Selection Lab
+
+Assumption:
+
+> A structured evaluation framework produces better model-selection decisions than anecdotal testing.
+
+Validation:
+
+Compare multiple configurations against the same golden dataset.
+
+---
+
+### Agentic Workflow Guardrail Simulator
+
+Assumption:
+
+> An AI workflow can gain useful autonomy without removing necessary human control.
+
+Validation:
+
+Test approval boundaries, permission failures, invalid tool calls, repeated actions, and escalation behavior.
+
+---
+
+# Learning Method
+
+Technical learning should follow:
+
+```text
+Explain
+    ↓
+Demonstrate
+    ↓
+You Try
+    ↓
+Diagnose
+    ↓
+Repeat
+    ↓
+Apply
+    ↓
+Explain Back
+    ↓
+Spaced Repetition
+```
+
+The goal is not syntax memorization.
+
+A concept is sufficiently learned when I can:
+
+- recognize it
+- explain it
+- use it
+- debug it
+- apply it to a product problem
+- explain why one approach was selected over another
+
+---
+
+# Definition of Portfolio Success
+
+The portfolio is successful when it demonstrates that I can move through the full AIML product decision process:
+
+```text
+Vision
+    ↓
+Customer / User
+    ↓
+Problem
+    ↓
+Outcome
+    ↓
+Requirements
+    ↓
+Baseline
+    ↓
+Architecture
+    ↓
+Build
+    ↓
+Evaluation
+    ↓
+Failure Analysis
+    ↓
+Product Recommendation
+```
+
+A completed project should be able to answer:
+
+1. Who is the user?
+2. What problem are they experiencing?
+3. Why is the problem worth solving?
+4. What outcome should improve?
+5. How will success be measured?
+6. What is the existing baseline?
+7. Why is AI/ML appropriate?
+8. What technical approach was selected?
+9. What alternatives were considered?
+10. How was the system evaluated?
+11. What failure modes were identified?
+12. Which errors matter most?
+13. Where should humans remain involved?
+14. What trade-offs were made?
+15. What does the evidence recommend?
+
+The final portfolio should therefore demonstrate more than the ability to build AI/ML systems.
+
+It should demonstrate the ability to decide:
+
+> **what problem is worth solving, why AI/ML is appropriate, what outcome should change, how the solution should be evaluated, and what the evidence says should happen next.**
