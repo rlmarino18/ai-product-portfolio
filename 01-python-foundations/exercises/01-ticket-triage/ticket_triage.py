@@ -5,6 +5,12 @@ tickets = [
     {"id": "T004", "category": "billing", "priority": 3, "age_hours": 50, "customer_tier": "pro"},
     {"id": "T005", "category": "feature_request", "priority": 1, "age_hours": 72, "customer_tier": "free"},
     {"id": "T006", "category": "login", "priority": 4, "age_hours": 25, "customer_tier": "pro"},
+
+    {
+        "id": "T007",
+        "category": "billing",
+        "priority": 4
+    }
 ]
 
 def classify_ticket(ticket: dict) -> str:
@@ -36,9 +42,37 @@ def is_sla_breached(ticket: dict) -> bool:
 def should_escalate(result: str, sla_status: bool) -> bool:
     return result == "HIGH" and sla_status
 
+required_fields = [
+    "id",
+    "category",
+    "priority",
+    "age_hours",
+    "customer_tier"
+]
+
+def has_required_fields(ticket: dict) -> bool:
+    for field in required_fields:
+        if field not in ticket:
+            return False
+
+    return True        
+
+invalid_ticket = {
+    "id": "T007",
+    "category": "billing",
+    "priority": 4
+}
+
+print("Invalid Ticket Valid:", has_required_fields(invalid_ticket))
+print("Existing Ticket Valid:", has_required_fields(tickets[0]))
+
 escalation_queue = []
 
 for ticket in tickets:
+    if not has_required_fields(ticket):
+        print(ticket.get("id", "UNKNOWN"), "has missing required fields")
+        continue
+
     result = classify_ticket(ticket)
     sla_status = is_sla_breached(ticket)
 

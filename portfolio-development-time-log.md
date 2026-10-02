@@ -1,6 +1,6 @@
 # AI/ML Product Portfolio — Development & Time Log
 
-This log tracks time invested across technical learning, portfolio development, evaluation, documentation, and interview preparation.
+This log tracks time invested across technical learning, portfolio development, evaluation, documentation.
 
 Its purpose is to provide a clear record of:
 
@@ -9,7 +9,7 @@ Its purpose is to provide a clear record of:
 - product reasoning and decision-making
 - evaluation and experimentation work
 - portfolio documentation
-- interview-ready learning and project translation
+- technical and product learning
 
 Progress is tracked by **session number rather than calendar day**.
 
@@ -24,13 +24,12 @@ Multiple sessions may be completed on the same day, and gaps between sessions do
 | Category | Hours |
 |---|---:|
 | Foundations | 0.0 |
-| Python | 3.83 |
+| Python | 4.33 |
 | Data Analysis | 0.0 |
 | Machine Learning | 0.0 |
 | Applied AI | 0.0 |
 | AI Systems | 0.0 |
-| Interview Preparation | 0.0 |
-| **Total Learning Time** | **3.83** |
+| **Total Learning Time** | **4.33** |
 
 > Learning-area hours represent the technical capability developed during portfolio work. Project hours are tracked separately below because the same session may simultaneously contribute to both technical learning and a featured project. These totals should not be added together.
 
@@ -43,9 +42,9 @@ Multiple sessions may be completed on the same day, and gaps between sessions do
 | AI Workflow Opportunity & ROI Analyzer | Not Started | 0.0 |
 | RAG Product Quality & Launch Readiness Lab | Not Started | 0.0 |
 | AI Experimentation & Model Selection Lab | Not Started | 0.0 |
-| AI Support Triage System | In Progress | 3.83 |
+| AI Support Triage System | In Progress | 4.33 |
 | Agentic Workflow Guardrail Simulator | Not Started | 0.0 |
-| **Total Portfolio Project Time** |  | **3.83** |
+| **Total Portfolio Project Time** |  | **4.33** |
 
 > Portfolio project hours represent time invested in building, testing, evaluating, and documenting each featured project. They are another view of the same underlying session time and should not be added to Technical Learning hours.
 
@@ -62,7 +61,7 @@ Multiple sessions may be completed on the same day, and gaps between sessions do
 **Project:** AI Support Triage System  
 **Duration:** 50 minutes
 
-**Concept Tags:** PCEP Core · Practical / Portfolio · Interview-Relevant
+**Concept Tags:** PCEP Core · Practical / Portfolio
 
 ### Objective
 
@@ -104,10 +103,6 @@ A deterministic rules-based system can provide a transparent baseline before int
 
 This makes it possible to evaluate whether additional model complexity creates enough measurable product value to justify higher cost, lower explainability, or additional operational complexity.
 
-### Interview Translation
-
-Built a rule-based support triage prototype to establish a deterministic baseline before introducing ML. The exercise demonstrated how product requirements can be translated into executable decision logic and how rule precedence affects system behavior.
-
 ---
 
 ### Session 2 — Variables, Booleans & SLA Logic
@@ -117,7 +112,7 @@ Built a rule-based support triage prototype to establish a deterministic baselin
 **Project:** AI Support Triage System  
 **Duration:** 30 minutes
 
-**Concept Tags:** PCEP Core · PCAP Foundation · Practical / Portfolio · Interview-Relevant
+**Concept Tags:** PCEP Core · PCAP Foundation · Practical / Portfolio
 
 ### Objective
 
@@ -169,10 +164,6 @@ Priority reflects the **business urgency** of a ticket, while SLA status reflect
 
 Keeping these dimensions separate makes the system easier to reason about, modify, measure, and eventually evaluate against more advanced approaches.
 
-### Interview Translation
-
-Extended a rule-based support triage prototype by separating prioritization logic from SLA compliance and implementing reusable Boolean decision logic. This allowed business urgency and service-level performance to be evaluated independently.
-
 ### Session 3 — Loops, Collections & Reusable Decision Logic
 
 **Date:** September 29, 2026  
@@ -180,7 +171,7 @@ Extended a rule-based support triage prototype by separating prioritization logi
 **Project:** AI Support Triage System  
 **Duration:** 30 minutes
 
-**Concept Tags:** PCEP Core · Practical / Portfolio · Interview-Relevant
+**Concept Tags:** PCEP Core · Practical / Portfolio
 
 ### Objective
 
@@ -225,10 +216,6 @@ Code can be syntactically valid while still producing incorrect behavior if logi
 The triage prototype now behaves as a simple decision pipeline: each ticket is classified, evaluated for SLA status, conditionally routed for review, and included in aggregate metrics.
 
 This provides a deterministic baseline that can later be compared against ML-assisted classification or routing approaches.
-
-### Interview Translation
-
-Built a reusable ticket-processing pipeline that applies independent classification and SLA rules across multiple records, routes breached tickets for review, and aggregates outcomes while maintaining separation between business urgency and service-level compliance.
 
 # Session 4 — Boolean Logic & Compound Decision Rules
 
@@ -284,10 +271,6 @@ Using `or` instead of `and` would significantly increase escalation volume by es
 - `or` requires only one condition to be true
 - Boolean operators directly encode business policy
 - small logical changes can materially change product behavior
-
-## Interview Translation
-
-I can explain how I translated multiple operational requirements into deterministic escalation logic and why the choice between `and` and `or` materially changes system behavior.
 
 ---
 
@@ -362,10 +345,6 @@ Placing aggregate queue output inside the loop produces incomplete intermediate 
 - code inside a loop executes once per item
 - aggregate outputs usually belong after the loop
 
-## Interview Translation
-
-I can explain how I moved a rule-based prototype from printed decisions toward a reusable routing queue that could support downstream workflow automation.
-
 ---
 
 # Session 6 — Indexing, Membership & Duplicate Prevention
@@ -439,10 +418,6 @@ Attempting to access a list position that does not exist can also produce an `In
 - `not in` tests whether a value does not exist
 - nested conditions allow more precise logic
 - duplicate prevention is both a programming and product-reliability concern
-
-## Interview Translation
-
-I can explain how I added basic idempotency to an automated routing workflow to prevent duplicate downstream actions and improve operational reliability.
 
 ---
 
@@ -545,9 +520,170 @@ Here:
 - Boolean functions are useful for business decision rules
 - refactoring improves readability and maintainability
 
-## Interview Translation
+# Session 8 — Input Validation & Defensive Decision Logic
 
-I can explain how I refactored embedded business logic into reusable decision functions, improving separation of concerns and making the routing policy easier to test and modify.
+**Date:** October 2, 2026  
+**Duration:** 30 minutes  
+**Project:** AI Support Triage System  
+**Learning Area:** Python Foundations
+
+## Objective
+
+Add input validation to the ticket-triage workflow so incomplete tickets are identified before classification, SLA evaluation, and escalation logic.
+
+## Work Completed
+
+Created a required-fields list:
+
+    required_fields = [
+        "id",
+        "category",
+        "priority",
+        "age_hours",
+        "customer_tier"
+    ]
+
+Created a reusable validation function:
+
+    def has_required_fields(ticket: dict) -> bool:
+        for field in required_fields:
+            if field not in ticket:
+                return False
+
+        return True
+
+Tested the validation function against both an incomplete ticket and an existing valid ticket:
+
+    print("Invalid Ticket Valid:", has_required_fields(invalid_ticket))
+    print("Existing Ticket Valid:", has_required_fields(tickets[0]))
+
+Validated the expected result:
+
+    Invalid Ticket Valid: False
+    Existing Ticket Valid: True
+
+Integrated validation into the main processing loop:
+
+    for ticket in tickets:
+        if not has_required_fields(ticket):
+            print(ticket.get("id", "UNKNOWN"), "has missing required fields")
+            continue
+
+Added an intentionally incomplete ticket:
+
+    {
+        "id": "T007",
+        "category": "billing",
+        "priority": 4
+    }
+
+Validated the complete workflow:
+
+    Invalid Ticket Valid: False
+    Existing Ticket Valid: True
+    T001 requires SLA review
+    T001 requires escalation
+    T001 -> HIGH | SLA Breached: True
+    T002 -> NORMAL | SLA Breached: False
+    T003 -> CRITICAL | SLA Breached: False
+    T004 requires SLA review
+    T004 -> NORMAL | SLA Breached: True
+    T005 requires SLA review
+    T005 -> NORMAL | SLA Breached: True
+    T006 requires SLA review
+    T006 requires escalation
+    T006 -> HIGH | SLA Breached: True
+    T007 has missing required fields
+    {'CRITICAL': 1, 'HIGH': 2, 'NORMAL': 3}
+    Escalation Queue: ['T001', 'T006']
+    Escalation Count: 2
+
+## Technical Concepts
+
+- input validation
+- required fields
+- dictionary membership
+- `in`
+- `not in`
+- `.get()`
+- fallback values
+- Boolean validation functions
+- `not`
+- `continue`
+- fail-fast logic
+- defensive programming
+- control flow
+
+## Product Capability Developed
+
+Added a validation layer before downstream decision logic.
+
+Instead of assuming that every incoming ticket contains complete data, the system now checks whether the required fields exist before attempting classification.
+
+The workflow now follows:
+
+    Input
+      ↓
+    Validation
+      ↓
+    Valid? ── No → Flag and skip
+      ↓ Yes
+    Classification
+      ↓
+    SLA Evaluation
+      ↓
+    Escalation
+
+This makes the workflow more resilient to malformed or incomplete input.
+
+## Product Decision / Insight
+
+Invalid inputs should be stopped before they enter downstream business logic.
+
+Once a ticket has already been determined to be incomplete, continuing into classification or SLA processing creates unnecessary work and increases the risk of runtime errors or incorrect decisions.
+
+Validation therefore acts as a control layer protecting the rest of the workflow.
+
+## Failure Mode / Edge Case
+
+Attempting to process a ticket without all required fields can cause downstream failures.
+
+For example:
+
+    ticket["age_hours"]
+
+will raise a `KeyError` if `"age_hours"` does not exist.
+
+The validation function prevents this by checking each required key before processing continues.
+
+Dictionary membership also required reinforcement:
+
+    "priority" in ticket
+
+checks whether `"priority"` exists as a **key**, not whether a particular value exists.
+
+Safe dictionary access also required reinforcement:
+
+    ticket.get("id", "UNKNOWN")
+
+means:
+
+- return the value associated with `"id"` if the key exists
+- return `"UNKNOWN"` if the key does not exist
+
+`continue` changes control flow by immediately ending the current loop iteration and moving to the next ticket.
+
+## Lessons Learned
+
+- validate incoming data before applying business logic
+- dictionary membership checks keys rather than values
+- `not in` is useful for detecting missing required fields
+- `.get()` provides safer dictionary access when a key may be missing
+- Boolean functions can encapsulate validation rules
+- `not` reverses a Boolean result
+- `continue` skips the remainder of the current loop iteration
+- fail-fast logic prevents unnecessary downstream processing
+- validation improves reliability and makes workflow failures easier to control
 
 ---
 
@@ -561,19 +697,17 @@ I can explain how I refactored embedded business logic into reusable decision fu
 | Product / Jira | 0.0 |
 | Dedicated Portfolio Build Block | 0.0 |
 | Weekly Assessment | 0.0 |
-| Interview Practice | 0.0 |
 | **Total Focused Time** | **1.33** |
 
 ## Week Ending October 4, 2026
 
-| Activity | Hours |
+| Category | Hours |
 |---|---:|
-| Python / Technical Learning | 2.50 |
-| Product / Jira | 0.0 |
+| Python / Technical Learning | 3.00 |
+| Product / Jira | 1.00 |
 | Dedicated Portfolio Build Block | 0.0 |
 | Weekly Assessment | 0.0 |
-| Interview Practice | 0.0 |
-| **Total Focused Time** | **2.50** |
+| **Total Focused Time** | **4.00** |
 
 > Portfolio project hours overlap with technical-learning hours and are therefore tracked separately rather than added again to the weekly total.
 
@@ -594,7 +728,6 @@ Each training session should record:
 9. Technical concepts practiced
 10. Lessons learned
 11. Product & strategy application
-12. Interview translation
 
 When relevant, also record:
 
