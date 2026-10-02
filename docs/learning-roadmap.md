@@ -86,7 +86,7 @@ The portfolio should demonstrate the ability to evaluate:
 - latency
 - cost
 
-This problem is addressed primarily through the **RAG Product Quality & Launch Readiness Lab**.
+This problem is addressed primarily through the **Document Q&A RAG Assistant**, where retrieval quality, grounding, reranking, failure behavior, and evidence quality are evaluated through controlled test cases.
 
 ---
 
@@ -420,7 +420,7 @@ Where applicable, projects should evaluate:
 |---|---|---|
 | AI Support Triage System | Supporting | Establish technical baseline and compare rules vs. ML |
 | AI Workflow Opportunity & ROI Analyzer | Flagship | Demonstrate AI opportunity discovery and prioritization |
-| RAG Product Quality & Launch Readiness Lab | Flagship | Demonstrate GenAI evaluation and launch decisions |
+| Document Q&A RAG Assistant | Flagship | Demonstrate retrieval quality, grounding, reranking, evidence evaluation, and launch-readiness decisions |
 | AI Experimentation & Model Selection Lab | Flagship | Demonstrate controlled experimentation and model selection |
 | Agentic Workflow Guardrail Simulator | Supporting | Demonstrate autonomy, governance, and human oversight |
 
@@ -543,7 +543,7 @@ Primary focus:
 
 Primary initiatives:
 
-- RAG Product Quality & Launch Readiness Lab
+- Document Q&A RAG Assistant
 - AI Experimentation & Model Selection Lab
 - Agentic Workflow Guardrail Simulator
 
@@ -720,15 +720,15 @@ Run multiple scenarios and test whether the recommendation logic remains consist
 
 ---
 
-### RAG Product Quality & Launch Readiness Lab
+### Document Q&A RAG Assistant
 
 Assumption:
 
-> Retrieval-augmented generation can provide sufficiently grounded answers for the selected use case.
+> Retrieval-augmented generation can provide sufficiently relevant and grounded evidence for document-based question answering.
 
 Validation:
 
-Measure retrieval relevance, groundedness, completeness, failures, latency, and cost.
+Evaluate retrieval relevance, reranking quality, evidence completeness, grounding, failure behavior, latency, and cost across controlled test cases.
 
 ---
 
