@@ -40,13 +40,15 @@ Multiple sessions may be completed on the same day, and gaps between sessions do
 | Project | Status | Hours |
 |---|---|---:|
 | AI Workflow Opportunity & ROI Analyzer | Not Started | 0.0 |
-| RAG Product Quality & Launch Readiness Lab | Not Started | 0.0 |
+| Document Q&A RAG Assistant | In Progress | 2.50 |
 | AI Experimentation & Model Selection Lab | Not Started | 0.0 |
 | AI Support Triage System | In Progress | 4.33 |
 | Agentic Workflow Guardrail Simulator | Not Started | 0.0 |
-| **Total Portfolio Project Time** |  | **4.33** |
+| **Total Portfolio Project Time** |  | **6.83** |
 
-> Portfolio project hours represent time invested in building, testing, evaluating, and documenting each featured project. They are another view of the same underlying session time and should not be added to Technical Learning hours.
+> Portfolio project hours represent verified time invested in building, testing, evaluating, and documenting featured projects. Some projects began before the current structured session sequence; verified historical development time is included where an existing project time log is available.
+
+> Technical Learning hours and Portfolio Project hours measure different dimensions of the work and should not be added together. Technical Learning currently reflects the structured learning sessions tracked in this portfolio, while Portfolio Project hours may also include verified development completed before those sessions began.
 
 ---
 
