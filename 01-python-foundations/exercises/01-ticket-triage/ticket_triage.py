@@ -10,7 +10,16 @@ tickets = [
         "id": "T007",
         "category": "billing",
         "priority": 4
+    },
+
+    {
+    "id": "T008",
+    "category": "billing",
+    "priority": 9,
+    "age_hours": -4,
+    "customer_tier": "gold"
     }
+
 ]
 
 def classify_ticket(ticket: dict) -> str:
@@ -57,20 +66,36 @@ def has_required_fields(ticket: dict) -> bool:
 
     return True        
 
+def has_valid_values(ticket: dict) -> bool:
+    if ticket["priority"] < 1 or ticket ["priority"] > 5:
+        return False
+    
+    if ticket["age_hours"] < 0:
+        return False    
+
+    if ticket["customer_tier"] not in ["free", "pro", "enterprise"]:
+        return False 
+
+    return True    
+
 invalid_ticket = {
     "id": "T007",
     "category": "billing",
     "priority": 4
-}
+},
 
-print("Invalid Ticket Valid:", has_required_fields(invalid_ticket))
-print("Existing Ticket Valid:", has_required_fields(tickets[0]))
+
+
 
 escalation_queue = []
 
 for ticket in tickets:
     if not has_required_fields(ticket):
         print(ticket.get("id", "UNKNOWN"), "has missing required fields")
+        continue
+
+    if not has_valid_values(ticket):
+        print(ticket.get("id", "UNKNOWN"), "has invalid values")
         continue
 
     result = classify_ticket(ticket)

@@ -24,12 +24,12 @@ Multiple sessions may be completed on the same day, and gaps between sessions do
 | Category | Hours |
 |---|---:|
 | Foundations | 0.0 |
-| Python | 4.33 |
+| Python | 4.83 |
 | Data Analysis | 0.0 |
 | Machine Learning | 0.0 |
 | Applied AI | 1.0 |
 | AI Systems | 0.0 |
-| **Total Learning Time** | **5.33** |
+| **Total Learning Time** | **5.83** |
 
 > Learning-area hours represent the technical capability developed during portfolio work. Project hours are tracked separately below because the same session may simultaneously contribute to both technical learning and a featured project. These totals should not be added together.
 
@@ -42,9 +42,9 @@ Multiple sessions may be completed on the same day, and gaps between sessions do
 | AI Workflow Opportunity & ROI Analyzer | Not Started | 0.0 |
 | Document Q&A RAG Assistant | In Progress | 3.50 |
 | Executive Brief Generator | In Progress | 44.50 |
-| AI Support Triage System | In Progress | 4.33 |
+| AI Support Triage System | In Progress | 4.83 |
 | Agentic Workflow Guardrail Simulator | Not Started | 0.0 |
-| **Total Portfolio Project Time** |  | **52.33** |
+| **Total Portfolio Project Time** |  | **52.83** |
 
 > Portfolio project hours represent verified time invested in building, testing, evaluating, and documenting featured projects. Some projects began before the current structured session sequence; verified historical development time is included where an existing project time log is available.
 
@@ -781,6 +781,91 @@ The review identified several unresolved retrieval risks:
 
 ---
 
+
+# Session 10 — Value Validation & Defensive Business Rules
+
+**Date:** October 2, 2026  
+**Duration:** 30 minutes  
+**Project:** AI Support Triage System  
+**Learning Area:** Python Foundations
+
+## Objective
+
+Extend ticket validation beyond required-field checks by validating whether incoming values satisfy defined business rules before downstream processing.
+
+## Work Completed
+
+- Added an intentionally malformed ticket with invalid business values
+- Demonstrated that required-field validation alone can allow invalid data downstream
+- Created `has_valid_values()` as a separate validation function
+- Added priority-range validation
+- Added non-negative ticket-age validation
+- Added supported customer-tier validation
+- Tested invalid priority, age, and customer-tier scenarios
+- Integrated value validation into the main processing loop
+- Used `continue` to stop invalid records before classification, SLA evaluation, aggregation, or escalation
+- Removed temporary validation test data after confirming expected behavior
+
+## Technical Concepts
+
+- value validation
+- range checks
+- list membership
+- Boolean functions
+- defensive programming
+- fail-fast control flow
+- `continue`
+- separation of concerns
+- input quality
+- business-rule validation
+
+## Product Capability Developed
+
+Expanded the triage workflow from structural validation to layered input validation.
+
+The processing flow now follows:
+
+    Input
+      ↓
+    Required Fields Present?
+      ↓
+    Values Valid?
+      ↓
+    Classification
+      ↓
+    SLA Evaluation
+      ↓
+    Escalation
+
+Invalid records are prevented from influencing downstream decisions or aggregate metrics.
+
+## Product Decision / Insight
+
+A record can be structurally complete while still containing invalid business data.
+
+Separating required-field validation from value validation makes failures easier to diagnose, rules easier to modify, and downstream decision logic more reliable.
+
+## Failure Modes / Edge Cases
+
+Testing exposed several data-quality risks:
+
+- priority values outside the supported range
+- negative ticket age
+- unsupported customer tiers
+- syntactically valid records influencing metrics despite invalid business values
+- malformed temporary test structures producing Python type errors
+
+## Lessons Learned
+
+- field presence and field validity are different concerns
+- validation should occur before downstream decision logic
+- invalid records should fail fast
+- `continue` prevents rejected records from affecting later processing
+- separate validation functions improve clarity and maintainability
+- syntactically valid data can still be operationally invalid
+
+---
+
 # Actual Time by Week
 
 ## Week Ending September 27, 2026
@@ -797,12 +882,12 @@ The review identified several unresolved retrieval risks:
 
 | Category | Hours |
 |---|---:|
-| Python / Technical Learning | 3.00 |
+| Python / Technical Learning | 3.50 |
 | Applied AI / Technical Learning | 1.00 |
 | Product / Jira | 1.00 |
 | Dedicated Portfolio Build Block | 0.0 |
 | Weekly Assessment | 0.0 |
-| **Total Focused Time** | **5.00** |
+| **Total Focused Time** | **5.50** |
 
 > Portfolio project hours overlap with technical-learning hours and are therefore tracked separately rather than added again to the weekly total.
 
