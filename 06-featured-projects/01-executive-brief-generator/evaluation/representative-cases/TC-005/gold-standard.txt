@@ -1,0 +1,83 @@
+# TC-005 Gold Standard
+
+## Scenario
+Leadership Decision-State Management
+
+## Business
+Summit Property Services
+
+## Meeting Date
+August 10, 2026
+
+# Executive Brief
+
+**Business / Client:** Summit Property Services
+**Project or Engagement:** Leadership Review
+**Reporting Period:** Current Leadership Decisions
+**Meeting Date:** August 10, 2026
+**Overall Status:** Not Determined
+
+## 1. Executive Summary
+
+Leadership discussed management capacity, budget reallocation, sales hiring, pricing, and weekend service. A second operations-manager hire remains unapproved pending review of September revenue projections. The proposed $50,000 equipment-to-sales budget reallocation was initially considered conditionally but is now on hold pending confirmation of two vehicle replacements totaling approximately $42,000. Sales may open two additional account-executive positions, but final offers may not be issued until the budget question is resolved. Weekend service remains unchanged for now, and no pricing increase was approved.
+
+## 2. Key Updates
+
+| Area | Update | Impact / Significance |
+|---|---|---|
+| Management Staffing | Second operations-manager hire remains unapproved. | Decision deferred pending September revenue projections. |
+| Budget | Proposed $50,000 reallocation is on hold. | Final sales offers remain restricted. |
+| Sales Hiring | Two account-executive positions may be opened. | Final offers are not authorized yet. |
+| Pricing | 4% and 3% options were discussed. | No pricing decision made. |
+| Cash | Reserves are approximately $620,000 against a $500,000 internal minimum. | Reported reserves remain above internal minimum. |
+| Operations | Weekend service remains unchanged for now. | Territory profitability will be reviewed in September. |
+
+## 3. Decisions
+
+| Decision / Item | Decision-Maker | Current State | Effective Date / Condition |
+|---|---|---|---|
+| Hire second operations manager. | Olivia | Deferred | Pending September revenue projections |
+| Reallocate $50,000 from equipment to sales hiring. | Olivia | On Hold | Pending confirmation of vehicle requirements |
+| Open two account-executive positions. | Olivia | Approved | Not specified |
+| Issue final offers for account-executive positions. | Olivia | Conditionally Restricted | Budget reallocation question must be resolved |
+| Pricing increase. | Olivia | Deferred / No Decision | Competitor data required |
+| Keep weekend service unchanged. | Olivia | Approved | For now |
+| Review territory profitability. | Olivia | Approved Follow-Up | September |
+
+## 4. Risks and Issues
+
+| Type | Item | Impact / Status | Action Owner | Response |
+|---|---|---|---|---|
+| Issue | Budget reallocation remains unresolved. | Final sales offers cannot be issued. | Renee | Confirm vehicle requirements by August 14. |
+| Risk | Management capacity may be insufficient before Q4. | Impact not explicitly stated. | Owner not assigned | Decision deferred pending projections. |
+
+## 5. Action Tracker
+
+| Action | Party | Owner | Deadline | Dependency / Condition | Status |
+|---|---|---|---|---|---|
+| Confirm whether both planned vehicle replacements remain necessary. | Summit | Renee | August 14 | None stated | Not Determined |
+| Prepare competitor pricing data. | Summit | Daniel | Before August 17 meeting | None stated | Not Determined |
+
+## 6. Leadership Attention Required
+
+- Resolve equipment-to-sales budget reallocation.
+- Decide whether a second operations manager is required after revenue projections are reviewed.
+- Review competitor pricing before deciding on new-customer pricing.
+- Review territory profitability in September.
+
+## 7. Open Questions
+
+- Are both planned vehicle replacements necessary?
+- Can $50,000 be reallocated to sales hiring?
+- When can final sales offers be authorized?
+- Will leadership approve a pricing increase?
+- Is another operations manager needed before Q4?
+
+## 8. Validation Notes
+
+- Initial conditional comfort with budget reallocation was superseded by a later on-hold decision.
+- Opening positions is approved; issuing final offers is not.
+- No pricing decision was made.
+- No second operations-manager hire was approved.
+
+**REVIEW STATUS:** HUMAN-APPROVED GOLD STANDARD

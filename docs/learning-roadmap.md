@@ -105,7 +105,7 @@ The portfolio should demonstrate the ability to compare:
 - cost
 - reliability
 
-This problem is addressed primarily through the **AI Experimentation & Model Selection Lab**.
+This problem is addressed primarily through the **Executive Brief Generator**, where model behavior, prompt revisions, evaluation criteria, regression testing, and promotion decisions are tested through controlled operational cases.
 
 ---
 
@@ -421,7 +421,7 @@ Where applicable, projects should evaluate:
 | AI Support Triage System | Supporting | Establish technical baseline and compare rules vs. ML |
 | AI Workflow Opportunity & ROI Analyzer | Flagship | Demonstrate AI opportunity discovery and prioritization |
 | Document Q&A RAG Assistant | Flagship | Demonstrate retrieval quality, grounding, reranking, evidence evaluation, and launch-readiness decisions |
-| AI Experimentation & Model Selection Lab | Flagship | Demonstrate controlled experimentation and model selection |
+| Executive Brief Generator | Flagship | Demonstrate AI workflow design, controlled evaluation, regression discipline, human-in-the-loop controls, and product promotion decisions |
 | Agentic Workflow Guardrail Simulator | Supporting | Demonstrate autonomy, governance, and human oversight |
 
 
@@ -544,7 +544,7 @@ Primary focus:
 Primary initiatives:
 
 - Document Q&A RAG Assistant
-- AI Experimentation & Model Selection Lab
+- Executive Brief Generator
 - Agentic Workflow Guardrail Simulator
 
 Primary outcomes:
@@ -732,15 +732,15 @@ Evaluate retrieval relevance, reranking quality, evidence completeness, groundin
 
 ---
 
-### AI Experimentation & Model Selection Lab
+### Executive Brief Generator
 
 Assumption:
 
-> A structured evaluation framework produces better model-selection decisions than anecdotal testing.
+> A two-stage AI workflow with explicit evaluation, regression testing, and human approval can produce more reliable executive-ready output from messy operational information than direct single-pass generation.
 
 Validation:
 
-Compare multiple configurations against the same golden dataset.
+Evaluate structured extraction quality, grounding, ownership accuracy, decision-state preservation, approval integrity, unsupported inference, regression behavior, and Stage-2 executive-brief quality across controlled synthetic operational cases.
 
 ---
 

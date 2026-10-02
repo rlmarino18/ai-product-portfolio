@@ -1,0 +1,112 @@
+HarborView Property Services
+Implementation Review
+August 12, 2026
+
+Attendees:
+Alicia Grant — General Manager
+Marcus Lee — Operations Director
+Jenna Cole — Project Manager
+Ravi Patel — Finance Lead
+Owen Brooks — Client Success Manager
+
+The team reviewed the rollout of the new work-order intake process.
+
+Jenna said the pilot originally planned for August 18 was moved to August 21 because two supervisors will be out earlier in the week.
+
+Marcus said the team should still aim for August 21.
+
+Alicia agreed that August 21 is the current target.
+
+The pilot setup checklist contains 24 items.
+
+Jenna said 17 items are complete.
+
+Four items are in progress.
+
+Three have not started.
+
+One of the incomplete items is supervisor training.
+
+Training was originally scheduled for Friday.
+
+Marcus said that will not work because one supervisor is unavailable.
+
+Jenna suggested moving the training to next Monday.
+
+Alicia approved moving supervisor training to next Monday.
+
+Jenna said training materials are already complete.
+
+The access-permission update is still in progress.
+
+Owen said IT told him the permission changes should be finished tomorrow, but he has not received confirmation.
+
+No formal completion date was committed by IT.
+
+The pilot cannot begin until the access-permission update is complete.
+
+Jenna said she will verify the permissions once IT confirms the change.
+
+The team also discussed the client notification email.
+
+Owen drafted the email last week.
+
+Alicia previously approved the draft.
+
+During today's meeting, Marcus asked that the email be held until the pilot date is confirmed.
+
+Alicia agreed to hold the notification.
+
+The prior approval to send the email is therefore no longer active.
+
+Owen should not send the client notification until Alicia authorizes release.
+
+Ravi reported pilot-related spending of approximately $14,600 so far.
+
+The original pilot budget was $18,000.
+
+Ravi said there may be another $2,000 to $3,000 in temporary labor costs depending on next week's staffing.
+
+Marcus said, "Approve the extra labor if we need it."
+
+Alicia responded that no additional labor spending should be approved yet and asked Ravi to bring back the staffing estimate first.
+
+No additional temporary-labor budget was approved.
+
+Ravi will provide the staffing-cost estimate by Friday.
+
+Marcus also asked whether two contract coordinators could be added for the first week of the pilot.
+
+Jenna said that would probably help, but nobody assigned an owner to evaluate the request.
+
+No decision was made on adding contract coordinators.
+
+Three legacy work-order forms are still being used by one field team.
+
+Marcus said, "Stop using those forms tomorrow."
+
+It was not clear from the notes whether Marcus was issuing an authorized directive or expressing what he wanted the team to do.
+
+Alicia did not explicitly approve or reject the statement during the meeting.
+
+Jenna said she will confirm the transition plan with the field supervisor before changing anything.
+
+Jenna will report back at the next review.
+
+The new intake dashboard is already live for the pilot group.
+
+Jenna said usage is around 70%.
+
+She expects usage to be above 90% by the end of next week, but that is an expectation rather than a formal target.
+
+Owen said several users told him the dashboard is easier to use than the old spreadsheet.
+
+No formal user-satisfaction survey has been completed.
+
+The next implementation review was initially scheduled for August 19.
+
+Because the pilot moved, Alicia approved moving the next review to August 20.
+
+The August 19 review date is superseded.
+
+The current review date is August 20, 2026.

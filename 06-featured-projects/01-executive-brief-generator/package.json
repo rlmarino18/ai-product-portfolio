@@ -1,0 +1,28 @@
+{
+  "name": "executive-brief-generator",
+  "version": "1.0.0",
+  "description": "The Executive Brief Generator is an AI-assisted operational workflow that converts messy business information into structured, executive-ready output.",
+  "main": "index.js",
+  "directories": {
+    "doc": "docs"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/rlmarino18/executive-brief-generator.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/rlmarino18/executive-brief-generator/issues"
+  },
+  "homepage": "https://github.com/rlmarino18/executive-brief-generator#readme",
+  "dependencies": {
+    "dotenv": "^17.4.2",
+    "openai": "^7.5.0"
+  }
+}

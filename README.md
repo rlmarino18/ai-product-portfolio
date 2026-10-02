@@ -221,21 +221,40 @@ Iteration
 
 # Featured Projects
 
-## 1. AI Workflow Opportunity & ROI Analyzer
+## 1. Executive Brief Generator
 **Type:** Flagship  
-**Status:** Planned
+**Status:** In Progress
 
-Evaluates operational workflows to determine where AI or automation may create measurable value.
+An AI-assisted operational workflow that converts messy business information into structured records and executive-ready briefs through a two-stage, human-reviewed pipeline.
 
-Focus areas include:
+Current capabilities include:
 
-- workflow discovery
-- AI opportunity identification
-- business-value estimation
-- implementation complexity
-- prioritization
-- ROI reasoning
-- recommendation quality
+- structured extraction from unstructured operational notes
+- source-evidence preservation
+- ownership and decision-state tracking
+- dependency and approval-gate handling
+- human review between Stage 1 and Stage 2
+- executive brief generation
+- prompt versioning and promotion gates
+- defect tracking
+- targeted and broader regression testing
+- representative evaluation cases
+- browser-based frontend
+- Node.js backend
+- live API-based model execution
+- failure-state preservation and retry behavior
+
+The project is also used to evaluate:
+
+- factual correctness
+- grounding quality
+- attribution accuracy
+- unsupported inference
+- decision-state preservation
+- approval integrity
+- regression behavior
+- human-in-the-loop workflow design
+- prototype-to-production trade-offs
 
 ---
 
@@ -272,22 +291,21 @@ The project is also used to evaluate:
 
 ---
 
-## 3. AI Experimentation & Model Selection Lab
+## 3. AI Workflow Opportunity & ROI Analyzer
 **Type:** Flagship  
 **Status:** Planned
 
-Demonstrates structured comparison of AI configurations using controlled evaluation rather than anecdotal testing.
+Evaluates operational workflows to determine where AI or automation may create measurable value.
 
 Focus areas include:
 
-- model comparison
-- prompt comparison
-- evaluation datasets
-- quality metrics
-- latency
-- cost
-- failure analysis
-- product recommendations
+- workflow discovery
+- AI opportunity identification
+- business-value estimation
+- implementation complexity
+- prioritization
+- ROI reasoning
+- recommendation quality
 
 ---
 

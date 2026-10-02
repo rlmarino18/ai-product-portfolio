@@ -1,0 +1,28 @@
+TEST ID: TC-002
+SCENARIO: Conflicting and Ambiguous Operating Data
+
+BUSINESS: NorthStar Home Services
+MEETING DATE: August 10, 2026
+PARTICIPANTS: Elena, Owner; Marcus, Operations Manager; Priya, Finance Lead; Jordan, Sales Manager
+
+SOURCE MATERIAL:
+
+July revenue closed at approximately $186,000. The original target was $200,000, although Marcus said the operating plan he has shows a revised target of $190,000. Priya said finance has not confirmed that revised target yet.
+
+Customer cancellations increased during the last two weeks. Jordan estimated there were 14 cancellations, but Elena said she thought the number was closer to 11. The team agreed the exact number needs to be confirmed before the next review.
+
+Three field technicians have exceeded normal overtime levels. Marcus believes this is related to two open technician positions and increased weekend demand. Priya said overtime expense is approximately $8,400 for the month so far.
+
+Elena suggested pausing weekend appointments for two weeks, but Marcus disagreed because weekend work is generating strong revenue. No decision was made.
+
+The company is evaluating a new scheduling platform. Jordan said the sales team prefers ServiceFlow. Marcus prefers keeping the existing system until September. Elena asked Marcus and Jordan to compare both options and present a recommendation at the next leadership meeting.
+
+Priya raised a concern that one commercial customer with an outstanding balance of $18,500 is now 42 days overdue. Elena told Priya to contact the customer today and send a final payment notice. Priya should escalate the issue to Elena if payment is not received by Friday.
+
+Marcus said the technician hiring process has produced six applicants. Two interviews are scheduled Wednesday. Elena said she wants at least one new technician hired before September 1, but no specific person was assigned ownership for making the final hire.
+
+Jordan reported 78 inbound leads this month. He initially said 31 had converted, but later corrected himself and said 29 had converted. The CRM currently shows 30 conversions. Jordan said he would reconcile the discrepancy by Thursday.
+
+Elena said leadership needs better visibility into cancellations, overtime, hiring, and collections before deciding whether to change weekend scheduling.
+
+Next leadership meeting is August 17.

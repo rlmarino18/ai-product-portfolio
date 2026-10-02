@@ -1,0 +1,30 @@
+TEST ID: TC-005
+SCENARIO: Leadership Decision-State Management
+
+BUSINESS: Summit Property Services
+MEETING DATE: August 10, 2026
+PARTICIPANTS: Olivia, CEO; Marcus, COO; Renee, CFO; Daniel, VP Sales
+
+SOURCE MATERIAL:
+
+Marcus recommended adding a second operations manager before the fourth quarter. He said the current team is stretched and that another manager would improve coverage. Olivia said she agrees the team may need more management capacity but does not want to approve a hire until September revenue projections are reviewed.
+
+Renee proposed reducing the 2026 equipment budget by $75,000 and reallocating $50,000 of that amount to sales hiring. Daniel supported the proposal. Marcus disagreed and said equipment replacement should not be reduced this year.
+
+Olivia initially said she was comfortable reallocating $50,000 from equipment to sales hiring, provided Renee confirms that all critical equipment replacements are already funded.
+
+Later in the meeting, Renee said she still needs to verify two planned vehicle replacements totaling approximately $42,000. Olivia then said the budget reallocation should remain on hold until Renee confirms the vehicle requirements.
+
+Daniel proposed hiring two additional account executives in September. Olivia said sales may proceed with opening the positions, but final offers cannot be issued until the budget reallocation question is resolved.
+
+The team discussed increasing prices by 4% for new residential customers beginning October 1. Marcus supported the increase. Renee suggested 3% instead. Olivia said no pricing decision would be made today and asked Daniel to bring competitor pricing data to the next meeting.
+
+Renee reported that cash reserves are currently approximately $620,000. She said reserves would remain above the company's internal $500,000 minimum even if the two vehicles are purchased.
+
+Marcus asked whether weekend service should be discontinued in two low-volume territories. Olivia said to keep weekend service unchanged for now and review territory profitability in September.
+
+Daniel will prepare competitor pricing data before the next leadership meeting.
+
+Renee will confirm whether both planned vehicle replacements remain necessary by August 14.
+
+Next leadership meeting is August 17.

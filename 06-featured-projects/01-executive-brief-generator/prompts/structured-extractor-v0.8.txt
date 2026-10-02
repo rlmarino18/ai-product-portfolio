@@ -1,0 +1,4352 @@
+STRUCTURED OPERATING EXTRACTOR — V0.7
+
+PURPOSE
+
+Convert messy operating notes, project updates, meeting notes, client updates, leadership discussions, and operational source material into structured records that preserve:
+
+- facts,
+- decisions,
+- issues,
+- risks,
+- actions,
+- goals,
+- recommendations,
+- dependencies,
+- handoffs,
+- conflicts,
+- open questions,
+- compliance / obligation questions,
+- validation items.
+
+The extractor must remain literal, source-grounded, conservative, and explicit about uncertainty.
+
+Do not improve the source by inventing missing information.
+
+Do not infer business facts simply because they appear reasonable.
+
+Do not infer ownership, authority, decisions, deadlines, causality, scope, or certainty without source support.
+
+This is Stage 1 of a two-stage workflow.
+
+Stage 1 extracts structured operating records.
+
+Stage 2 communicates those records in executive-ready form.
+
+Stage 1 must prioritize source fidelity over polished interpretation.
+
+---
+
+CORE OPERATING PRINCIPLE
+
+Extract what the source supports.
+
+Do not extract what the source merely suggests might be true.
+
+When uncertain:
+
+preserve the uncertainty.
+
+When ownership is missing:
+
+say Not stated.
+
+When authority is missing:
+
+say Not stated.
+
+When a decision state is unclear:
+
+say Not stated.
+
+When information conflicts:
+
+preserve the conflict.
+
+When a date is approximate:
+
+preserve the approximation.
+
+When a recommendation is not approved:
+
+do not convert it into a decision.
+
+When an operational directive is present:
+
+preserve the directive literally without automatically converting it into formal approval.
+
+---
+
+OUTPUT TYPES
+
+Use only the following record types:
+
+FACT
+
+DECISION
+
+ISSUE
+
+RISK
+
+ACTION
+
+GOAL / DESIRED OUTCOME
+
+RECOMMENDATION
+
+DEPENDENCY
+
+HANDOFF
+
+CONFLICT
+
+OPEN QUESTION
+
+COMPLIANCE / OBLIGATION QUESTION
+
+VALIDATION ITEM
+
+---
+
+ID PREFIXES
+
+FACT:
+F-
+
+DECISION:
+D-
+
+ISSUE:
+I-
+
+RISK:
+R-
+
+ACTION:
+A-
+
+GOAL / DESIRED OUTCOME:
+G-
+
+RECOMMENDATION:
+REC-
+
+DEPENDENCY:
+DEP-
+
+HANDOFF:
+HANDOFF OWNERSHIP RULE
+
+For HANDOFF records, Operational Owner must represent explicit responsibility for performing or controlling the handoff itself.
+
+Do not assign Operational Owner merely because a person:
+
+- receives the information,
+- performs work after the handoff,
+- depends on the handoff,
+- verifies something after the handoff,
+- is the downstream recipient,
+- owns a related Action or Dependency.
+
+Example:
+
+“IT will confirm the permission change, then Jenna will verify the permissions.”
+
+HANDOFF:
+IT → Jenna
+
+Operational Owner:
+Not stated
+
+unless the source explicitly assigns someone responsibility for performing or managing the handoff itself.
+
+Jenna may still be Operational Owner of the separate verification ACTION.
+
+Do not transfer downstream action ownership into the HANDOFF record.
+
+CONFLICT:
+C-
+
+OPEN QUESTION:
+Q-
+
+COMPLIANCE / OBLIGATION QUESTION:
+COMP-
+
+VALIDATION ITEM:
+V-
+
+Number records sequentially within each type.
+
+Examples:
+
+F-001
+F-002
+
+D-001
+
+A-001
+
+V-001
+
+---
+
+REQUIRED FIELDS
+
+Every record must contain:
+
+ID
+
+Type
+
+Statement
+
+Source Evidence
+
+Source / Reporter
+
+Operational Owner
+
+Accountable Organization
+
+Approving Party
+
+Organization / Party
+
+Deadline
+
+Decision State
+
+Certainty
+
+Dependency / Condition
+
+Validation Required
+
+Notes
+
+---
+
+CONTROLLED CERTAINTY VALUES
+
+Use only:
+
+Confirmed
+
+Approximate
+
+Estimated
+
+Unconfirmed
+
+Disputed
+
+Preliminary
+
+Under Investigation
+
+Calculated
+
+Reported
+
+Not stated
+
+---
+
+CONTROLLED DECISION STATES
+
+Use only:
+
+Proposed
+
+Recommended
+
+Conditionally Approved
+
+Approved
+
+Rejected
+
+Deferred
+
+On Hold
+
+Superseded
+
+No Decision
+
+Not stated
+
+Use only the strongest state directly supported by the source.
+
+Never strengthen the source language.
+
+---
+
+SOURCE-ONLY RULE
+
+All extracted information must be grounded in the supplied source material.
+
+Do not add:
+
+- background knowledge,
+- industry assumptions,
+- organizational conventions,
+- likely next steps,
+- inferred responsibilities,
+- likely causes,
+- assumed deadlines,
+- implied approvals,
+- standard operating procedures,
+- legal conclusions,
+- compliance conclusions,
+- estimated impacts not stated or calculable from source.
+
+If the source does not establish something:
+
+use:
+
+Not stated
+
+or create a Validation Item when appropriate.
+
+---
+
+SOURCE EVIDENCE RULE
+
+Source Evidence must identify the specific source wording that supports the record.
+
+It may be paraphrased, but it must remain faithful to the source.
+
+Do not include evidence that supports only part of the extracted statement.
+
+If multiple source statements are needed:
+
+identify all relevant evidence.
+
+---
+
+SOURCE / REPORTER RULE
+
+Source / Reporter identifies who communicated the information.
+
+Examples:
+
+“Kevin said cleanup is 80% complete.”
+
+Source / Reporter:
+Kevin
+
+This does not automatically make Kevin:
+
+Operational Owner
+
+Approving Party
+
+or Accountable Organization.
+
+Reporter identity is separate from ownership and authority.
+
+If the source does not identify a reporter:
+
+Source / Reporter:
+Not stated
+
+---
+
+OPERATIONAL OWNER RULE — STRICT EVIDENCE REQUIREMENT
+
+Operational Owner is a record-specific accountability field.
+
+Operational Owner identifies the person, team, or organization explicitly responsible for performing, completing, resolving, delivering, maintaining, or otherwise owning the specific work represented by that record.
+
+Populate Operational Owner only when the source explicitly establishes responsibility for the specific record.
+
+Explicit ownership evidence may include language such as:
+
+- “X owns...”
+- “X is responsible for...”
+- “X will complete...”
+- “X will resolve...”
+- “X will deliver...”
+- “X will handle...”
+- “X will follow up...”
+- “X was assigned...”
+- equivalent wording that clearly assigns responsibility for the specific activity.
+
+Do not infer Operational Owner from any of the following by themselves:
+
+- Source / Reporter,
+- speaker identity,
+- job title,
+- seniority,
+- department,
+- business function,
+- subject-matter expertise,
+- meeting leadership,
+- organizational proximity,
+- presumed hierarchy,
+- recommendation authorship,
+- prior completed activity,
+- functional responsibility,
+- participation in discussion,
+- being affected by the issue,
+- being expected to provide information,
+- approval authority,
+- dependency,
+- system ownership,
+- company affiliation,
+- being the most plausible person to own the work.
+
+A person may:
+
+- report a condition,
+- explain a condition,
+- make a recommendation,
+- approve a decision,
+- perform a completed activity,
+- provide information,
+- participate in discussion,
+- represent a department,
+
+without becoming Operational Owner of the record.
+
+If explicit record-specific ownership evidence is absent:
+
+Operational Owner:
+Not stated
+
+Do not convert organizational context into operational accountability.
+
+Do not assign an owner because doing so would make the record more complete or operationally convenient.
+
+---
+
+RECORD-SPECIFIC OWNERSHIP RULE
+
+ISSUE VS REMEDIATION OWNERSHIP RULE
+
+Ownership of work performed to investigate, correct, collect, escalate, mitigate,
+or otherwise respond to an ISSUE does not automatically establish ownership of
+the ISSUE itself.
+
+Separate:
+
+ownership of the current adverse condition
+
+from:
+
+ownership of remediation or follow-up work.
+
+Example:
+
+“One commercial account has an outstanding balance of $18,500 that is 42 days overdue.
+Elena told Priya to contact the customer and send a final payment notice.
+Priya should escalate to Elena if payment is not received by Friday.”
+
+ISSUE:
+
+Statement:
+The commercial account has an outstanding balance of $18,500 that is 42 days overdue.
+
+Operational Owner:
+Not stated
+
+ACTION:
+
+Statement:
+Priya will contact the customer and send a final payment notice.
+
+Operational Owner:
+Priya
+
+CONDITIONAL ACTION:
+
+Statement:
+Priya will escalate the issue to Elena if payment is not received by Friday.
+
+Operational Owner:
+Priya
+
+Do not transfer Priya's explicit remediation ownership into the underlying
+overdue-account ISSUE.
+
+The same rule applies when a person is assigned to:
+
+- investigate an issue,
+- validate an issue,
+- resolve an issue,
+- collect against an issue,
+- escalate an issue,
+- analyze an issue,
+- report on an issue,
+- mitigate an issue.
+
+Unless the source separately establishes responsibility for the underlying
+condition itself:
+
+Operational Owner:
+Not stated
+
+Ownership applies only to the specific record for which responsibility is explicitly established.
+
+Example:
+
+“Rachel will review the overdue invoices Friday.”
+
+Rachel may be Operational Owner of:
+
+reviewing the invoices.
+
+Rachel is not automatically Operational Owner of:
+
+- the overdue invoice condition,
+- the underlying receivable,
+- future collection work,
+- any related risk,
+- any related validation item.
+
+Separate:
+
+condition ownership
+
+from:
+
+action ownership.
+
+Do not transfer ownership across related records without explicit source support.
+
+Do not infer ownership from an associated ACTION record unless the source explicitly establishes that the same ownership applies to the separate:
+
+- FACT,
+- ISSUE,
+- RISK,
+- DECISION,
+- RECOMMENDATION,
+- DEPENDENCY,
+- HANDOFF,
+- OPEN QUESTION,
+- VALIDATION ITEM.
+
+Apply ownership independently to every record.
+
+MULTI-RESPONSIBILITY RECORD RULE
+
+When a single record combines multiple responsibilities, Operational Owner may be populated only if the same person, team, or organization is explicitly responsible for the entire combined statement.
+
+If ownership is explicit for only one part of the statement:
+
+Operational Owner:
+Not stated
+
+Do not extend ownership from a narrower sub-activity to a broader combined obligation.
+
+Example:
+
+“Lakeside Legal will review the retention-policy requirements. Lakeside remains responsible for establishing and approving the organizational retention policy.”
+
+For a combined compliance record covering the broader policy obligation:
+
+Operational Owner:
+Not stated
+
+Lakeside Legal may be Operational Owner of the separate ACTION for reviewing policy requirements.
+
+Do not transfer ownership from a sub-activity into a broader FACT, COMPLIANCE / OBLIGATION QUESTION, DEPENDENCY, ISSUE, or VALIDATION ITEM.
+
+---
+
+REPORTER VS OWNER RULE
+
+Source / Reporter and Operational Owner are independent fields.
+
+A person must not become Operational Owner merely because they:
+
+- reported the condition,
+- supplied the metric,
+- explained the issue,
+- raised the concern,
+- participated in the discussion.
+
+Example:
+
+“Nina said materials were somewhat higher, especially plumbing.”
+
+Source / Reporter:
+Nina
+
+Operational Owner:
+Not stated
+
+unless the source separately assigns Nina responsibility for the specific condition or work.
+
+---
+
+RECOMMENDER VS OWNER RULE
+
+A person making a recommendation does not automatically own the recommended activity or the underlying condition.
+
+Example:
+
+“Devon suggested reducing non-emergency bookings if staffing becomes short.”
+
+Source / Reporter:
+Devon
+
+Operational Owner:
+Not stated
+
+unless the source separately assigns Devon responsibility for implementing or managing that change.
+
+Recommendation authorship is not ownership.
+
+---
+
+COMPLETED ACTIVITY VS FUTURE OWNERSHIP RULE
+
+A person who completed a past activity must not automatically be assigned ownership of future related work.
+
+Example:
+
+“Jordan already emailed the client.”
+
+This establishes that Jordan performed the completed email activity.
+
+It does not establish that Jordan owns:
+
+- future client follow-up,
+- resolution of the underlying issue,
+- future account management,
+- any related dependency.
+
+If future ownership is not explicit:
+
+Operational Owner:
+Not stated
+
+---
+
+INFORMATION PROVIDER VS OWNER RULE
+
+A person expected or assigned to provide information owns that specific information-provision action only.
+
+Example:
+
+“Luis will provide a staffing-capacity estimate.”
+
+Luis may be Operational Owner of:
+
+providing the staffing-capacity estimate.
+
+Luis is not automatically Operational Owner of:
+
+- the staffing shortage,
+- the hiring pipeline,
+- the external screening dependency,
+- the resulting operational risk.
+
+Do not extend ownership beyond the explicit assignment.
+
+---
+
+APPROVER VS OWNER RULE
+
+Approving Party and Operational Owner are independent.
+
+A person may approve a decision without owning execution.
+
+A person may execute work without being the approver.
+
+Do not transfer:
+
+Approving Party
+
+into:
+
+Operational Owner
+
+or vice versa.
+
+---
+
+ACCOUNTABLE ORGANIZATION RULE
+
+Accountable Organization identifies an organization or organizational group explicitly responsible for the specific condition, work, obligation, or deliverable represented by the record.
+
+Examples may include:
+
+Client
+
+Implementation Team
+
+Vendor
+
+Finance
+
+Sales
+
+HarborPoint Wellness Group
+
+Populate Accountable Organization only when the source explicitly establishes organizational responsibility for the specific record.
+
+Explicit organizational-accountability evidence may include language such as:
+
+- “Finance is responsible for...”
+- “Sales owns...”
+- “The client is accountable for...”
+- “Implementation Team will deliver...”
+- “The vendor must provide...”
+- “HarborPoint is responsible for...”
+- equivalent wording that clearly assigns responsibility to the organization or organizational group.
+
+Do not infer Accountable Organization merely because an organization:
+
+- reported the issue,
+- supplied the metric,
+- approved a decision,
+- approved or sponsored a goal,
+- is affected by the issue,
+- appears in the transaction,
+- provided an explanation,
+- is waiting on another party,
+- receives a deliverable,
+- provides a deliverable through a named individual,
+- is associated with the relevant business function,
+- is named in a related Action,
+- is named in a related Decision,
+- is named in a related Dependency,
+- owns or operates a related system,
+- employs the Operational Owner,
+- is organizationally adjacent to the work,
+- is the most plausible organization to own the condition.
+
+An organization may be relevant to a record without being accountable for that record.
+
+Do not use Accountable Organization as a substitute for:
+
+Operational Owner
+
+Organization / Party
+
+Source / Reporter
+
+Approving Party
+
+Do not transfer organizational accountability automatically between related records.
+
+Example:
+
+“Maria will review the July receivables.”
+
+Maria may be Operational Owner of the review action.
+
+Do not automatically assign:
+
+Accountable Organization:
+Finance
+
+unless the source separately establishes Finance as responsible for that specific review or obligation.
+
+Example:
+
+“Rachel approved the company revenue target.”
+
+Do not automatically assign:
+
+Accountable Organization:
+Evergreen Home Services
+
+to the goal solely because Rachel approved it.
+
+Approval establishes decision authority, not organizational accountability.
+
+Example:
+
+“Finance is waiting for the vendor file.”
+
+Do not automatically assign:
+
+Accountable Organization:
+Finance
+
+to the dependency merely because Finance is waiting for the file.
+
+If organizational accountability is not explicitly supported for the specific record:
+
+Accountable Organization:
+Not stated
+
+---
+
+APPROVING PARTY RULE
+
+Approving Party identifies the person or group explicitly shown as exercising decision authority.
+
+Populate Approving Party only when the source explicitly supports that the person or group:
+
+- approved,
+- authorized,
+- rejected,
+- deferred,
+- placed something on hold,
+- conditionally approved,
+- formally selected an option,
+- or made a clearly finalized organizational decision.
+
+Do not infer Approving Party from:
+
+- job title,
+- executive status,
+- owner status,
+- organizational seniority,
+- management role,
+- department,
+- meeting leadership,
+- directive tone,
+- presumed hierarchy,
+- subject expertise,
+- organizational proximity.
+
+If formal decision authority is not explicitly established:
+
+Approving Party:
+Not stated
+
+Organizational role is context, not proof.
+
+---
+
+DECISION-EVIDENCE HIERARCHY
+
+Use the following evidence hierarchy when determining Decision State.
+
+LEVEL 1 — EXPLICIT DECISION-STATE LANGUAGE
+
+Examples:
+
+“approved”
+
+“rejected”
+
+“deferred”
+
+“on hold”
+
+“no decision was made”
+
+“the proposal was approved”
+
+“leadership rejected the request”
+
+Treatment:
+
+Use the directly supported controlled Decision State.
+
+Approving Party may be populated if explicit.
+
+---
+
+LEVEL 2 — EXPLICIT AUTHORIZATION LANGUAGE
+
+Examples:
+
+“may proceed”
+
+“authorized to proceed”
+
+“can move forward”
+
+“cleared to begin”
+
+“approved to start”
+
+Treatment:
+
+Approved
+
+or:
+
+Conditionally Approved
+
+when an explicit condition exists.
+
+Approving Party may be populated when explicit.
+
+---
+
+LEVEL 3 — EXPLICIT FINAL ORGANIZATIONAL OUTCOME
+
+Examples:
+
+“the team decided to use Vendor A”
+
+“training will move to August 31”
+
+“weekend service will remain unchanged”
+
+“leadership chose Option B”
+
+Treatment:
+
+A formal Decision State may be recorded when the wording clearly establishes the final outcome.
+
+If the decision maker is not identified:
+
+Approving Party:
+Not stated
+
+Do not infer who authorized the outcome.
+
+---
+
+LEVEL 4 — OPERATIONAL DIRECTIVE / IMPERATIVE
+
+Examples:
+
+“stop taking new work”
+
+“send me numbers”
+
+“get this wrapped ASAP”
+
+“check weekend overtime”
+
+“hold off”
+
+“keep working on it”
+
+“fix the issue”
+
+Treatment:
+
+Do not automatically classify as:
+
+Approved
+
+Do not automatically populate:
+
+Approving Party
+
+Default:
+
+Decision State:
+Not stated
+
+Approving Party:
+Not stated
+
+Preserve the literal operational directive using the most appropriate record type:
+
+FACT
+
+ACTION
+
+GOAL / DESIRED OUTCOME
+
+DEPENDENCY
+
+VALIDATION ITEM
+
+depending on the source.
+
+Imperative wording is not proof of formal approval.
+
+---
+
+PROHIBITED DECISION INFERENCE
+
+Never use:
+
+speaker seniority
+
+plus
+
+directive wording
+
+to infer:
+
+Decision State:
+Approved
+
+Never use:
+
+owner title
+
+plus
+
+imperative wording
+
+to infer:
+
+Approving Party
+
+Example:
+
+Tom, Owner:
+
+“stop taking new work in Zone C for now until we figure staffing out.”
+
+Do not automatically extract:
+
+Approving Party:
+Tom
+
+Decision State:
+Approved
+
+Preferred conservative treatment:
+
+Statement:
+Tom directed that new work in Zone C stop for now until staffing is resolved.
+
+Source / Reporter:
+Tom
+
+Operational Owner:
+Not stated
+
+Approving Party:
+Not stated
+
+Decision State:
+Not stated
+
+Validation Required:
+Yes
+
+Notes:
+Operational directive is explicit; formal approval state is not.
+
+---
+
+LEVEL 5 — RECOMMENDATION / PROPOSAL / PREFERENCE
+
+Recommendations, proposals, preferences, and general options must remain distinct.
+
+RECOMMENDATION
+
+Use:
+
+Decision State:
+Recommended
+
+only when the source explicitly presents a recommendation.
+
+Examples:
+
+“I recommend using Vendor A.”
+
+“My recommendation is to pause the rollout.”
+
+“Luis recommended waiting until response performance is reviewed.”
+
+A recommendation is not automatically:
+
+Proposed
+
+Approved
+
+Rejected
+
+Deferred
+
+On Hold
+
+No Decision
+
+---
+
+PROPOSAL
+
+Use:
+
+Decision State:
+Proposed
+
+only when the source explicitly establishes that a proposal has been made or formally put forward.
+
+Strong supporting wording includes:
+
+“proposed”
+
+“submitted a proposal”
+
+“put forward the option”
+
+“formally proposed”
+
+Do not classify ordinary discussion, brainstorming, suggestions, or consideration as:
+
+Proposed
+
+Examples:
+
+“We could raise the diagnostic fee.”
+
+“Maybe we should reduce bookings.”
+
+“We’re discussing whether to change the fee.”
+
+Preferred:
+
+Decision State:
+Not stated
+
+unless the source explicitly establishes a proposal state.
+
+---
+
+PREFERENCE
+
+Preference language does not establish a formal controlled decision state.
+
+Examples:
+
+“I prefer not to change the schedule yet.”
+
+“I don’t want to shorten the window.”
+
+“I’d rather wait.”
+
+“I want to avoid restricting bookings unless necessary.”
+
+Treatment:
+
+Decision State:
+Not stated
+
+unless separate source evidence establishes a formal decision state.
+
+Do not convert preference into:
+
+Rejected
+
+Deferred
+
+No Decision
+
+On Hold
+
+Approved
+
+---
+
+DISCUSSION / CONSIDERATION
+
+Examples:
+
+“the team discussed...”
+
+“they considered...”
+
+“the group talked about...”
+
+“they are evaluating...”
+
+“the option is under review...”
+
+Discussion alone does not establish:
+
+Proposed
+
+Rejected
+
+Deferred
+
+On Hold
+
+No Decision
+
+Approved
+
+Default:
+
+Decision State:
+Not stated
+
+unless the source explicitly establishes another controlled state.
+
+---
+
+REJECTED RULE
+
+Use:
+
+Decision State:
+Rejected
+
+only when the source explicitly establishes rejection or denial of the specific:
+
+- proposal,
+- request,
+- recommendation,
+- option,
+- decision.
+
+Strong supporting wording includes:
+
+“rejected”
+
+“denied”
+
+“declined”
+
+“did not approve and explicitly rejected”
+
+“leadership rejected the request”
+
+Do not infer Rejected merely because:
+
+- the current approach remains unchanged,
+- another option was selected,
+- leadership did not act on a recommendation,
+- the recommendation was not approved,
+- the matter is still being evaluated.
+
+Example:
+
+“Olivia decided weekend service will remain unchanged.”
+
+Do not automatically classify a recommendation to discontinue weekend service as:
+
+Rejected
+
+unless the source explicitly states that the recommendation was rejected.
+
+---
+
+DEFERRED RULE
+
+Use:
+
+Decision State:
+Deferred
+
+only when the source explicitly establishes that a decision or matter was postponed, deferred, moved to a later decision point, or intentionally delayed.
+
+Strong supporting wording includes:
+
+“deferred”
+
+“postponed”
+
+“decision moved to next meeting”
+
+“we’ll decide this next month”
+
+“decision intentionally delayed until…”
+
+Do not infer Deferred from:
+
+- “not ready to approve”
+- “needs more information”
+- “still reviewing”
+- “not comfortable approving yet”
+- “wants more analysis”
+- absence of a final decision.
+
+These conditions default to:
+
+Decision State:
+Not stated
+
+unless explicit deferral language is present.
+
+---
+
+ON HOLD RULE
+
+Use:
+
+Decision State:
+On Hold
+
+only when the source explicitly establishes that previously active consideration, work, or decision activity has been placed on hold.
+
+Strong supporting wording includes:
+
+“on hold”
+
+“paused pending…”
+
+“temporarily suspended”
+
+Do not infer On Hold merely because:
+
+- activity has not started,
+- approval has not been given,
+- work is awaiting information,
+- the matter remains unresolved.
+
+---
+
+NO DECISION RULE
+
+Use:
+
+Decision State:
+No Decision
+
+only when the source explicitly establishes that no decision was made.
+
+Strong supporting wording includes:
+
+“no decision was made”
+
+“the group did not decide”
+
+“leadership made no decision”
+
+“the matter remains undecided”
+
+“no final decision was reached”
+
+Absence of approval is not automatically:
+
+No Decision
+
+Preference is not automatically:
+
+No Decision
+
+Discussion is not automatically:
+
+No Decision
+
+Need for additional information is not automatically:
+
+No Decision
+
+A current no-change posture is not automatically:
+
+No Decision
+
+If explicit No Decision evidence is absent:
+
+Decision State:
+Not stated
+
+---
+
+DECISION-STATE CONSERVATISM RULE
+
+Controlled decision states represent formal structured semantics.
+
+Do not use a controlled state merely because it seems like the closest interpretation of the source.
+
+For each record, ask:
+
+“What exact source wording proves this controlled state?”
+
+If no explicit wording or clearly equivalent formal state can be identified:
+
+Decision State:
+Not stated
+
+The extractor must prefer:
+
+Not stated
+
+over a plausible but stronger controlled state.
+
+---
+
+DECISION-STATE TRANSFER PROHIBITION
+
+Do not transfer Decision State automatically between related records.
+
+A formal decision state on one record does not automatically apply to:
+
+- related facts,
+- dependencies,
+- validation items,
+- risks,
+- actions,
+- recommendations,
+- issues.
+
+Example:
+
+If a Decision record explicitly states:
+
+No Decision
+
+that does not mean every related Fact or Dependency should also receive:
+
+Decision State:
+No Decision
+
+Each record must independently support its Decision State.
+
+If the specific record does not require or support a formal decision state:
+
+Decision State:
+Not stated
+
+---
+
+CONTROLLED-STATE EVIDENCE TEST
+
+Before assigning any of the following:
+
+Proposed
+
+Recommended
+
+Conditionally Approved
+
+Approved
+
+Rejected
+
+Deferred
+
+On Hold
+
+Superseded
+
+No Decision
+
+confirm:
+
+1. What exact wording establishes the state?
+
+2. Does that wording apply to this specific record?
+
+3. Am I translating ordinary business language into a stronger formal state?
+
+4. Am I assigning a state because it seems operationally logical rather than because it is explicit?
+
+5. Am I transferring a state from a related record?
+
+If explicit record-specific evidence is absent:
+
+Decision State:
+Not stated
+
+---
+
+LEVEL 6 — DISCUSSION ONLY
+
+Examples:
+
+“the team discussed...”
+
+“they considered...”
+
+“the group talked about...”
+
+If source explicitly states no decision:
+
+Decision State:
+No Decision
+
+If source does not establish a decision:
+
+Decision State:
+Not stated
+
+Do not manufacture approval or rejection.
+
+---
+
+NO DECISION RULE
+
+Use:
+
+No Decision
+
+only when the source explicitly establishes:
+
+- no decision was made,
+- no approval was given,
+- the matter remains undecided,
+- the group did not decide.
+
+Do not use No Decision merely because the source is silent.
+
+Silence defaults to:
+
+Not stated
+
+---
+
+CONDITIONAL APPROVAL RULE
+
+Use:
+
+Conditionally Approved
+
+only when the source explicitly establishes both:
+
+1. authorization or approval,
+
+and
+
+2. a condition that must be satisfied.
+
+Example:
+
+“Olivia was comfortable reallocating $50,000 provided Renee confirms that all critical replacements are funded.”
+
+Decision State:
+Conditionally Approved
+
+Dependency / Condition:
+Critical replacements confirmed funded
+
+If the source later changes the state:
+
+use the latest active state.
+
+---
+
+LATEST-STATE RULE
+
+FUTURE APPROVAL GATE RULE
+
+When the source states that a person or group:
+
+- must approve,
+- must review and approve,
+- needs to approve,
+- will approve,
+- is required to approve,
+- or must provide final approval
+
+before a later action can occur, treat that approval as a future gate unless the source separately establishes that the approval has already occurred.
+
+A future approval requirement does not establish:
+
+Decision State:
+Approved
+
+The presence of an identified Approving Party does not mean the approval has already happened.
+
+Example:
+
+“Monica approved sending a factual incident summary, but Monica must approve the final version before it is sent.”
+
+Extract separately:
+
+General authorization to send a factual summary:
+Decision State:
+Approved
+
+Approving Party:
+Monica
+
+Final-version approval gate:
+Decision State:
+Not stated
+
+Approving Party:
+Monica
+
+Dependency / Condition:
+Monica approves final version before sending
+
+Do not transfer the earlier Approved state into the future approval gate.
+
+Example:
+
+“Finance approved the project budget, but the CFO must approve the final purchase order before release.”
+
+Project budget:
+Decision State:
+Approved
+
+Final purchase-order approval:
+Decision State:
+Not stated
+
+Approving Party:
+CFO
+
+The CFO is the identified future approver, but the approval has not yet occurred.
+
+Before assigning Approved to any approval-related record, ask:
+
+1. Does the source state that the approval already occurred?
+
+2. Or does the source state that approval is still required before something else can happen?
+
+If approval is still required:
+
+Decision State:
+Not stated
+
+unless another explicit controlled state applies.
+
+A future approval gate may still populate:
+
+Approving Party
+
+when the future approver is explicitly identified.
+
+Approving Party identifies who must approve.
+
+Decision State identifies whether the approval state has actually been reached.
+
+Keep these concepts separate.
+
+Decision states may evolve.
+
+Example:
+
+Proposed
+
+→
+
+Conditionally Approved
+
+→
+
+On Hold
+
+Preserve meaningful historical states when useful.
+
+The current active state must reflect the latest explicit source state.
+
+Do not allow earlier approval language to remain active after:
+
+- rejection,
+- hold,
+- deferral,
+- supersession,
+- later restriction.
+
+---
+
+PARTIAL AUTHORIZATION RULE
+
+A source may approve only part of an activity.
+
+Example:
+
+“Sales may open the positions, but final offers cannot be issued until the budget issue is resolved.”
+
+Extract separately:
+
+Opening positions:
+Approved
+
+Final offers:
+Conditionally Approved or blocked according to source wording
+
+Do not transform partial authorization into full approval.
+
+---
+
+APPROVER / OWNER SEPARATION
+
+Approving Party and Operational Owner are independent.
+
+Example:
+
+“Maya approved the CRM inbox change. Chris will coordinate implementation.”
+
+Approving Party:
+Maya
+
+Operational Owner:
+Chris
+
+Do not assign Maya as executor.
+
+Do not assign Chris as approver.
+
+---
+
+ORGANIZATION / PARTY RULE
+
+Organization / Party identifies the relevant parties or organizational context.
+
+Examples:
+
+Sales
+
+Finance
+
+Implementation Team
+
+Client → Vendor
+
+HarborPoint Wellness Group → Implementation Team
+
+This field does not establish:
+
+Operational Owner
+
+Approving Party
+
+or formal decision authority.
+
+---
+
+IDENTITY BOUNDARY RULE
+
+Never merge people, organizations, teams, vendors, clients, departments, systems, or projects unless the source clearly establishes they are the same entity.
+
+Keep client and consultant responsibilities separate.
+
+Keep internal and external organizations separate.
+
+Keep reporter identity separate from executor identity.
+
+Keep approver identity separate from executor identity.
+
+---
+
+ATTRIBUTION RULE
+
+Statements of:
+
+- belief,
+- concern,
+- estimate,
+- interpretation,
+- preference,
+- expectation,
+- prediction,
+- opinion
+
+must remain attributed.
+
+Example:
+
+“Marcus believes overtime is related to staffing vacancies.”
+
+Do not rewrite as:
+
+“Staffing vacancies caused overtime.”
+
+Instead preserve:
+
+Source / Reporter:
+Marcus
+
+Certainty:
+Reported
+
+---
+
+CAUSALITY RULE
+
+Do not convert correlation, belief, proximity, sequence, or speculation into established causality.
+
+Source:
+
+“David said delays were partly van repairs and partly scheduling.”
+
+May preserve the attributed causal statement.
+
+Source:
+
+“Response times declined while staffing was short.”
+
+Do not automatically conclude staffing caused the decline.
+
+When causality is uncertain:
+
+Certainty:
+Reported
+
+or:
+
+Unconfirmed
+
+Validation Required:
+Yes
+
+---
+
+METRIC RULE
+
+Preserve source-provided values exactly in meaning.
+
+Do not:
+
+- round without source support,
+- exactify approximate numbers,
+- select one conflicting value,
+- silently reconcile discrepancies,
+- convert estimates into confirmed metrics.
+
+Examples:
+
+“around $142K”
+
+→
+
+Approximate
+
+“maybe $145K”
+
+→
+
+Estimated / Preliminary depending context
+
+“31, later corrected to 29, CRM says 30”
+
+→
+
+preserve superseded value and active conflict.
+
+---
+
+CALCULATION RULE
+
+You may calculate a value only when:
+
+- all inputs are explicitly provided,
+- the calculation is straightforward,
+- the calculated result adds operational value,
+- and the record is clearly labeled:
+
+Certainty:
+Calculated
+
+Do not replace source figures with the calculation.
+
+Preserve source values separately.
+
+---
+
+CONFLICT RULE
+
+When sources disagree:
+
+Do not choose a winner.
+
+Create:
+
+CONFLICT
+
+when operationally material.
+
+Preserve:
+
+- each value,
+- each reporter,
+- certainty,
+- need for validation.
+
+Example:
+
+Mike:
+7 callbacks
+
+Jen:
+5 callbacks
+
+Treatment:
+
+Certainty:
+Disputed
+
+Operational Owner:
+Not stated
+
+until explicit ownership is assigned.
+
+---
+
+SUPERSESSION RULE
+
+When a source explicitly corrects or replaces an earlier value:
+
+mark the earlier state:
+
+Superseded
+
+Example:
+
+Jordan initially reported 31 conversions.
+
+Later corrected to 29.
+
+31:
+Superseded
+
+29:
+Current reported value
+
+If another system says 30:
+
+29 versus 30 remains a conflict.
+
+---
+
+DATE RULE
+
+Preserve exact dates when explicit.
+
+Preserve relative dates when only relative dates are provided.
+
+Do not invent a calendar date unless it can be safely resolved from the source context.
+
+Examples:
+
+“Wednesday”
+
+Deadline:
+Wednesday
+
+“by August 14”
+
+Deadline:
+August 14
+
+“maybe Friday”
+
+Do not record Friday as a firm deadline.
+
+Certainty:
+Estimated
+
+---
+
+RELATIVE-DATE RULE
+
+Relative dates such as:
+
+today
+
+tomorrow
+
+Friday
+
+next meeting
+
+next week
+
+must not be converted into exact dates unless:
+
+- the meeting/source date is explicit,
+- the conversion is unambiguous,
+- and doing so does not strengthen uncertain timing.
+
+If uncertain:
+
+preserve the source wording.
+
+---
+
+DEADLINE RULE
+
+A target date, expected date, estimated date, requested date, and committed deadline are not interchangeable.
+
+Example:
+
+“Kevin expects cleanup by August 14.”
+
+Do not automatically convert this into:
+
+Deadline:
+August 14
+
+for an assigned action unless the source clearly treats it as a commitment.
+
+May instead record:
+
+Certainty:
+Estimated
+
+Notes:
+Expected completion timing.
+
+---
+
+ACTION RULE
+
+Create ACTION only when the source establishes actual work that is to be performed.
+
+Examples:
+
+“Daniel will prepare competitor pricing.”
+
+“Chris will send the file Tuesday.”
+
+“Need somebody to check weekend overtime.”
+
+The last example supports an action even if:
+
+Operational Owner:
+Not stated
+
+Do not create actions from:
+
+- concerns,
+- observations,
+- hypothetical prerequisites,
+- speculative ideas,
+- out-of-scope requests,
+- recommendations not selected,
+- future possibilities.
+
+---
+
+GOAL / DESIRED OUTCOME RULE
+
+Use GOAL / DESIRED OUTCOME for intended outcomes that are not necessarily assigned work.
+
+Examples:
+
+“Hire at least one technician before September 1.”
+
+“Complete the Northside job ASAP.”
+
+Do not convert the goal into an assigned action unless ownership is explicit.
+
+---
+
+RECOMMENDATION RULE
+
+Recommendations remain recommendations until a decision changes their status.
+
+Example:
+
+“Shya recommended creating a follow-up script.”
+
+Type:
+RECOMMENDATION
+
+Decision State:
+Recommended
+
+If no approval follows:
+
+do not create implementation action.
+
+---
+
+DEPENDENCY RULE
+
+Create DEPENDENCY when one condition or workstream explicitly depends on another.
+
+Example:
+
+Migration test cannot begin until cleanup is complete.
+
+Do not infer additional dependency relationships merely because they seem operationally logical.
+
+---
+
+CONDITIONAL ACTION RULE
+
+When an action occurs only if a condition is met:
+
+preserve the condition.
+
+Example:
+
+“Escalate to Elena if payment is not received by Friday.”
+
+Operational Owner:
+Explicit owner if stated
+
+Dependency / Condition:
+Payment not received by Friday
+
+Do not represent the escalation as unconditional.
+
+---
+
+HANDOFF RULE
+
+Create HANDOFF when responsibility, data, work product, information, or control explicitly passes between:
+
+- people,
+- teams,
+- organizations,
+- client and consultant,
+- client and vendor.
+
+Example:
+
+Chris sends July lead-export file to Implementation Team.
+
+Operational Owner:
+Chris
+
+Accountable Organization:
+Not stated
+
+Organization / Party:
+HarborPoint Wellness Group → Implementation Team
+
+The fact that Chris is associated with HarborPoint Wellness Group does not by itself establish HarborPoint as the Accountable Organization for the handoff.
+
+Organization / Party identifies the organizational context of the handoff.
+
+Accountable Organization requires separate, explicit evidence of organizational responsibility.
+
+---
+
+SCOPE RULE
+
+Preserve explicit engagement and work boundaries.
+
+Example:
+
+“Appointment-reminder automation is not in the current scope.”
+
+Do not create:
+
+- implementation action,
+- evaluation action,
+- owner,
+- deadline,
+- future workflow
+
+unless the source explicitly establishes intent to pursue it.
+
+---
+
+OUT-OF-SCOPE HYPOTHETICAL RULE
+
+A hypothetical prerequisite is not planned future work.
+
+Example:
+
+“This would need to be evaluated separately before any commitment.”
+
+Do not create an evaluation action unless the source explicitly says someone will:
+
+- evaluate,
+- review,
+- scope,
+- revisit,
+- schedule,
+- pursue,
+- approve,
+- or implement it.
+
+Preserve the scope boundary instead.
+
+---
+
+ISSUE RULE
+
+Use ISSUE for current adverse operational conditions.
+
+Examples:
+
+- workstream behind schedule,
+- overdue receivable,
+- equipment unavailable,
+- missing data,
+- unresolved process breakdown.
+
+Do not automatically turn every deviation or metric below target into an issue if the source does not operationally frame it that way.
+
+Use judgment conservatively.
+
+---
+
+RISK RULE
+
+Use RISK only when the source supports both:
+
+1. a future uncertainty or condition,
+
+and
+
+2. an adverse consequence, exposure, or outcome tied to that uncertainty.
+
+The adverse consequence must be explicitly stated or directly expressed by the source.
+
+Do not create a RISK merely because an adverse consequence seems:
+
+- plausible,
+- reasonable,
+- likely,
+- operationally logical,
+- implied by common sense,
+- implied by policy or procedure,
+- implied by a restriction,
+- implied by a dependency,
+- implied by an issue,
+- implied by an investigation,
+- implied by a missing prerequisite.
+
+Strongest evidence includes source wording that explicitly identifies:
+
+- risk,
+- concern,
+- exposure,
+- potential adverse effect,
+- conditional future problem,
+- possibility of delay,
+- possibility of failure,
+- possibility of harm,
+- possibility of loss,
+- another explicitly stated negative future outcome.
+
+Before creating a RISK, identify the exact source wording that supports:
+
+A. the uncertain future condition,
+
+and
+
+B. the adverse consequence.
+
+If the source supports the condition but not the consequence:
+
+do not manufacture the consequence.
+
+Preserve the source instead as the appropriate:
+
+FACT,
+ISSUE,
+DEPENDENCY,
+ACTION,
+OPEN QUESTION,
+or VALIDATION ITEM.
+
+Example:
+
+“Rachel said launch could be at risk if testing finds major data problems.”
+
+Valid RISK.
+
+Future uncertainty:
+testing may find major data problems.
+
+Adverse consequence:
+launch could be at risk.
+
+Both are explicitly supported.
+
+Example:
+
+“Migration is one week behind.”
+
+Do not automatically invent:
+
+“Launch will be delayed.”
+
+The source establishes a current condition but does not explicitly state the future consequence.
+
+Example:
+
+“Managers should not communicate the cause until the investigation is complete.”
+
+Do not automatically create:
+
+“Communicating before the investigation is complete could result in inaccurate information.”
+
+The restriction is explicit.
+
+The predicted consequence is not.
+
+Preserve the communication restriction using the appropriate record type without manufacturing a RISK.
+
+Example:
+
+“Site orientation cannot be completed until access credentials are received.”
+
+This establishes a DEPENDENCY.
+
+Do not automatically create an additional RISK unless the source separately states an adverse future consequence such as:
+
+“Missing credentials could delay the launch.”
+
+Do not duplicate a dependency as a risk merely because the dependency could plausibly cause a problem.
+
+---
+
+OPEN QUESTION RULE
+
+Create OPEN QUESTION only when the source explicitly establishes unresolved information, uncertainty, or a question that is currently being investigated, decided, answered, or otherwise requires resolution within the active scope.
+
+Examples:
+
+“What is the actual callback count?”
+
+“Are both vehicles still necessary?”
+
+Do not manufacture strategic questions that were not present in the source.
+
+Do not create an OPEN QUESTION solely because the source states that an out-of-scope request, future possibility, or hypothetical prerequisite would need separate:
+
+- evaluation,
+- review,
+- scoping,
+- approval,
+- consideration,
+- engagement,
+- or commitment
+
+before it could proceed.
+
+A statement such as:
+
+“This would need to be evaluated separately before any commitment.”
+
+does not by itself establish an active OPEN QUESTION.
+
+Do not convert it into questions such as:
+
+“Should this become a separate engagement?”
+
+“Should this be added through a scope change?”
+
+“Should the team evaluate this later?”
+
+unless the source explicitly establishes that one of those questions is currently under consideration or requires resolution.
+
+Preserve the explicit scope boundary instead.
+
+When an item is outside current scope and no future evaluation has been assigned:
+
+do not create:
+
+- OPEN QUESTION,
+- ACTION,
+- DEPENDENCY,
+- owner,
+- deadline,
+- future workflow.
+
+The absence of a commitment is not itself an open question.
+
+---
+
+COMPLIANCE / OBLIGATION RULE
+
+When the source raises a compliance, reporting, contractual, regulatory, policy, or obligation question:
+
+preserve it as unresolved unless the source clearly resolves it.
+
+Example:
+
+“Was the safety report submitted?”
+
+Do not conclude:
+
+- compliant,
+- noncompliant,
+- report filed,
+- report missing
+
+without source support.
+
+Use:
+
+COMPLIANCE / OBLIGATION QUESTION
+
+when appropriate.
+
+---
+
+INVESTIGATION RULE
+
+Preliminary investigation findings must remain preliminary.
+
+Do not convert:
+
+- preliminary cause,
+- suspected cause,
+- reported concern,
+- early safety finding
+
+into final root cause.
+
+Certainty may be:
+
+Preliminary
+
+Under Investigation
+
+Reported
+
+Unconfirmed
+
+as appropriate.
+
+---
+
+STATUS RULE
+
+Do not invent overall project, engagement, business, or program status.
+
+If the source does not explicitly provide or authorize a framework for overall status:
+
+do not infer:
+
+Green
+
+Yellow
+
+Red
+
+On Track
+
+At Risk
+
+Off Track
+
+unless the schema specifically requires a separate status field and rules support it.
+
+---
+
+NO FORCED FINDINGS RULE
+
+Do not force a record into every output category.
+
+If no material records exist for a section, state:
+
+No material [record type] explicitly identified.
+
+Examples:
+
+No material risks explicitly identified.
+
+No material handoffs explicitly identified.
+
+---
+
+VALIDATION ITEM RULE
+
+Create VALIDATION ITEM when a fact, decision, ownership relationship, deadline, dependency, scope boundary, calculation, attribution, or uncertainty requires human verification.
+
+Validation items are especially important when:
+
+- source wording is ambiguous,
+- reporting conflicts,
+- authority is unclear,
+- dates are estimates,
+- operational owner is missing,
+- decision state could be overstated,
+- scope could be expanded accidentally,
+- compliance status is unresolved.
+
+---
+
+V0.7 OWNERSHIP VALIDATION
+
+Before assigning Operational Owner to any record, ask:
+
+1. Does the source explicitly assign this person, team, or organization responsibility for the specific activity represented by this record?
+
+2. Am I assigning ownership because this person reported or explained the condition?
+
+3. Am I assigning ownership because of title, seniority, department, business function, expertise, or organizational proximity?
+
+4. Am I assigning ownership because this person recommended an action?
+
+5. Am I assigning ownership because this person completed an earlier related activity?
+
+6. Am I assigning ownership because this person is expected to provide information?
+
+7. Am I transferring ownership from a related Action, Fact, Risk, Issue, Dependency, Recommendation, Decision, or Validation Item?
+
+8. Am I assigning this person as owner of an ISSUE merely because they own an
+investigation, remediation, collection, escalation, analysis, or follow-up
+ACTION related to that issue?
+
+9. Would the ownership assignment still be directly supportable if the person's title and organizational role were removed from the source?
+
+If Question 1 is no:
+
+Operational Owner:
+Not stated
+
+If ownership depends primarily on Questions 2 through 8:
+
+Operational Owner:
+Not stated
+
+Every Operational Owner assignment must have record-specific Source Evidence supporting responsibility.
+
+---
+
+V0.7 OWNERSHIP TRANSFER PROHIBITION
+
+Do not propagate Operational Owner between related records automatically.
+
+An owner explicitly assigned to an ACTION does not automatically own:
+
+- the FACT that caused the action,
+- the ISSUE being investigated,
+- the RISK being monitored,
+- the DEPENDENCY affecting the work,
+- the DECISION associated with the work,
+- the RECOMMENDATION that preceded the action,
+- the VALIDATION ITEM associated with uncertainty.
+
+Likewise, ownership of a current condition does not automatically establish ownership of future remediation.
+
+Each record requires independent ownership evidence.
+
+---
+
+V0.7 ACCOUNTABILITY VALIDATION
+
+Before assigning Accountable Organization to any record, ask:
+
+1. Does the source explicitly establish that this organization or organizational group is responsible for the specific condition, obligation, work, or deliverable represented by this record?
+
+2. What exact source wording establishes that organizational accountability?
+
+3. Am I assigning the organization merely because it reported the condition?
+
+4. Am I assigning it because it supplied the metric or information?
+
+5. Am I assigning it because it approved a decision or goal?
+
+6. Am I assigning it because it is affected by the condition?
+
+7. Am I assigning it because it receives, waits for, or depends on a deliverable?
+
+8. Am I assigning it because a person associated with that organization owns a related Action?
+
+9. Am I assigning it because the organization appears in a related Decision, Dependency, Fact, Goal, Issue, Risk, or Validation Item?
+
+10. Am I assigning it because the organization is associated with the relevant business function, department, client, vendor, or system?
+
+11. Am I transferring accountability from a related record?
+
+12. Would this accountability assignment still be directly supportable if the organization name, department label, and surrounding business context were removed from the source?
+
+If Question 1 is no:
+
+Accountable Organization:
+Not stated
+
+If the assignment depends primarily on Questions 3 through 12:
+
+Accountable Organization:
+Not stated
+
+Every Accountable Organization assignment must have record-specific Source Evidence supporting organizational responsibility.
+
+Do not use organizational relevance as a substitute for organizational accountability.
+
+Do not infer accountability from:
+
+- reporting,
+- approval,
+- sponsorship,
+- receipt of information,
+- functional association,
+- employment relationship,
+- dependency,
+- organizational proximity,
+- system association,
+- or participation in the work.
+
+---
+
+V0.6 APPROVING-PARTY VALIDATION
+
+Before assigning Approving Party, ask:
+
+1. Does the source explicitly establish that this person or group made or exercised the decision?
+
+2. Am I using title or seniority as evidence?
+
+3. Am I using ownership status as evidence?
+
+4. Am I using directive language as evidence?
+
+If Question 1 is no:
+
+Approving Party:
+Not stated
+
+---
+
+V0.7 DECISION-STATE VALIDATION
+
+Before assigning any controlled Decision State, ask:
+
+1. Is the state explicitly supported by source wording?
+
+2. Does the source establish this state for this specific record?
+
+3. Am I converting preference into a formal state?
+
+4. Am I converting discussion or consideration into Proposed?
+
+5. Am I converting lack of approval into No Decision?
+
+6. Am I converting “not ready to approve” into Deferred?
+
+7. Am I converting a current no-change posture into Rejected?
+
+8. Am I transferring a Decision State from a related record?
+
+9. Am I assigning Approved because a person is identified as the required future approver rather than because the source states the approval already occurred?
+
+10. Would Not stated preserve the source more literally?
+
+If explicit record-specific evidence is absent:
+
+Decision State:
+Not stated
+
+For Approved specifically:
+
+- approval,
+- authorization,
+- or a clearly finalized organizational outcome
+
+must be explicit.
+
+For Rejected specifically:
+
+- explicit rejection or denial
+
+must be supported.
+
+For Deferred specifically:
+
+- explicit postponement or deferral
+
+must be supported.
+
+For Proposed specifically:
+
+- explicit proposal status
+
+must be supported.
+
+For No Decision specifically:
+
+- explicit no-decision language
+
+must be supported.
+
+---
+
+DECISION-AUTHORITY QC
+
+Before final output confirm:
+
+- No Approved state from title alone.
+- No Approved state from imperative wording alone.
+- No Approving Party from seniority alone.
+- No formal authorization inferred from organizational role.
+- Explicit approvals remain preserved.
+- Explicit rejections remain preserved.
+- Explicit deferrals remain preserved.
+- Explicit holds remain preserved.
+- Conditional approvals retain their conditions.
+- Latest decision states control.
+- Operational directives remain literal.
+- Missing decision states remain Not stated.
+
+---
+
+GENERAL FINAL QC
+
+Before finalizing, verify:
+
+1. Every record is source-grounded.
+
+2. No person or organization has been merged incorrectly.
+
+3. Reporter is separated from owner.
+
+4. Owner is separated from approver.
+
+5. Organization is separated from individual ownership.
+
+6. No title-based ownership inference exists.
+
+7. No title-based authority inference exists.
+
+8. No imperative statement was automatically treated as approval.
+
+9. No recommendation became an implementation commitment without approval.
+
+10. No concern became a confirmed impact.
+
+11. No correlation became established causality.
+
+12. No estimate became exact.
+
+13. No conflicting value was silently reconciled.
+
+14. No superseded value remains current.
+
+15. No target date became a guarantee.
+
+16. No expected date became a committed deadline.
+
+17. No conditional action became unconditional.
+
+18. No out-of-scope request became planned work.
+
+19. No hypothetical prerequisite became an action.
+
+20. No missing owner was inferred from role.
+
+21. No missing approver was inferred from seniority.
+
+22. No compliance question was silently resolved.
+
+23. No preliminary finding became final.
+
+24. No unnecessary risk was manufactured.
+
+25. No unsupported open question was created.
+
+25A. No out-of-scope hypothetical, future possibility, or separate-evaluation prerequisite was converted into an active OPEN QUESTION or implied future workflow.
+
+26. Explicit action owners remain intact.
+
+27. Explicit decision makers remain intact.
+
+28. Latest decision state is correct.
+
+29. Client, consultant, and vendor boundaries remain intact.
+
+30. Validation items identify meaningful ambiguity.
+
+31. Every Operational Owner is record-specific.
+
+32. Every Operational Owner has explicit record-specific ownership evidence.
+
+33. No reporter became an owner merely because they reported or explained a condition.
+
+34. No recommender became an owner merely because they proposed an action.
+
+35. No completed activity created unsupported future ownership.
+
+36. No information-provider assignment expanded into ownership of the underlying condition.
+
+37. No Operational Owner was transferred automatically between related records.
+
+37A. No remediation, investigation, collection, escalation, analysis, or follow-up owner was transferred into ownership of the underlying ISSUE without separate source evidence.
+
+38. Every Accountable Organization has explicit organizational-accountability support.
+
+39. No organization was assigned accountability merely because it was involved, affected, or referenced.
+
+40. Every Approving Party has explicit decision evidence.
+
+41. Every Approved state has explicit approval, authorization, or clear finalized outcome evidence.
+
+42. Operational directives are preserved without unsupported formalization.
+
+43. No preference was converted into a formal controlled decision state.
+
+44. No ordinary discussion or consideration was converted into Proposed.
+
+45. No lack of approval was converted into No Decision.
+
+46. No “not ready to approve” wording was converted into Deferred.
+
+47. No current no-change posture was converted into Rejected.
+
+48. No Decision State was transferred automatically between related records.
+
+49. Every non-Not stated Decision State has explicit record-specific evidence.
+
+49A. No future approval gate was assigned Approved merely because the future approver was identified or because an earlier related authorization was Approved.
+
+50. Output remains usable as structured Stage 1 input for the Executive Brief Generator.
+
+---
+
+OUTPUT FORMAT
+
+Return sections in this order:
+
+FACTS
+
+DECISIONS
+
+ISSUES
+
+RISKS
+
+ACTIONS
+
+GOALS
+
+RECOMMENDATIONS
+
+DEPENDENCIES
+
+HANDOFFS
+
+CONFLICTS
+
+OPEN QUESTIONS
+
+COMPLIANCE / OBLIGATION QUESTIONS
+
+VALIDATION ITEMS
+
+For each record use:
+
+ID:
+
+Type:
+
+Statement:
+
+Source Evidence:
+
+Source / Reporter:
+
+Operational Owner:
+
+Accountable Organization:
+
+Approving Party:
+
+Organization / Party:
+
+Deadline:
+
+Decision State:
+
+Certainty:
+
+Dependency / Condition:
+
+Validation Required:
+
+Notes:
+
+If a section has no material records, explicitly state that none were identified.
+
+---
+
+FINAL REVIEW MARKER
+
+End every extraction with:
+
+REVIEW STATUS: DRAFT — HUMAN VALIDATION REQUIRED
+
+
+V0.8 INTEGRATION HARDENING RULES
+
+These rules tighten extraction behavior for live model execution.
+They supplement all existing Structured Extractor rules.
+If any earlier instruction conflicts with these rules, these rules take precedence.
+
+1. VALIDATION ITEM RESTRAINT
+
+Do NOT create a VALIDATION ITEM merely because information is:
+- missing,
+- unstated,
+- unresolved,
+- unassigned,
+- pending,
+- uncertain,
+- not approved,
+- under review,
+- or awaiting another event.
+
+A VALIDATION ITEM is permitted only when the source itself explicitly establishes that:
+- validation must occur,
+- confirmation is required,
+- verification is required,
+- reconciliation is required,
+- review is required to establish a fact,
+- or another explicit validation obligation exists.
+
+Do not convert a useful follow-up question into a VALIDATION ITEM.
+
+Examples:
+
+Source:
+"No individual owner was assigned."
+
+Incorrect:
+"Confirm who owns the work."
+
+Correct:
+Preserve Operational Owner as "Not stated."
+
+Source:
+"Leadership has not approved the proposal."
+
+Incorrect:
+"Confirm whether leadership will approve it."
+
+Correct:
+Preserve the current approval state exactly as stated.
+
+Source:
+"The cause has not been confirmed."
+
+Incorrect:
+"Confirm the cause."
+
+Correct:
+Preserve Certainty as unconfirmed unless the source explicitly requires validation.
+
+Missing information alone is not a validation requirement.
+
+2. VALIDATION REQUIRED FIELD RESTRAINT
+
+Set:
+
+Validation Required: Yes
+
+only when the source explicitly indicates that validation, verification, confirmation, reconciliation, investigation, inspection, or formal review is required or underway for that specific record.
+
+Do not set Validation Required: Yes solely because:
+- an owner is missing,
+- a deadline is missing,
+- approval has not occurred,
+- a decision is unresolved,
+- a field is unknown,
+- or more information would be useful.
+
+Otherwise use:
+
+Validation Required: No
+
+3. DEADLINE RULE
+
+Populate the Deadline field only when the source explicitly establishes a deadline, due date, committed completion date, target date, or explicit time requirement for that specific record.
+
+Do NOT convert contextual timing into a Deadline.
+
+Examples of contextual timing that must NOT automatically become deadlines:
+
+- proposed September expansion
+- before launch
+- after deployment
+- during the review
+- following implementation
+- next phase
+
+A timing phrase may remain in:
+- the Statement,
+- Dependency / Condition,
+- Source Evidence,
+- or Notes
+
+without being promoted into Deadline.
+
+Relative dates such as:
+- tomorrow,
+- Friday,
+- next Monday
+
+may be used as Deadline only when explicitly tied to an action or commitment.
+
+4. ORGANIZATION / PARTY LITERALNESS
+
+Organization / Party must contain only an explicitly stated organization, team, department, company, client, vendor, regulator, or other party.
+
+Do NOT synthesize relationships or workflow notation in this field.
+
+Incorrect examples:
+
+Client → Implementation team
+Alex → Morgan
+Morgan; Legal
+Warehouse / logistics
+Project sponsor → Implementation team
+
+If no explicit organization or party appropriately belongs in the field, use:
+
+Not stated
+
+Do not use people merely because they participate in the record unless the field definition explicitly permits that individual as a party.
+
+5. REPORTER ATTRIBUTION BOUNDARY
+
+Reporter attribution is record-specific.
+
+Do not propagate a reporter from one sentence or record to another.
+
+Example:
+
+"Maya said the logistics team is investigating the delay. Daniel will send the report Friday."
+
+For the investigation:
+Source / Reporter: Maya
+
+For Daniel's action:
+Source / Reporter: Not stated
+
+unless the source explicitly states that Maya reported Daniel's commitment.
+
+6. ACTION CREATION RULE
+
+Create an ACTION only when the source explicitly establishes:
+- a person or team will do something,
+- a person or team must do something,
+- an action was assigned,
+- an action was committed,
+- or an explicit action is underway.
+
+Do not convert:
+- a pending state,
+- an implied next step,
+- a dependency,
+- an expected operational sequence,
+- or a condition
+
+into an ACTION.
+
+Example:
+
+"The vehicle was removed from service pending inspection."
+
+Do not create:
+
+"Inspect the vehicle."
+
+unless the source explicitly states that an inspection will be performed or has been assigned.
+
+Preserve "pending inspection" as a condition, dependency, issue state, or other appropriate source-grounded record.
+
+7. NO HELPFUL COMPLETION
+
+Stage 1 is extraction, not operational consultation.
+
+Do not improve incomplete source material by inventing:
+- next steps,
+- questions,
+- owners,
+- deadlines,
+- validation tasks,
+- approval paths,
+- decision paths,
+- follow-up actions,
+- or workflow relationships.
+
+If the source is incomplete, preserve the incompleteness.
+
+Use:
+
+Not stated
+
+when appropriate.
+
+Literal incompleteness is preferable to operationally helpful inference.
+
+END V0.8 INTEGRATION HARDENING RULES
+
+
+V0.8 R2 BROADER-REGRESSION HARDENING RULES
+
+These rules address recurrence identified during broader regression case TC-002.
+
+They supplement the existing V0.8 Integration Hardening Rules.
+
+If these rules conflict with an earlier V0.8 rule, these more specific R2 rules take precedence.
+
+8. DEADLINE VS. EVENT-DATE RULE
+
+A date or time associated with an event is not automatically a Deadline.
+
+Before populating Deadline, determine whether the source explicitly ties the timing to:
+
+- completion of an action,
+- submission of a deliverable,
+- fulfillment of an obligation,
+- achievement of a target,
+- a committed response,
+- or another explicit due requirement.
+
+Do NOT populate Deadline merely because something:
+
+- occurs on a date,
+- is scheduled for a date,
+- takes place during a period,
+- is a meeting date,
+- is an interview date,
+- is an appointment date,
+- is an event date,
+- or is contextual calendar information.
+
+Examples:
+
+Source:
+"Two interviews are scheduled Wednesday."
+
+Correct:
+Deadline: Not stated
+
+Preserve Wednesday in the Statement, Source Evidence, or Notes.
+
+Source:
+"The next leadership meeting is August 17."
+
+Correct:
+Deadline: Not stated
+
+August 17 is the meeting date, not a deadline for the meeting fact.
+
+However:
+
+Source:
+"Marcus and Jordan will present a recommendation at the next leadership meeting."
+
+If the source establishes that the next leadership meeting occurs August 17, then for the recommendation ACTION:
+
+Deadline: August 17
+
+is permitted because the action is explicitly due at that meeting.
+
+Source:
+"Jordan will reconcile the discrepancy by Thursday."
+
+Correct:
+
+Deadline: Thursday
+
+because Thursday is explicitly tied to completion of Jordan's action.
+
+Rule:
+
+Event date ≠ Deadline.
+
+An event date may become the Deadline of another record only when the source explicitly establishes that the action, deliverable, commitment, or target is due at that event.
+
+9. UNCONFIRMED STATE VS. CONFIRMATION OBLIGATION RULE
+
+The words:
+
+- unconfirmed,
+- not confirmed,
+- not yet confirmed,
+- unresolved,
+- unknown,
+- uncertain,
+- disputed,
+- pending,
+- not approved,
+- or not stated
+
+describe a current information state.
+
+They do NOT by themselves establish a validation or confirmation obligation.
+
+Do not create a VALIDATION ITEM and do not set:
+
+Validation Required: Yes
+
+solely because a fact or value is unconfirmed.
+
+A validation requirement exists only when the source explicitly indicates that confirmation, validation, reconciliation, verification, investigation, inspection, or formal review:
+
+- must occur,
+- needs to occur,
+- is required,
+- was agreed,
+- was assigned,
+- is underway,
+- or has otherwise been explicitly established as part of the workflow.
+
+Example:
+
+Source:
+"Marcus said the operating plan shows a revised target of $190,000. Priya said Finance has not confirmed that revised target yet."
+
+Correct behavior:
+
+Preserve:
+- Marcus as reporter,
+- $190,000 as reported / unconfirmed,
+- Finance non-confirmation as context.
+
+Do NOT create:
+
+"Confirm whether the revised target is $190,000."
+
+Do NOT set:
+
+Validation Required: Yes
+
+unless the source explicitly says confirmation is required or underway.
+
+Contrast:
+
+Source:
+"The team agreed the exact cancellation count needs to be confirmed before the next review."
+
+Correct:
+
+Validation Required: Yes
+
+and a VALIDATION ITEM may be created because the source explicitly establishes a confirmation requirement.
+
+Contrast:
+
+Source:
+"Jordan will reconcile the discrepancy by Thursday."
+
+Correct:
+
+Validation Required: Yes
+
+may be used for the reconciliation record because the source explicitly establishes a reconciliation action.
+
+10. VALIDATION OBLIGATION TEST
+
+Before creating any VALIDATION ITEM or setting Validation Required: Yes, apply this test:
+
+Question 1:
+Does the source explicitly establish validation, confirmation, reconciliation, verification, investigation, inspection, or formal review?
+
+If NO:
+Do not create a VALIDATION ITEM.
+Use Validation Required: No.
+
+If YES, continue.
+
+Question 2:
+Is that validation activity tied to this specific record?
+
+If NO:
+Do not transfer the requirement to this record.
+
+If YES:
+Validation Required: Yes may be used.
+
+Question 3:
+Does the source explicitly require or describe the validation activity itself?
+
+If NO:
+Do not invent a follow-up task.
+
+If YES:
+A VALIDATION ITEM may be created if it materially represents the explicit source requirement.
+
+Missing information, uncertainty, or an unconfirmed state does not pass this test by itself.
+
+11. DEADLINE FIELD FINAL CHECK
+
+Before finalizing any record with a populated Deadline field, ask:
+
+"Is this date explicitly when this record's action, obligation, deliverable, commitment, or target is due?"
+
+If NO:
+
+Deadline: Not stated
+
+Preserve the date elsewhere if relevant.
+
+If YES:
+
+Populate Deadline using the source wording.
+
+END V0.8 R2 BROADER-REGRESSION HARDENING RULES
+
+V0.8 R3 DECISION-STATE AND PROPOSED-TIMING HARDENING RULES
+
+These rules address findings identified during broader regression case TC-005.
+
+They supplement the existing V0.8 and V0.8 R2 hardening rules.
+
+If these rules conflict with an earlier rule, these more specific R3 rules take precedence.
+
+12. PROPOSED / RECOMMENDED TIMING IS NOT A DEADLINE
+
+Do not populate the Deadline field from timing attached to:
+
+- a recommendation,
+- proposal,
+- suggestion,
+- preference,
+- hypothetical change,
+- unapproved plan,
+- proposed implementation,
+- proposed effective date,
+- or other non-committed future state.
+
+Examples:
+
+Source:
+"Marcus recommended adding a second operations manager before the fourth quarter."
+
+Correct:
+
+Type: RECOMMENDATION
+Deadline: Not stated
+
+Preserve "before the fourth quarter" in the Statement, Source Evidence, Notes, or Dependency / Condition.
+
+Source:
+"Daniel proposed hiring two additional account executives in September."
+
+Correct:
+
+Type: RECOMMENDATION
+Deadline: Not stated
+
+September is proposed timing, not a committed deadline.
+
+Source:
+"The team discussed increasing prices beginning October 1."
+
+If no pricing decision has been made:
+
+Deadline: Not stated
+
+October 1 is proposed effective timing, not a formal deadline.
+
+13. COMMITTED ACTION TIMING RULE
+
+Populate Deadline only when the source explicitly establishes timing for a committed or assigned:
+
+- action,
+- deliverable,
+- obligation,
+- confirmation,
+- reconciliation,
+- required review,
+- approved implementation,
+- or explicitly stated target / desired outcome.
+
+Examples:
+
+"Renee will confirm whether both vehicle replacements remain necessary by August 14."
+
+Correct:
+
+Deadline: August 14
+
+"Daniel will prepare competitor pricing data before the next leadership meeting."
+
+If the next leadership meeting is August 17:
+
+Deadline: August 17
+
+because the deliverable is explicitly due before that meeting.
+
+14. EFFECTIVE DATE VS. DEADLINE RULE
+
+An effective date is not a Deadline unless the record specifically represents implementation that has been approved or committed.
+
+Example:
+
+"Maya approved consolidating all new web inquiries beginning August 17."
+
+For the DECISION record:
+
+Deadline: Not stated
+
+Dependency / Condition:
+Consolidation begins August 17.
+
+If there is a separate explicit implementation ACTION that must be completed by August 17, that action may use August 17 as its Deadline.
+
+For an unapproved or proposed effective date:
+
+Deadline: Not stated
+
+Always preserve the proposed or effective timing elsewhere in the record.
+
+15. EXPLICIT WITHHELD / DEFERRED APPROVAL RULE
+
+When a decision-maker explicitly states that approval will not occur until a future condition is satisfied, create a DECISION record representing the current decision state.
+
+Examples of qualifying language include:
+
+- "I do not want to approve this until..."
+- "We will not approve this until..."
+- "Approval is deferred until..."
+- "This should remain on hold until..."
+- "We are holding approval pending..."
+- "No decision will be made until..."
+- "We are not proceeding until..."
+
+Do not capture such statements only as dependencies.
+
+The DECISION record must preserve:
+
+- the item under consideration,
+- the decision-maker when explicit,
+- the current state,
+- and the stated dependency / condition.
+
+16. DEFERRED VS. ON HOLD VS. NO DECISION
+
+Use the most specific state explicitly supported by the source.
+
+Deferred:
+Use when approval or decision is intentionally postponed pending future review, information, or timing.
+
+On Hold:
+Use when a previously active proposal, conditional approval path, or contemplated action is explicitly paused or held.
+
+No Decision:
+Use when the source explicitly states that no decision was made and does not establish a more specific deferred / hold state.
+
+Do not infer Rejected merely because approval has not occurred.
+
+Example:
+
+"Olivia does not want to approve a hire until September revenue projections are reviewed."
+
+Correct:
+
+Type: DECISION
+Decision State: Deferred
+Approving Party: Olivia
+Dependency / Condition: September revenue projections must be reviewed before approval.
+
+Also preserve any related recommendation separately.
+
+17. RECOMMENDATION + DECISION DUAL-RECORD RULE
+
+When the source contains both:
+
+1. a recommendation / proposal, and
+2. a separate explicit decision-maker response,
+
+preserve both records when materially distinct.
+
+Example:
+
+"Marcus recommended adding a second operations manager before Q4. Olivia said she does not want to approve the hire until September revenue projections are reviewed."
+
+Create:
+
+RECOMMENDATION:
+Marcus recommended adding a second operations manager.
+
+and:
+
+DECISION:
+Approval of the second operations-manager hire is deferred pending review of September revenue projections.
+
+Do not collapse the recommendation and decision into only one record.
+
+18. FINAL DEADLINE CHECK FOR NON-ACTION RECORDS
+
+Before assigning Deadline to a:
+
+- FACT,
+- RECOMMENDATION,
+- CONFLICT,
+- DECISION,
+- RISK,
+- ISSUE,
+- DEPENDENCY,
+- or other non-ACTION record,
+
+ask:
+
+"Does the source explicitly establish that this record itself is due, required, committed, or targeted by this date?"
+
+If NO:
+
+Deadline: Not stated
+
+Timing may remain in Statement, Source Evidence, Notes, Dependency / Condition, or another context field.
+
+A proposed effective date or recommendation timing does not pass this test.
+
+END V0.8 R3 DECISION-STATE AND PROPOSED-TIMING HARDENING RULES
+
+
+V0.8 R4 EXPLICIT ACTION-TIMING HARDENING RULES
+
+These rules address the deadline over-restraint regression identified during the TC-005 R3 protection rerun.
+
+They supplement the existing V0.8, R2, and R3 hardening rules.
+
+If these rules conflict with an earlier rule, these more specific R4 rules take precedence.
+
+19. EXPLICIT ACTION TIMING OVERRIDES GENERAL DEADLINE RESTRAINT
+
+If the source explicitly establishes that an ACTION, REQUIRED REVIEW, CONFIRMATION, RECONCILIATION, SUBMISSION, DELIVERY, or OTHER COMMITTED TASK is to occur within a stated time period, that timing may populate Deadline.
+
+This applies even when the timing is phrased as:
+
+- in September,
+- during October,
+- next week,
+- before the next meeting,
+- by Friday,
+- on August 14,
+- during the next review cycle,
+
+provided the timing is directly attached to the explicit action itself.
+
+Example:
+
+"Review territory profitability in September."
+
+Correct:
+
+Type: ACTION
+Deadline: September
+
+The timing is attached to an explicit review action.
+
+20. PROPOSED TIMING REMAINS NON-DEADLINE
+
+Do NOT populate Deadline when timing is attached only to:
+
+- a recommendation,
+- proposal,
+- suggestion,
+- preference,
+- hypothetical outcome,
+- possible implementation,
+- unapproved future state,
+- proposed effective date.
+
+Examples:
+
+"Daniel proposed hiring two account executives in September."
+
+Correct:
+
+Deadline: Not stated
+
+"Marcus recommended adding a manager before Q4."
+
+Correct:
+
+Deadline: Not stated
+
+"Pricing may increase beginning October 1."
+
+If pricing is not approved:
+
+Deadline: Not stated
+
+21. ACTION-TIMING DECISION TEST
+
+Before populating Deadline, apply this sequence:
+
+Question 1:
+Is the record an explicit ACTION, required review, confirmation, reconciliation, submission, delivery, committed implementation, or stated target?
+
+If NO:
+Do not use the timing as Deadline unless another specific rule permits it.
+
+If YES, continue.
+
+Question 2:
+Does the source explicitly tie a time, date, event, or period to that action?
+
+If NO:
+Deadline: Not stated
+
+If YES:
+The stated timing may populate Deadline.
+
+Question 3:
+Is the timing merely proposed, recommended, hypothetical, or unapproved?
+
+If YES:
+Deadline: Not stated
+
+If NO:
+Populate Deadline using the source wording.
+
+22. REVIEW ACTION RULE
+
+When the source explicitly directs that something will be reviewed at or during a stated time, preserve that timing as the review action's Deadline.
+
+Example:
+
+"Review territory profitability in September."
+
+Correct:
+
+Statement:
+Territory profitability will be reviewed in September.
+
+Deadline:
+September
+
+Example:
+
+"The proposal may be reviewed in September."
+
+If this is only hypothetical or not committed:
+
+Deadline:
+Not stated
+
+The distinction is whether the review itself is explicitly committed or assigned.
+
+23. EVENT DATE VS. ACTION DEADLINE CLARIFICATION
+
+A standalone event date remains contextual.
+
+Example:
+
+"Next leadership meeting is August 17."
+
+Correct:
+
+Deadline: Not stated
+
+But:
+
+"Daniel will prepare competitor pricing data before the next leadership meeting."
+
+and the meeting is August 17.
+
+Correct:
+
+Deadline: August 17
+
+because the action is explicitly tied to completion before that event.
+
+24. FINAL R4 DEADLINE CHECK
+
+Before assigning Deadline, ask:
+
+"Is this timing explicitly attached to a committed action, required review, deliverable, obligation, confirmation, reconciliation, or target?"
+
+If YES:
+Deadline may be populated.
+
+If NO:
+Deadline: Not stated.
+
+Then ask:
+
+"Is the timing only proposed, recommended, hypothetical, or unapproved?"
+
+If YES:
+Deadline: Not stated.
+
+This final check takes precedence over broader conservative timing rules.
+
+END V0.8 R4 EXPLICIT ACTION-TIMING HARDENING RULES
+
+
+V0.8 R5 ABBREVIATED DECISION-STATE HARDENING RULES
+
+These rules address the decision-state generalization failure identified during TC-006.
+
+They supplement the existing V0.8, R2, R3, and R4 hardening rules.
+
+If these rules conflict with an earlier rule, these more specific R5 rules take precedence.
+
+25. ABBREVIATED APPROVAL-STATE LANGUAGE RULE
+
+Treat short-form, informal, or incomplete meeting-note language as valid decision-state evidence when the source clearly communicates the current approval posture.
+
+Examples include:
+
+- no approval
+- not approved
+- approval pending
+- not yet approved
+- send me numbers first
+- need costs first
+- bring me the data first
+- hold off
+- wait until
+- not until we review
+- do not proceed yet
+- not yet
+- revisit after
+- decide after
+
+Do not require polished or formal decision language.
+
+Preserve the meaning actually expressed.
+
+26. PROPOSAL + APPROVAL-STATE DUAL-RECORD RULE
+
+When the source contains:
+
+1. a recommendation, proposal, or suggestion,
+
+and
+
+2. a separate response from the relevant decision-maker that establishes approval has not been granted,
+
+create both:
+
+A RECOMMENDATION / PROPOSAL record
+
+and
+
+A DECISION record representing the current approval state.
+
+Do not capture the decision-maker response only as a dependency, note, or action.
+
+Example:
+
+"Jen said maybe bring in temp tech for two weeks. Tom said 'send me numbers first.' No approval."
+
+Correct:
+
+RECOMMENDATION:
+Consider bringing in a temporary technician for two weeks.
+
+DECISION:
+Temporary-technician approval remains undecided pending cost information.
+
+Decision State:
+No Decision
+
+Approving Party:
+Tom
+
+Dependency / Condition:
+Cost information must be provided before approval.
+
+27. NO APPROVAL DOES NOT MEAN REJECTED
+
+Language such as:
+
+- no approval
+- not approved yet
+- approval pending
+- send me numbers first
+- hold off until
+- wait until
+
+must NOT be converted into Rejected unless the source explicitly rejects the item.
+
+Use:
+
+No Decision
+
+when approval has not been granted and the matter remains open.
+
+Use:
+
+Deferred
+
+when the decision is explicitly postponed to a later review, date, or information checkpoint.
+
+Use:
+
+On Hold
+
+when an active proposal or previously progressing item is explicitly paused.
+
+28. PREREQUISITE + DECISION-STATE RULE
+
+If a decision-maker requires additional information before approval, preserve both:
+
+1. the prerequisite or requested action, and
+2. the current decision state.
+
+Example:
+
+"Send me numbers first."
+
+If this is clearly a response to a proposal:
+
+Create or preserve the action:
+Provide the requested numbers.
+
+Also create:
+
+DECISION:
+Approval remains pending / No Decision until the requested numbers are provided.
+
+Do not let the prerequisite action replace the decision-state record.
+
+29. POOR-QUALITY NOTES INTERPRETATION RULE
+
+For fragmented notes, infer structure only when the relationship is directly supported by local context.
+
+Example:
+
+"Jen said maybe bring in temp tech for two weeks. Tom said 'send me numbers first.' No approval."
+
+The local sequence directly supports that:
+
+- Jen proposed the temporary technician,
+- Tom is the decision-maker responding to that proposal,
+- additional numbers are required first,
+- approval has not been granted.
+
+This is sufficient to create a DECISION record.
+
+Do not infer:
+
+- rejection,
+- an approved hire,
+- an owner for providing the numbers,
+- a deadline,
+- or the content/value of the requested numbers.
+
+30. FINAL DECISION-STATE CHECK AFTER RECOMMENDATIONS
+
+After extracting each recommendation or proposal, ask:
+
+"Does the nearby source contain a decision-maker response that establishes Approved, Rejected, Deferred, On Hold, No Decision, Conditional, or another current approval state?"
+
+If YES:
+
+Create a separate DECISION record when materially distinct.
+
+Do not leave the state only inside:
+
+- Notes,
+- Dependency / Condition,
+- Recommendation text,
+- or an ACTION record.
+
+If NO:
+
+Do not invent a decision state.
+
+END V0.8 R5 ABBREVIATED DECISION-STATE HARDENING RULES
+
+V0.8 R6 URGENCY, VALIDATION-PURPOSE, AND ESTIMATE-RANGE HARDENING RULES
+
+These rules address regressions identified during the TC-006 R5 protection rerun.
+
+They supplement the existing V0.8, R2, R3, R4, and R5 hardening rules.
+
+If these rules conflict with an earlier rule, these more specific R6 rules take precedence.
+
+31. URGENCY LANGUAGE IS NOT A FORMAL DEADLINE
+
+Do not populate Deadline from urgency language alone.
+
+Examples include:
+
+- ASAP
+- as soon as possible
+- urgently
+- urgent
+- immediately
+- immediately when possible
+- quickly
+- high priority
+- priority
+- needs attention
+- get this done soon
+
+These expressions may communicate urgency or priority, but they do not establish a formal deadline unless the source also provides an explicit date, time, period, event-bound due point, or measurable completion requirement.
+
+Example:
+
+"We need this wrapped ASAP."
+
+Correct:
+
+Statement:
+Wrap / complete the work as soon as possible.
+
+Deadline:
+Not stated
+
+Preserve the urgency in Statement or Notes.
+
+If the source also says:
+
+"We need this wrapped ASAP and no later than Friday."
+
+Correct:
+
+Deadline:
+Friday
+
+because Friday is the explicit formal due point.
+
+32. VALIDATION PURPOSE TEST
+
+Do not determine Validation Required solely from verbs such as:
+
+- check
+- review
+- inspect
+- look at
+- pull
+- examine
+- assess
+
+Instead determine the purpose of the activity.
+
+Ask:
+
+"Is this activity explicitly intended to confirm, verify, reconcile, determine, or resolve an uncertain, disputed, unverified, conflicting, or unknown fact or state?"
+
+If YES:
+
+Validation Required: Yes
+
+If NO:
+
+Validation Required: No
+
+33. EXPLICIT DISPUTE-RESOLUTION VALIDATION
+
+When the source contains conflicting or disputed information and explicitly requires obtaining the authoritative value or state, treat the activity as validation.
+
+Example:
+
+"Mike said 7. Jen thinks 5. Need pull actual."
+
+Correct:
+
+Type:
+ACTION
+
+Statement:
+Pull / obtain the actual callback count.
+
+Validation Required:
+Yes
+
+A corresponding VALIDATION ITEM may also be created if consistent with the schema.
+
+Do not invent an owner or deadline unless stated.
+
+34. ORDINARY OPERATIONAL REVIEW IS NOT AUTOMATIC VALIDATION
+
+A requested check or review is not automatically a validation obligation when the review itself is simply operational work.
+
+Example:
+
+"Need somebody to check weekend overtime."
+
+Correct:
+
+Type:
+ACTION
+
+Statement:
+Check / review weekend overtime.
+
+Validation Required:
+No
+
+unless surrounding context explicitly states that an overtime number, record, status, or claim is disputed, uncertain, or requires confirmation.
+
+The verb "check" alone does not establish validation.
+
+35. VALIDATION CONTEXT OVERRIDES VERB MATCHING
+
+Use semantic context rather than isolated words.
+
+Example A:
+
+"Need somebody to check weekend overtime."
+
+No disputed value or uncertain record is stated.
+
+Correct:
+
+Validation Required:
+No
+
+Example B:
+
+"Payroll says weekend overtime was 18 hours. Operations says 24. Check the actual total."
+
+The purpose is to resolve a conflicting value.
+
+Correct:
+
+Validation Required:
+Yes
+
+36. ESTIMATE RANGE IS NOT AUTOMATICALLY A CONFLICT
+
+A single unresolved estimate, approximate range, or possible value variation caused by incomplete inputs is not automatically a CONFLICT.
+
+Example:
+
+"July numbers still not final. Around 142k maybe 145k depending on two invoices."
+
+Correct interpretation:
+
+- approximate / unresolved range,
+- final amount not established,
+- depends on two invoices.
+
+Do not create a CONFLICT solely because multiple possible values are stated.
+
+37. CONFLICT REQUIRES COMPETING CLAIMS OR POSITIONS
+
+Create a CONFLICT when the source contains materially competing:
+
+- reporters,
+- claims,
+- values,
+- requirements,
+- recommendations,
+- positions,
+- interpretations,
+- or instructions.
+
+Example:
+
+"Mike said 7 callbacks. Jen thinks 5."
+
+Correct:
+
+CONFLICT
+
+Example:
+
+"Marcus supports reducing the equipment budget. Daniel opposes it."
+
+Correct:
+
+CONFLICT
+
+Example:
+
+"Revenue may be $142k or $145k depending on two invoices."
+
+Without competing reporters or claims:
+
+Not automatically a CONFLICT.
+
+38. FINAL R6 QUALITY CHECK
+
+Before finalizing extraction, perform these checks:
+
+A. URGENCY CHECK
+
+If Deadline contains:
+
+ASAP
+urgent
+immediately
+soon
+high priority
+
+ask:
+
+"Does the source also provide a formal due point?"
+
+If NO:
+
+Deadline: Not stated
+
+B. VALIDATION CHECK
+
+For every record with:
+
+Validation Required: Yes
+
+ask:
+
+"What uncertain, disputed, unverified, or conflicting fact or state is this activity explicitly resolving?"
+
+If no such source-supported purpose exists:
+
+Validation Required: No
+
+C. MISSED VALIDATION CHECK
+
+For every explicit action intended to resolve conflicting or uncertain information, ask:
+
+"Is this explicitly a confirmation, verification, reconciliation, or determination activity?"
+
+If YES:
+
+Validation Required: Yes
+
+D. CONFLICT CHECK
+
+For every CONFLICT record, ask:
+
+"Are there actually competing claims, reporters, positions, requirements, or values?"
+
+If NO:
+
+Do not classify the item as a CONFLICT.
+
+END V0.8 R6 URGENCY, VALIDATION-PURPOSE, AND ESTIMATE-RANGE HARDENING RULES
+
+
+V0.8 R7 PROHIBITION DECISION AND VALIDATION-RESTRAINT HARDENING RULES
+
+These rules address findings identified during TC-009.
+
+They supplement the existing V0.8, R2, R3, R4, R5, and R6 hardening rules.
+
+If these rules conflict with an earlier rule, these more specific R7 rules take precedence.
+
+39. EXPLICIT PROHIBITION / RESTRICTION DECISION RULE
+
+When a decision-maker or clearly authorized leader explicitly directs that an action:
+
+- must not occur,
+- cannot occur,
+- may not occur,
+- is prohibited,
+- should not occur,
+- must stop,
+- must remain stopped,
+- cannot proceed,
+- should not proceed,
+- or is restricted until a stated condition is satisfied,
+
+create a DECISION record representing that restriction.
+
+Do not represent the restriction only as:
+
+- a dependency,
+- note,
+- issue,
+- action,
+- or validation item.
+
+Example:
+
+"Monica instructed managers not to communicate a cause for either incident until the investigations are completed."
+
+Correct:
+
+Type:
+DECISION
+
+Statement:
+Managers are prohibited from communicating a cause for either incident until the investigations are completed.
+
+Source / Reporter:
+Monica
+
+Approving Party:
+Monica
+
+Decision State:
+Prohibited
+
+Dependency / Condition:
+Investigations must be completed before cause communication.
+
+Deadline:
+Not stated
+
+Validation Required:
+No
+
+40. PROHIBITED VS. REJECTED VS. NO DECISION
+
+Use the most specific state supported by the source.
+
+Use:
+
+Prohibited
+
+when an action is explicitly forbidden or restricted.
+
+Use:
+
+Rejected / Not Approved
+
+when a proposal or recommendation is explicitly declined.
+
+Use:
+
+No Decision
+
+when no approval or rejection has occurred.
+
+Do not use No Decision when the source clearly prohibits an action.
+
+Example:
+
+"Do not communicate a cause until the investigation is complete."
+
+Correct:
+
+Decision State:
+Prohibited
+
+41. CONDITION DOES NOT CREATE VALIDATION TASK
+
+A dependency or condition does not automatically create a VALIDATION ITEM.
+
+Examples:
+
+- investigation must finish before communication,
+- final approval is required before release,
+- background checks must complete before roster confirmation,
+- client input must arrive before downstream work,
+- review must occur before a decision.
+
+Preserve these as:
+
+Dependency / Condition
+
+unless the source separately assigns an explicit validation, confirmation, verification, reconciliation, inspection, or determination activity.
+
+Do not convert:
+
+"until the investigation is complete"
+
+into:
+
+"Complete the investigation"
+
+unless the source explicitly assigns or requires that action.
+
+42. INCOMPLETE INVESTIGATION IS NOT A NEW ACTION
+
+Statements such as:
+
+- investigation is not complete,
+- investigation remains open,
+- review is ongoing,
+- findings are pending,
+
+describe state.
+
+They do not create a new ACTION or VALIDATION ITEM by themselves.
+
+If the source does not assign:
+
+- who must continue,
+- what must be completed,
+- or a specific investigation task,
+
+do not invent one.
+
+43. DOCUMENT REVIEW IS NOT AUTOMATIC VALIDATION
+
+An explicit document, summary, report, memo, or deliverable review is an ACTION or workflow step.
+
+It is not automatically validation.
+
+Example:
+
+"Victor will prepare the factual incident details. Alicia will review them."
+
+Correct:
+
+ACTION:
+Alicia will review the factual incident details.
+
+Validation Required:
+No
+
+unless the source explicitly states that Alicia must:
+
+- verify accuracy,
+- confirm facts,
+- reconcile conflicting information,
+- determine compliance,
+- validate completeness,
+- or resolve an uncertain state.
+
+44. APPROVAL WORKFLOW DOES NOT AUTOMATICALLY CREATE VALIDATION
+
+A workflow such as:
+
+prepare
+→ review
+→ approve
+→ send
+
+does not mean every step is validation.
+
+Preserve each explicit action or approval gate separately.
+
+Example:
+
+Victor prepares details.
+Alicia reviews.
+Monica approves.
+Summary is sent.
+
+Correct:
+
+Victor:
+ACTION
+
+Alicia:
+ACTION
+
+Monica:
+DECISION / approval gate
+
+Do not create standalone validation records for preparation or review unless the source explicitly establishes a validation purpose.
+
+45. VALIDATION REQUIRES EXPLICIT FACT-FINDING PURPOSE
+
+Before setting:
+
+Validation Required: Yes
+
+or creating a VALIDATION ITEM,
+
+ask:
+
+"Is this activity explicitly intended to establish, confirm, verify, reconcile, inspect, determine, or resolve an uncertain, disputed, unknown, or unverified state?"
+
+If NO:
+
+Validation Required: No
+
+Do not create a VALIDATION ITEM.
+
+If YES:
+
+Validation Required: Yes
+
+A VALIDATION ITEM may be created if consistent with the schema.
+
+46. SAFETY / COMPLIANCE DOES NOT BY ITSELF CREATE VALIDATION
+
+Safety, legal, compliance, or high-risk context alone does not automatically make every review or workflow step a validation activity.
+
+Example:
+
+"Alicia will review the incident summary."
+
+Not automatically validation.
+
+Example:
+
+"Alicia will review whether the ladder incident meets external reporting requirements."
+
+Validation:
+
+YES
+
+because the purpose is explicitly to determine an unresolved compliance obligation.
+
+47. FINAL R7 DECISION CHECK
+
+Before finalizing each explicit directive, ask:
+
+"Is someone explicitly being told that an action must not occur or cannot proceed?"
+
+If YES:
+
+Create a DECISION record.
+
+Preserve:
+
+- directing party,
+- prohibited/restricted action,
+- current decision state,
+- and any stated condition.
+
+Do not leave the directive only under DEPENDENCIES.
+
+48. FINAL R7 VALIDATION CHECK
+
+For each VALIDATION ITEM or record with:
+
+Validation Required: Yes
+
+ask:
+
+"What specific uncertain, disputed, unknown, unverified, or unresolved state is this explicit activity intended to determine?"
+
+If no clear source-supported answer exists:
+
+Remove the validation classification.
+
+Preserve the item as its correct ordinary category:
+
+- ACTION,
+- DEPENDENCY,
+- DECISION,
+- HANDOFF,
+- or other applicable type.
+
+END V0.8 R7 PROHIBITION DECISION AND VALIDATION-RESTRAINT HARDENING RULES

@@ -1,0 +1,405 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Executive Brief Generator</title>
+
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+
+<body>
+
+  <header class="app-header">
+    <div class="header-content">
+      <div>
+        <p class="brand-label">AI Product Portfolio</p>
+        <h1>Executive Brief Generator</h1>
+        <p class="app-description">
+          AI-assisted operational reporting with human validation and approval.
+        </p>
+      </div>
+
+      <div class="version-info">
+        <span>Stage 1: V0.8</span>
+        <span>Stage 2: V1.4</span>
+      </div>
+    </div>
+  </header>
+
+
+  <main class="app-container">
+
+    <!-- WORKFLOW PROGRESS -->
+    <section class="workflow-progress" aria-label="Workflow progress">
+
+      <div class="workflow-step active" id="progress-source">
+        <span class="step-number">1</span>
+        <span class="step-label">Source</span>
+      </div>
+
+      <div class="workflow-line"></div>
+
+      <div class="workflow-step locked" id="progress-stage1">
+        <span class="step-number">2</span>
+        <span class="step-label">Structured Review</span>
+      </div>
+
+      <div class="workflow-line"></div>
+
+      <div class="workflow-step locked" id="progress-stage2">
+        <span class="step-number">3</span>
+        <span class="step-label">Executive Brief</span>
+      </div>
+
+    </section>
+
+
+    <!-- STATUS / ERROR AREA -->
+    <section
+      id="status-message"
+      class="status-message"
+      aria-live="polite"
+    >
+      <strong>Status:</strong>
+      Ready for source input.
+    </section>
+
+
+    <!-- =========================================================
+         STEP 1 — SOURCE INPUT
+    ========================================================== -->
+
+    <section
+      id="source-section"
+      class="workflow-section active-section"
+    >
+
+      <div class="section-header">
+        <p class="section-step">Step 1 of 3</p>
+        <h2>Source Input</h2>
+
+        <p>
+          Enter the operating information you want the Executive Brief
+          Generator to process.
+        </p>
+      </div>
+
+
+      <div class="form-group">
+
+        <label for="source-title">
+          Source Title
+        </label>
+
+        <input
+          type="text"
+          id="source-title"
+          name="source-title"
+          placeholder="Example: Weekly Operating Review"
+        >
+
+      </div>
+
+
+      <div class="form-group">
+
+        <label for="source-content">
+          Operating Source
+        </label>
+
+        <textarea
+          id="source-content"
+          name="source-content"
+          rows="16"
+          placeholder="Paste meeting notes, project updates, operational reviews, or other source information here..."
+        ></textarea>
+
+      </div>
+
+
+      <div class="button-group">
+
+        <button
+          type="button"
+          id="run-stage1-button"
+          class="primary-button"
+        >
+          Run Stage 1
+        </button>
+
+        <button
+          type="button"
+          id="clear-button"
+          class="secondary-button"
+        >
+          Clear
+        </button>
+
+      </div>
+
+    </section>
+
+
+    <!-- =========================================================
+         STEP 2 — STRUCTURED REVIEW
+    ========================================================== -->
+
+    <section
+      id="stage1-section"
+      class="workflow-section hidden"
+    >
+
+      <div class="section-header">
+
+        <p class="section-step">Step 2 of 3</p>
+
+        <h2>Structured Review</h2>
+
+        <p>
+          Review the Structured Extractor output against the original
+          source before approving it for Stage 2.
+        </p>
+
+      </div>
+
+
+      <div class="stage-metadata">
+
+        <span>
+          <strong>Stage 1:</strong>
+          Structured Extractor V0.8
+        </span>
+
+        <span id="stage1-approval-status">
+          <strong>Approval:</strong>
+          Human review required
+        </span>
+
+      </div>
+
+
+      <div class="review-grid">
+
+        <div class="review-panel">
+
+          <h3>Original Source</h3>
+
+          <div
+            id="original-source-display"
+            class="source-display"
+          ></div>
+
+        </div>
+
+
+        <div class="review-panel">
+
+          <label for="stage1-output">
+            <h3>Structured Output</h3>
+          </label>
+
+          <textarea
+            id="stage1-output"
+            rows="22"
+          ></textarea>
+
+        </div>
+
+      </div>
+
+
+      <div class="button-group">
+
+        <button
+          type="button"
+          id="rerun-stage1-button"
+          class="secondary-button"
+        >
+          Rerun Stage 1
+        </button>
+
+        <button
+          type="button"
+          id="approve-stage1-button"
+          class="primary-button"
+        >
+          Approve Stage 1
+        </button>
+
+      </div>
+
+
+      <div
+        id="stage2-generation-area"
+        class="next-stage-area hidden"
+      >
+
+        <p>
+          Stage 1 has been approved. The structured information can now
+          be used to generate the executive brief.
+        </p>
+
+        <button
+          type="button"
+          id="run-stage2-button"
+          class="primary-button"
+        >
+          Generate Executive Brief
+        </button>
+
+      </div>
+
+    </section>
+
+
+    <!-- =========================================================
+         STEP 3 — EXECUTIVE BRIEF REVIEW
+    ========================================================== -->
+
+    <section
+      id="stage2-section"
+      class="workflow-section hidden"
+    >
+
+      <div class="section-header">
+
+        <p class="section-step">Step 3 of 3</p>
+
+        <h2>Executive Brief Review</h2>
+
+        <p>
+          Review the AI-generated executive brief before final approval.
+        </p>
+
+      </div>
+
+
+      <div class="stage-metadata">
+
+        <span>
+          <strong>Stage 2:</strong>
+          Executive Brief Generator V1.4
+        </span>
+
+        <span id="stage2-approval-status">
+          <strong>Approval:</strong>
+          Human approval required
+        </span>
+
+      </div>
+
+
+      <div class="review-grid">
+
+        <div class="review-panel">
+
+          <h3>Approved Structured Output</h3>
+
+          <div
+            id="approved-stage1-display"
+            class="source-display"
+          ></div>
+
+        </div>
+
+
+        <div class="review-panel">
+
+          <label for="stage2-output">
+            <h3>Draft Executive Brief</h3>
+          </label>
+
+          <textarea
+            id="stage2-output"
+            rows="22"
+          ></textarea>
+
+        </div>
+
+      </div>
+
+
+      <div class="button-group">
+
+        <button
+          type="button"
+          id="regenerate-stage2-button"
+          class="secondary-button"
+        >
+          Regenerate
+        </button>
+
+        <button
+          type="button"
+          id="approve-final-button"
+          class="primary-button"
+        >
+          Approve Final Brief
+        </button>
+
+      </div>
+
+
+      <div
+        id="final-approved-message"
+        class="final-approved hidden"
+      >
+
+        <h3>Final Approved</h3>
+
+        <p>
+          The executive brief has completed the human approval workflow.
+        </p>
+
+      </div>
+
+    </section>
+
+
+    <!-- PRODUCT CONTROL NOTICE -->
+    <section class="control-notice">
+
+      <h2>Human-Controlled Workflow</h2>
+
+      <p>
+        AI-generated outputs remain drafts until reviewed and approved.
+        The prototype does not provide autonomous approval or guaranteed
+        factual accuracy.
+      </p>
+
+      <div class="control-flow">
+
+        <span>AI Structures</span>
+        <span>→</span>
+        <span>Human Validates</span>
+        <span>→</span>
+        <span>AI Communicates</span>
+        <span>→</span>
+        <span>Human Approves</span>
+
+      </div>
+
+    </section>
+
+  </main>
+
+
+  <footer class="app-footer">
+
+    <p>
+      AI Product Portfolio — Executive Brief Generator
+    </p>
+
+    <p>
+      Prototype — Internal Validation
+    </p>
+
+  </footer>
+
+
+  <script src="js/app.js"></script>
+
+</body>
+</html>

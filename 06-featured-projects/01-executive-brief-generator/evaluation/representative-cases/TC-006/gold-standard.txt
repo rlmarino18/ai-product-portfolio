@@ -1,0 +1,96 @@
+# TC-006 Gold Standard
+
+## Scenario
+Poor-Quality and Incomplete Meeting Notes
+
+## Business
+ClearLine Mechanical
+
+## Meeting Date
+August 10, 2026
+
+# Executive Brief
+
+**Business / Client:** ClearLine Mechanical
+**Project or Engagement:** Operating Review
+**Reporting Period:** July / August 2026
+**Meeting Date:** August 10, 2026
+**Overall Status:** Not Determined
+
+## 1. Executive Summary
+
+July revenue remains unfinalized and is currently estimated at approximately $142,000 to $145,000 against a $150,000 target. Several operating items remain unresolved, including callback volume, the delayed Northside job, three outstanding customer estimates, Truck 4 downtime, and confirmation of safety-report submission. Tom approved temporarily stopping new work in Zone C while staffing is reviewed. A temporary technician was discussed but not approved.
+
+## 2. Key Updates
+
+| Area | Update | Impact / Significance |
+|---|---|---|
+| Revenue | July revenue is estimated at approximately $142,000–$145,000 and is not yet final. | Final performance against the $150,000 target remains unresolved. |
+| Quality | Callback count is disputed between 5 and 7. | Actual callback performance requires validation. |
+| Project / Service | Northside job remains delayed. | Customer dissatisfaction was reported. |
+| Customer Follow-Up | Three customers are still waiting on estimates. | Follow-up ownership is unclear. |
+| Fleet | Truck 4 remains out of service and a rental is being used. | Return-to-service timing is uncertain. |
+| Staffing | August schedule is estimated at roughly 92% booked. | Staffing capacity remains under review. |
+| Safety | A minor hand-cut incident occurred with no lost time. | Report-submission status is unconfirmed. |
+
+## 3. Decisions
+
+| Decision / Item | Decision-Maker | Current State | Effective Date / Condition |
+|---|---|---|---|
+| Stop accepting new work in Zone C. | Tom | Approved | Immediate / until staffing is reviewed |
+| Bring in a temporary technician. | Tom | No Decision | Cost information requested before approval |
+
+## 4. Risks and Issues
+
+| Type | Item | Impact / Status | Action Owner | Response |
+|---|---|---|---|---|
+| Issue | Callback count is disputed. | Reported as either 5 or 7. | Owner not assigned | Confirm actual count. |
+| Issue | Northside job remains delayed. | Customer is upset. | Owner not assigned | Parts may arrive Thursday; no revised completion date confirmed. |
+| Issue | Three customer estimates remain outstanding. | Follow-up is incomplete. | Owner not assigned | Ownership requires clarification. |
+| Issue | Truck 4 remains unavailable. | Rental vehicle is being used. | Owner not assigned | Repair timing remains uncertain. |
+| Issue | Safety-report submission is unconfirmed. | Reporting status requires validation. | Owner not assigned | Verify whether report was submitted. |
+| Risk | Staffing constraints may affect future work acceptance. | Impact not explicitly stated. | Owner not assigned | Zone C intake paused while staffing is reviewed. |
+
+## 5. Action Tracker
+
+| Action | Party | Owner | Deadline | Dependency / Condition | Status |
+|---|---|---|---|---|---|
+| Confirm actual callback count. | ClearLine | Owner not assigned | Deadline not provided | None stated | Not Determined |
+| Provide temporary-technician cost information to Tom. | ClearLine | Owner not assigned | Deadline not provided | Required before any approval | Not Determined |
+| Verify whether the safety report was submitted. | ClearLine | Owner not assigned | Deadline not provided | None stated | Not Determined |
+| Review weekend overtime. | ClearLine | Owner not assigned | Deadline not provided | None stated | Not Determined |
+
+## 6. Leadership Attention Required
+
+- Resolve ownership of the three outstanding customer estimates.
+- Review staffing capacity before reopening Zone C.
+- Review temporary-technician cost information before making a staffing decision.
+- Confirm safety-report submission.
+- Monitor Truck 4 repair timing.
+
+## 7. Open Questions
+
+- What is final July revenue?
+- Were there 5 or 7 callbacks last week?
+- When will the Northside job be completed?
+- Who owns follow-up on the three outstanding estimates?
+- When will Truck 4 return to service?
+- Was the safety report submitted?
+- What is the confirmed August booking percentage?
+- Who owns the weekend-overtime review?
+- Is the next meeting Monday or Tuesday?
+
+## 8. Validation Notes
+
+- July revenue is approximate and unresolved.
+- Callback count is disputed.
+- Northside completion date is not confirmed.
+- Estimate ownership is unclear.
+- Truck repair date is uncertain.
+- Temporary technician has not been approved.
+- Safety-report submission is unconfirmed.
+- August booking percentage is approximate.
+- Next meeting date is not confirmed.
+- “ASAP” is not treated as a formal deadline.
+
+**REVIEW STATUS:** HUMAN-APPROVED GOLD STANDARD

@@ -41,10 +41,10 @@ Multiple sessions may be completed on the same day, and gaps between sessions do
 |---|---|---:|
 | AI Workflow Opportunity & ROI Analyzer | Not Started | 0.0 |
 | Document Q&A RAG Assistant | In Progress | 2.50 |
-| AI Experimentation & Model Selection Lab | Not Started | 0.0 |
+| Executive Brief Generator | In Progress | 44.50 |
 | AI Support Triage System | In Progress | 4.33 |
 | Agentic Workflow Guardrail Simulator | Not Started | 0.0 |
-| **Total Portfolio Project Time** |  | **6.83** |
+| **Total Portfolio Project Time** |  | **51.33** |
 
 > Portfolio project hours represent verified time invested in building, testing, evaluating, and documenting featured projects. Some projects began before the current structured session sequence; verified historical development time is included where an existing project time log is available.
 

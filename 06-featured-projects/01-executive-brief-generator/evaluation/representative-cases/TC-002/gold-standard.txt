@@ -1,0 +1,90 @@
+# TC-002 Gold Standard
+
+## Scenario
+Conflicting and Ambiguous Operating Data
+
+## Business
+NorthStar Home Services
+
+## Meeting Date
+August 10, 2026
+
+# Executive Brief
+
+**Business / Client:** NorthStar Home Services
+**Project or Engagement:** Operating Review
+**Reporting Period:** July / August 2026
+**Meeting Date:** August 10, 2026
+**Overall Status:** Not Determined
+
+## 1. Executive Summary
+
+July revenue closed at approximately $186,000 against an original target of $200,000. A possible revised target of $190,000 was referenced by operations but remains unconfirmed by finance. Leadership is also managing unresolved cancellation and conversion data, elevated overtime, an overdue commercial receivable, and technician staffing needs. No decision was made on pausing weekend appointments or changing scheduling platforms.
+
+## 2. Key Updates
+
+| Area | Update | Impact / Significance |
+|---|---|---|
+| Revenue | July revenue was approximately $186,000. Original target was $200,000; possible revised target of $190,000 is unconfirmed. | Performance against the official target remains unresolved. |
+| Customers | Cancellation count is disputed between approximately 11 and 14. | Exact customer-cancellation performance requires validation. |
+| Staffing | Three technicians exceeded normal overtime levels. | Overtime expense is approximately $8,400 month-to-date. |
+| Collections | One commercial customer owes $18,500 and is 42 days overdue. | Collection is materially delayed. |
+| Sales | Lead-conversion counts conflict between 29, 30, and an earlier figure of 31. | Conversion reporting is unresolved. |
+| Technology | ServiceFlow and the existing scheduling platform are under consideration. | No platform decision was made. |
+
+## 3. Decisions
+
+| Decision / Item | Decision-Maker | Current State | Effective Date / Condition |
+|---|---|---|---|
+| Send final payment notice to the overdue commercial customer. | Elena | Approved | August 10, 2026 |
+| Escalate overdue balance to Elena if unpaid by Friday. | Elena | Conditionally Approved | If payment is not received by Friday |
+| Pause weekend appointments. | Not stated | Deferred / No Decision | Not applicable |
+| Scheduling-platform selection. | Not stated | No Decision | Not applicable |
+
+## 4. Risks and Issues
+
+| Type | Item | Impact / Status | Action Owner | Response |
+|---|---|---|---|---|
+| Issue | Revenue is below the original $200,000 target. | Approx. $14,000 below original target. | Owner not assigned | Confirm official target. |
+| Issue | Cancellation count is disputed. | Exact count unresolved. | Owner not assigned | Confirm before next review. |
+| Issue | Three technicians exceeded normal overtime levels. | Approx. $8,400 overtime expense month-to-date. | Owner not assigned | Marcus believes staffing gaps and weekend demand may contribute. |
+| Issue | $18,500 commercial balance is 42 days overdue. | Delayed collection. | Priya | Send final notice and escalate if unpaid. |
+| Issue | Conversion data conflicts across sources. | Sales performance cannot be reliably finalized. | Jordan | Reconcile by Thursday. |
+| Risk | Technician staffing may remain constrained. | Impact not explicitly stated. | Owner not assigned | Six applicants and two scheduled interviews were reported. |
+
+## 5. Action Tracker
+
+| Action | Party | Owner | Deadline | Dependency / Condition | Status |
+|---|---|---|---|---|---|
+| Confirm exact cancellation count. | NorthStar | Owner not assigned | Before next review | None stated | Not Determined |
+| Compare ServiceFlow with current scheduling system and present recommendation. | NorthStar | Marcus + Jordan | August 17, 2026 | None stated | Not Determined |
+| Contact overdue customer and send final payment notice. | NorthStar | Priya | August 10, 2026 | None stated | Not Determined |
+| Escalate overdue balance to Elena. | NorthStar | Priya | Friday | Only if payment is not received | Conditional |
+| Reconcile lead-conversion discrepancy. | NorthStar | Jordan | Thursday | None stated | Not Determined |
+
+## 6. Leadership Attention Required
+
+- Confirm the official revenue target.
+- Resolve cancellation and conversion-data discrepancies.
+- Review overtime and staffing conditions before making weekend-scheduling changes.
+- Review scheduling-platform recommendation at the next meeting.
+- Assign ownership for final technician hiring responsibility if needed.
+
+## 7. Open Questions
+
+- Is the official revenue target $200,000 or $190,000?
+- What is the confirmed cancellation count?
+- What is the correct lead-conversion count?
+- Who owns final technician hiring responsibility?
+- Will the overdue balance be paid by Friday?
+
+## 8. Validation Notes
+
+- Revenue is approximate.
+- Revised $190,000 target is unconfirmed.
+- Cancellation count is disputed.
+- Lead-conversion data is disputed.
+- Marcus's explanation for overtime is a belief, not a confirmed causal finding.
+- Hiring one technician before September 1 is a desired outcome; no explicit final hiring owner was assigned.
+
+**REVIEW STATUS:** HUMAN-APPROVED GOLD STANDARD

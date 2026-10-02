@@ -1,0 +1,94 @@
+# TC-009 Gold Standard
+
+## Scenario
+High-Risk Operational and Safety Situation
+
+## Business
+Crestview Facility Services
+
+## Meeting Date
+August 10, 2026
+
+# Executive Brief
+
+**Business / Client:** Crestview Facility Services
+**Project or Engagement:** Safety Review
+**Reporting Period:** Current Safety Incidents
+**Meeting Date:** August 10, 2026
+**Overall Status:** Not Determined
+
+## 1. Executive Summary
+
+Crestview is managing two recent employee safety incidents, including a ladder fall that resulted in an emergency-room visit and a chemical splash incident. Monica ordered three additional ladders of the same model removed from service immediately pending Victor's inspection. The causes of both incidents remain unresolved, and managers were instructed not to communicate unconfirmed causes. External reporting requirements for the ladder incident are under review. A client-facing factual incident summary is due Wednesday and requires preparation, review, and Monica's approval before release.
+
+## 2. Key Updates
+
+| Area | Update | Impact / Significance |
+|---|---|---|
+| Safety | Two employee injuries occurred within five days. | One resulted in an emergency-room visit; the second employee returned to work the following day. |
+| Equipment | Ladder involved in the first incident was not included in the most recent inspection log. | Reason remains unknown. |
+| Equipment Control | Three same-model ladders were identified in regional use. | Monica ordered immediate removal pending inspection. |
+| Investigation | Chemical-handling procedures were reported as followed based on Victor's initial review. | Investigation is incomplete; finding remains preliminary. |
+| Compliance | External reporting requirement for the ladder incident is unresolved. | Alicia will review and consult outside safety counsel if necessary. |
+| Client Reporting | Client requested a written incident summary by Wednesday. | Summary must remain factual and avoid speculation about cause or liability. |
+
+## 3. Decisions
+
+| Decision / Item | Decision-Maker | Current State | Effective Date / Condition |
+|---|---|---|---|
+| Remove three same-model ladders from service. | Monica | Approved | Immediate / pending inspection |
+| Suspend all ladder-based work. | Monica | Rejected / Not Approved | Other inspected equipment remains available |
+| Communicate causes before investigations conclude. | Monica | Prohibited | Until investigations are complete |
+| Send factual client incident summary. | Monica | Approved | After required review and final approval |
+| Retrain all regional supervisors. | Not stated | No Decision | To be considered after investigations |
+
+## 4. Risks and Issues
+
+| Type | Item | Impact / Status | Action Owner | Response |
+|---|---|---|---|---|
+| Issue | Ladder fall resulted in emergency-room treatment. | Investigation remains open. | Victor | Continue investigation and inspect related equipment. |
+| Issue | Ladder was missing from latest inspection log. | Reason unknown. | Victor | Requires investigation. |
+| Issue | Chemical splash incident occurred. | Investigation remains open. | Victor | Continue investigation. |
+| Risk | Three same-model ladders may present unresolved safety concern. | Removed from service pending inspection. | Sam + Victor | Remove and inspect. |
+| Validation / Compliance | External reporting requirement is unresolved. | Human determination required. | Alicia | Review details and contact outside safety counsel if necessary. |
+
+## 5. Action Tracker
+
+| Action | Party | Owner | Deadline | Dependency / Condition | Status |
+|---|---|---|---|---|---|
+| Remove three same-model ladders from service. | Crestview | Sam | Immediate | None stated | Not Determined |
+| Inspect the three ladders and provide findings. | Crestview | Victor | August 11, 2026 | Ladders removed from service | Not Determined |
+| Review whether external reporting is required. | Crestview | Alicia | August 10, 2026 | Incident details | Not Determined |
+| Contact outside safety counsel if necessary. | Crestview | Alicia | Conditional | Based on reporting review | Conditional |
+| Prepare factual incident details for client summary. | Crestview | Victor | Before Wednesday | None stated | Not Determined |
+| Review client incident summary. | Crestview | Alicia | Before release | Victor's factual details | Pending Dependency |
+| Approve final client incident summary. | Crestview | Monica | Before release | Alicia review | Pending Dependency |
+
+## 6. Leadership Attention Required
+
+- Maintain immediate control over same-model ladders until inspection is complete.
+- Review investigation findings without treating preliminary statements as final causes.
+- Determine external reporting obligations through appropriate human review.
+- Ensure client communication contains factual information only.
+- Preserve Monica's final approval gate before client release.
+
+## 7. Open Questions
+
+- Why was the ladder absent from the inspection log?
+- What caused the ladder incident?
+- What caused the chemical incident?
+- Were chemical-handling procedures fully compliant?
+- Does the ladder incident require external reporting?
+- Will supervisor retraining be approved after investigations conclude?
+
+## 8. Validation Notes
+
+- Cause of the ladder incident is unknown.
+- Claim that incorrect PPE caused the chemical incident is unconfirmed.
+- Victor's statement regarding chemical procedures is based on an initial review, not a final finding.
+- External reporting requirements are unresolved.
+- No broad ladder-work suspension was approved.
+- Supervisor retraining was discussed but not approved.
+- Client summary must not speculate regarding cause or liability.
+
+**REVIEW STATUS:** HUMAN-APPROVED GOLD STANDARD

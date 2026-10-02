@@ -1,0 +1,77 @@
+# Executive Brief Generator — Project Time Log
+
+## Historical Estimate
+
+Work completed before formal time tracking began:
+
+Estimated Hours: 22
+
+Period:
+Initial concept through V0.4 / V1.3 internal regression baseline
+
+Included:
+- Product definition
+- Requirements
+- Prompt development
+- Two-stage architecture
+- Test-case development
+- Evaluation framework
+- Defect analysis
+- Prompt revisions
+- Regression testing
+- Documentation
+
+Note:
+Historical hours are estimated because formal time tracking was not in place.
+
+---
+
+# Time Log
+
+| Date | Duration | Phase | Work Completed | Artifact / Output | Time Type |
+|---|---:|---|---|---|---|
+| Aug 7–8, 2026 | ~12.0 hrs | Product Definition & Prototype Development | Defined product concept, use case, requirements, executive brief structure, initial prompt architecture, two-stage Extractor → Brief architecture, and 10-test-case/gold-standard framework | Initial product architecture, prompt versions, TC-001–TC-010 framework | Estimated |
+| Aug 10, 2026 | ~10.0 hrs | Testing, Regression & Documentation | Ran test cases, reviewed defects, refined prompts, completed V0.4 / V1.3 regression work, reran earlier cases on the current baseline, completed end-to-end evaluations, consolidated regression results, and updated repository documentation | Defect fixes, TC-001–TC-010 evaluations, regression report, regression-results.md, README.md | Estimated |
+Aug 12, 2026 | 3.0 hrs | Unseen Validation | Begin Phase 2 validation by defining the unseen-input testing methodology and creating the next validation set for the V0.4 / V1.3 baseline | Unseen-validation framework + TC-011 onward | Actual
+Aug 15, 2026 | 1.0 hr | Operational Prototype Validation | Completed OVR-20260815-001 end-to-end operational validation using a fresh synthetic weekly operating review; generated and preserved the raw source, original Stage-1 extraction, Stage-1 validation, corrected Stage-1 records, original Stage-2 executive brief, Stage-2 validation, final approved brief, and run summary; identified 8 Stage-1 and 2 Stage-2 non-material corrections; reopened E-005 based on ownership-inference recurrence; confirmed O-001 recurrence; observed Stage-2 attribution-compression and leadership-attention over-prioritization candidates; confirmed no recurrence of E-006 or O-002; updated README, defect log, regression results, current baseline report, and V0.6 promotion/closure documentation; committed and pushed the completed operational-validation artifacts to GitHub. | OVR-20260815-001 closed; V0.6/V1.3 remained the active baseline with human validation required.
+Aug 15, 2026 | 1.2 hrs | Operational Validation & V0.7 Remediation Planning | Completed OVR-20260815-002 end-to-end validation and closure; documented 15 Stage-1 and 6 Stage-2 non-material corrections; updated defect, regression, baseline, promotion, and README documentation; promoted O-001 to E-007; formalized O-003, O-004, and O-005; updated Jira; created V0.7 remediation plan and Structured Extractor V0.7 candidate; implemented E-005 ownership/accountability controls and E-007 decision-state controls; prepared E-005 targeted regression framework. | OVR-20260815-002 closed; V0.7 remediation implemented; targeted regression is the next validation step.
+Aug 15, 2026 | 2.8 hrs | V0.7 E-005 Targeted Regression & Remediation | Completed targeted E-005 regression across TC-011 through TC-015 using Structured Extractor V0.7; identified and remediated a handoff-ownership failure in TC-012 and a multi-responsibility ownership failure in TC-013; added handoff-specific and multi-responsibility ownership controls to the V0.7 candidate; reran affected cases and achieved final passes across TC-011–TC-015 with 0 unsupported ownership assignments in final outputs; validated preservation of explicit owners; completed OVR-20260815-001 targeted retesting of prior E-005 failures F-010, F-018, and F-027, with all three corrected under V0.7; updated the V0.7 E-005 targeted regression record throughout testing. | TC-011–TC-015 targeted set closed at 5/5 final passes; OVR-20260815-001 E-005 retest passed; E-005 remains open pending targeted regression of the six ownership corrections from OVR-20260815-002.
+Aug 17, 2026 | [1.0 hrs] | V0.7 Targeted & Broader Regression Validation | Completed V0.7 E-005 targeted-regression closure across TC-011–TC-015 and prior OVR-20260815-001/002 recurrence cases; completed E-007 targeted regression using TC-005 and both operational-validation recurrence sets; confirmed E-006 protection through TC-006; executed and reviewed broader V0.7 regression across TC-001–TC-015; achieved 15/15 passing test cases and 293/300 available evaluation points with 0 material defects and 0 automatic failures; identified a non-material E-005 recurrence in TC-002, possible E-003 scope-boundary recurrence in TC-004, O-003 accountability-boundary recurrence in TC-007, O-002 predictive-risk recurrence in TC-009, and additional action-boundary, dependency-classification, and approval-gate findings; corrected affected regression artifacts and formally closed Phase 4 with V0.7 promotion blocked pending controlled remediation. | Phase 1 E-005 targeted regression CLOSED; Phase 2 E-007 targeted regression CLOSED; Phase 3 E-006 protection CLOSED; Phase 4 broader regression CLOSED at 293/300; V0.7 remains candidate and is NOT promoted; next step is controlled broader-regression remediation before fresh operational validation.
+Aug 19, 2026 | [1.5 hrs] | V0.7 Phase 4 — Remediation & Broader Regression | Completed controlled remediation validation and full TC-001–TC-015 broader-regression rerun. Confirmed no recurrence of E-003, E-005, E-006, E-007, O-002, O-003, or future approval-gate inheritance. Final result: 15/15 PASS, 300/300, 0 material defects, 0 automatic failures. V0.7 remains unpromoted pending Phase 5 fresh operational validation. | Updated `structured-extractor-v0.7.txt`; focused remediation regression artifacts; `TC-001`–`TC-015` V0.7 Phase 4 rerun outputs; `v0.7-phase4-broader-regression-rerun.md` | Actual |
+Aug 19, 2026 | 1.5 hrs | Structured Extractor V0.7 Promotion & Closure | Completed Phase 5 fresh operational validation across five synthetic cases; finalized V0.7 promotion review; updated README, operational validation plan, regression results, current baseline report, and defect log; closed remediated Stage-1 defects; retained observation monitoring items; updated Jira; committed and pushed final promotion-state documentation to GitHub. | Structured Extractor V0.7 formally promoted as current Stage-1 baseline; Executive Brief Generator V1.3 remains current Stage-2 baseline; human review still required.
+Aug 20, 2026 | 3.0 hrs | Executive Brief Generator V1.4 Validation & Promotion | Completed Executive Brief Generator V1.4 Stage-2 remediation and promotion cycle; finalized V1.4 attribution-preservation and leadership-attention controls; completed targeted remediation validation, risk-based broader regression, and five-case fresh operational validation using Structured Extractor V0.7 → Executive Brief Generator V1.4; identified and remediated O-005 recurrence during TC-006 candidate regression; completed human Stage-1 and Stage-2 validation for FOV-S2-001 through FOV-S2-005; achieved 5/5 fresh Stage-2 validation PASS with 0 material defects, 0 automatic failures, 0 O-004 recurrence, 0 post-remediation O-005 recurrence, 0 Open-Question Boundary Expansion recurrence, and 0 new systematic Stage-2 defects; completed formal V1.4 promotion review; promoted Executive Brief Generator V1.4 as the active Stage-2 baseline; updated README and defect-log baseline states; updated Jira validation and remediation workflow statuses; committed and pushed 53 promotion artifacts to GitHub; created annotated Git tag v1.4-stage2-baseline. | V1.4 formally promoted; active prototype architecture is Structured Extractor V0.7 → Executive Brief Generator V1.4 with human review required; product remains Prototype — Internal Validation.
+Aug 21, 2026 | 0.75 hr | Phase-A Front-End Prototype | Defined Stage 1/Stage 2 integration contract, application data model, prototype user workflow, and front-end implementation plan; built the initial HTML/CSS/JavaScript browser prototype using the application design system; validated the end-to-end human-review workflow with mock Stage-1 and Stage-2 outputs. | Phase-A browser workflow passed initial validation with no observed blocking defects; approval invalidation and Stage-2 gating worked correctly. Phase B secure AI integration paused pending partner discussion on API cost and architecture.
+Aug 24, 2026 | 0.75 hr | Phase-B Backend & Live API Integration | Installed and initialized Node.js/npm backend tooling; added OpenAI SDK dependencies; configured secure session-based API credential handling; created and validated the local Node.js backend and /api/health endpoint; implemented the first live Stage-1 API endpoint using Structured Extractor V0.7; corrected the promoted prompt path; completed the first successful live GPT-5.6 Luna Stage-1 call; identified an unsupported deadline inference and a possible validation-item over-generation requiring controlled model-integration validation. | Local backend and OpenAI API integration technically validated; first live Stage-1 call succeeded; Structured Extractor V0.7 + GPT-5.6 Luna remains an integration candidate pending behavioral validation before browser integration. | Actual
+Aug 27, 2026 | 1.0 hr | Stage-1 Live Model Validation & V0.8 Remediation | Completed the five-case live Structured Extractor V0.7 + GPT-5.6 Luna integration baseline; documented recurring validation-item over-generation, contextual deadline inference, reporter-attribution leakage, organization/party synthesis, and pending-state action synthesis; preserved V0.7 and created Structured Extractor V0.8 Candidate with targeted hardening rules; reconfigured the local Node.js backend for V0.8; resolved a stale Node-process/version mismatch; executed five targeted V0.8 protection tests covering deadlines, ownership, attribution, approval/scope, dependencies/handoffs, safety, causality, compliance, and validation restraint; achieved 5/5 PASS with 0 material failures; documented results and established broader regression testing as the next promotion gate. | V0.8 Candidate passed targeted remediation validation; live Stage-1 browser integration remains blocked pending broader regression/protection testing and formal promotion review. | Actual
+Aug 29, 2026 | 2.67 hr | Stage-1 V0.8 Promotion & Browser Integration | Completed remaining Structured Extractor V0.8 broader regression testing across TC-008, TC-009, and TC-012; identified and remediated TC-009 decision-state and validation-restraint defects through R7; achieved 7/7 broader regression cases cleared with 0 material failures and 0 recurrence of known systematic defects; completed the formal V0.8 R7 promotion review; promoted Structured Extractor V0.8 as the active Stage-1 baseline; created and pushed Git tag `v0.8-stage1-baseline`; updated the Node.js backend to use the promoted V0.8 prompt; verified promoted runtime output; integrated the live `/api/stage1` workflow into the browser prototype; removed obsolete Stage-1 mock generation; updated frontend V0.7 references to V0.8; preserved human review, approval, and approval-invalidation controls; completed JavaScript syntax/integrity checks and manually validated the live Stage-1 browser workflow; updated Jira and pushed promotion/browser-integration commits to GitHub. | Structured Extractor V0.8 is promoted and live in the browser prototype; Stage-1 regression and promotion cycle complete; Stage 2 remains V1.4 with browser generation still mocked; next development phase is live Stage-2 backend/API integration. | Actual
+Sep 1, 2026 | 1.0 hr | Live Stage-2 Backend Integration & End-to-End Browser Validation | Added the promoted Executive Brief Generator V1.4 prompt to the Node.js backend; created and validated the live POST /api/stage2 endpoint using GPT-5.6 Luna; confirmed request validation and successful live Stage-2 model output; removed the obsolete Stage-2 browser mock and connected the frontend to the live backend API; preserved Stage-1 approval gating and final human approval controls; completed the first fully live source → Stage-1 V0.8 → human approval → Stage-2 V1.4 → final human approval workflow; validated the HarborView test case as PASS WITH MONITOR; documented cross-record timing propagation and Validation Notes restraint as monitoring items; identified missing visible AI loading feedback as a usability requirement and created Jira KAN-28; created the Phase-B live Stage-1/Stage-2 validation artifact; committed and pushed the completed integration and validation to GitHub as d5392f1. | Stage 1 V0.8 and Stage 2 V1.4 are now both live in the browser prototype with human approval gates preserved; Phase B integration milestone complete; next work is backend/API hardening and error-state validation before broader UI/UX refinement. | Actual
+Sep 3, 2026 | 1.33 hr | Phase-B Hardening, Validation Restraint & Failure-State Recovery | Ran a second live Redwood end-to-end validation through Structured Extractor V0.8 and Executive Brief Generator V1.4; confirmed correct handling of approved go-live timing, Alicia’s September 18 deadline, Eric’s explicit verification requirement, prohibited workflow-change decision, reported callback inconsistency, and unconfirmed callback-volume baseline; identified one Stage-2 Validation Notes wording expansion and classified it for targeted follow-up; ran isolated and mixed validation-restraint tests confirming V1.4 does not systematically convert unresolved or unconfirmed facts into unsupported actions, owners, deadlines, open questions, or leadership-attention items; retained Validation-Note Expansion as OBSERVED ONCE / MONITOR with no prompt patch authorized; tested Stage-2 backend outage behavior and confirmed approved Stage-1 state, output, and workflow position were preserved; validated successful Stage-2 retry and recovery after backend restart without rerunning Stage 1; tested Stage-1 API failure behavior using a temporary invalid endpoint and confirmed source preservation, no false workflow advancement, Stage-2 lockout, and retry readiness; restored the live /api/stage1 route and verified JavaScript syntax and endpoint integrity; confirmed UI loading/retry feedback remains tracked under KAN-28. | Phase-B live integration remains stable; Stage-1 and Stage-2 failure-state preservation and recovery paths are validated; V1.4 validation-restraint behavior remains acceptable with one monitored wording observation; next work is additional hardening/error-state validation before broader UI/UX refinement. | Actual
+
+---
+
+# Milestones
+
+## August 12, 2026 — Structured Extractor V0.6 Promoted
+
+Milestone:
+
+**Structured Extractor V0.6 promoted to the current Stage-1 baseline.**
+
+Current approved architecture:
+
+```text
+Raw Operating Source
+        ↓
+Structured Extractor V0.6
+        ↓
+Structured Records + Source Evidence
+        ↓
+Validation
+        ↓
+Executive Brief Generator V1.3
+        ↓
+Draft Executive Brief
+        ↓
+Human Approval
+
+Aug 15, 2026 | 1.0 hr | Operational Prototype Validation

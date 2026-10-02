@@ -1,0 +1,30 @@
+TEST ID: TC-006
+SCENARIO: Poor-Quality and Incomplete Meeting Notes
+
+BUSINESS: ClearLine Mechanical
+MEETING DATE: August 10, 2026
+PARTICIPANTS: Tom, Owner; Jen, Operations; Mike, Service; Ana, Office
+
+SOURCE MATERIAL:
+
+July numbers still not final. Around 142k maybe 145k depending on two invoices. target 150.
+
+callback issue still bad. Mike said 7 last week? Jen thinks 5. need pull actual.
+
+Northside job delayed again. parts maybe Thurs. Customer upset. Tom said "we need this wrapped asap." No new date.
+
+Ana mentioned 3 customers waiting on estimates from last week. Not sure who owns follow-up. Mike said probably service? Jen said office normally handles.
+
+Truck 4 still down. repair shop said maybe Friday but last week they also said Wednesday. using rental meanwhile.
+
+Tom: stop taking new work in Zone C for now until we figure staffing out.
+
+Jen said maybe bring in temp tech for two weeks. Tom said "send me numbers first." No approval.
+
+Safety incident yesterday — minor hand cut, no lost time. report submitted? Mike thinks yes, Ana said she hasn't seen it.
+
+August schedule looks slammed. 92% booked? Jen said "around there."
+
+Need somebody to check weekend overtime. no owner.
+
+Next mtg maybe Monday or Tuesday depending Tom travel.

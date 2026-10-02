@@ -1,0 +1,34 @@
+TEST ID: TC-009
+SCENARIO: High-Risk Operational and Safety Situation
+
+BUSINESS: Crestview Facility Services
+MEETING DATE: August 10, 2026
+PARTICIPANTS: Monica, CEO; James, COO; Alicia, HR Director; Victor, Safety Manager; Sam, Regional Manager
+
+SOURCE MATERIAL:
+
+Victor reported two employee injuries at separate client sites during the past five days. One involved a ladder fall that resulted in an emergency-room visit. The second involved a chemical splash to an employee's arm; the employee returned to work the following day.
+
+Victor said the ladder involved in the first incident had not been included in the most recent equipment inspection log. He does not yet know why.
+
+Sam said three additional ladders of the same model are currently being used across the region.
+
+Monica told Sam to remove the three ladders from service immediately until Victor completes an inspection.
+
+Victor will inspect the ladders tomorrow and provide findings to Monica and James.
+
+Alicia said the company needs to confirm whether the ladder incident meets external reporting requirements. She will review the incident details today and contact outside safety counsel if necessary.
+
+James suggested suspending all ladder-based work until the review is complete. Monica said she does not want to suspend all ladder work yet because other inspected equipment is available. No broader suspension was approved.
+
+Victor said chemical-handling procedures were followed during the second incident based on his initial review, but the investigation is not complete.
+
+Sam reported that one supervisor told employees the chemical incident happened because the employee was not wearing the correct protective equipment. Victor said that has not been confirmed.
+
+Monica instructed managers not to communicate a cause for either incident until the investigations are completed.
+
+Alicia said one client has asked for a written incident summary by Wednesday. Monica approved sending a factual summary but said it must not speculate about cause or liability. Victor will prepare the factual incident details, Alicia will review them, and Monica must approve the final version before it is sent.
+
+James said the company should consider retraining all regional supervisors after the investigations are complete. No decision was made.
+
+Next safety review is August 12.
