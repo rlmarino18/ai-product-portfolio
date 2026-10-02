@@ -1,45 +1,69 @@
-# Ralph Marino — AI/ML Product Portfolio
+# Ralph Marino — AI Product Portfolio
 
-This portfolio demonstrates hands-on product and technical fluency across Python, data analysis, machine learning, generative AI, evaluation, APIs, retrieval-augmented generation, agentic workflows, and AI system design.
+This portfolio demonstrates hands-on AI product judgment supported by technical fluency across Python, machine learning fundamentals, generative AI, retrieval-augmented generation, evaluation, APIs, agentic workflows, and AI system design.
 
-The objective is to develop enough technical capability to make strong AI/ML product decisions: identifying valuable problems, translating business needs into requirements, understanding system architecture, prototyping technical approaches, evaluating quality, identifying failure modes, reasoning about cost and latency, and determining whether an AI capability creates enough value to justify its complexity.
+The objective is not to specialize as an ML engineer or pursue ML Product Management as a separate career track.
+
+The objective is to develop the technical depth required to make strong AI product decisions: identifying valuable problems, translating business needs into product requirements, understanding AI system architecture, prototyping solutions, evaluating quality, identifying failure modes, reasoning about cost and latency, and determining whether an AI capability creates enough value to justify its complexity.
 
 The portfolio is built around a central principle:
 
-> A technically functional AI system is not necessarily a good product.
+> A technically functional AI system is not necessarily a good AI product.
 
-Each project therefore emphasizes both **how the system works** and **why a particular product or technical decision should be made**.
+Each project therefore emphasizes both **how the system works** and **why a particular product, architecture, or implementation decision should be made**.
 
 ---
 
 # What This Portfolio Is Designed to Prove
 
-This portfolio is designed to demonstrate the ability to operate across product, engineering, data, and business contexts.
+This portfolio is designed to demonstrate the ability to operate at the intersection of product, engineering, data, and business.
 
 Specifically, the work is intended to show that I can:
 
-- identify workflows and problems where AI/ML may create measurable value
+- identify workflows and customer problems where AI may create measurable value
 - distinguish strong AI opportunities from weak or unnecessary ones
 - translate business problems into product and technical requirements
-- understand the architecture of AI/ML systems at product depth
+- understand AI and ML architecture at sufficient depth to make product decisions
 - build working prototypes to test assumptions
-- reason about deterministic rules versus machine learning
-- evaluate models, prompts, retrieval systems, and workflows
-- define success metrics before implementation
+- determine when deterministic logic, traditional ML, or generative AI is appropriate
+- evaluate models, prompts, retrieval systems, agents, and end-to-end workflows
+- define product and evaluation metrics before implementation
 - design experiments and evaluation datasets
-- analyze quality, latency, cost, reliability, and failure modes
-- determine where human review should remain in the system
-- communicate technical decisions to non-technical stakeholders
-- communicate product requirements and trade-offs to technical teams
+- analyze quality, latency, cost, reliability, safety, and failure modes
+- determine where human review and operational controls should remain
+- communicate technical trade-offs to business stakeholders
+- communicate product requirements and priorities to technical teams
 - make evidence-based product recommendations rather than relying on model capability alone
 
 The portfolio is not intended to demonstrate:
 
-> “I can build the most technically sophisticated model.”
+> “I can build the most sophisticated machine learning model.”
 
 It is intended to demonstrate:
 
-> “I can understand, prototype, evaluate, and make disciplined product decisions around AI/ML systems.”
+> “I can identify, understand, prototype, evaluate, and make disciplined product decisions around AI systems.”
+
+---
+
+# Portfolio Thesis
+
+**AI Product judgment backed by hands-on technical fluency.**
+
+Machine learning is included as a supporting technical discipline rather than the primary career focus.
+
+Understanding ML fundamentals helps answer product questions such as:
+
+- When is machine learning actually necessary?
+- When would deterministic rules be sufficient?
+- Which model errors matter to the customer or business?
+- What data is required to make the capability viable?
+- How should model quality be evaluated?
+- What trade-offs exist between accuracy, latency, cost, explainability, and operational complexity?
+- When is an AI capability reliable enough to launch?
+
+The goal is therefore not ML specialization for its own sake.
+
+The goal is sufficient technical depth to make better AI product decisions.
 
 ---
 
@@ -48,20 +72,24 @@ It is intended to demonstrate:
 - AI Product Management
 - Applied AI Product
 - AI Product Strategy
-- AI Product Discovery
+- AI Product Discovery & Prioritization
+- AI Productization & Lifecycle
 - AI Evaluation & Experimentation
-- AI Workflow Automation
-- AI Technical Program Management
+- AI Workflow Design & Automation
 - Human-in-the-Loop AI
-- AI Systems & Product Architecture
+- RAG & Knowledge Products
+- Agentic Product Design
 - AI Reliability & Governance
-- Technical Product Development
+- AI Systems & Product Architecture
+- Business Value, Adoption & Product Metrics
 
 ---
 
 # Technical Scope
 
-The portfolio intentionally spans the technical domains required to understand, prototype, and evaluate modern AI/ML products without attempting to reproduce ML-engineer-level specialization.
+The portfolio intentionally spans the technical domains required to understand, prototype, evaluate, and manage modern AI products.
+
+Machine learning is treated as an important technical foundation rather than a separate portfolio identity. The objective is product-level technical fluency: enough depth to understand model behavior, evaluate trade-offs, communicate effectively with engineering and data teams, and make informed product decisions without attempting to reproduce ML-engineer-level specialization.
 
 ## Foundations
 
@@ -99,22 +127,25 @@ This area develops the ability to:
 
 ---
 
-## Machine Learning
+## Machine Learning Foundations for AI Product
 
 scikit-learn · Feature Engineering · Classification · Training / Validation Concepts · Precision · Recall · F1 Score · Confusion Matrices · Error Analysis · Model Comparison
 
 ### Purpose
 
-The goal is not advanced model development.
+Machine learning provides foundational knowledge for understanding how predictive AI systems behave and how their performance should influence product decisions.
 
 The goal is to understand:
 
-- when machine learning is appropriate
-- how simple models are trained
-- how predictions should be evaluated
-- which errors matter most
+- when traditional machine learning is appropriate
+- how training and validation work
+- how features influence predictions
+- how precision, recall, F1, and confusion matrices relate to product outcomes
+- which model errors matter most for a specific use case
+- how to compare model performance against business and user requirements
 - when deterministic logic may outperform unnecessary ML complexity
-- how to compare model performance against product requirements
+
+The objective is product fluency rather than ML engineering specialization.
 
 ---
 
@@ -262,32 +293,30 @@ The project is also used to evaluate:
 **Type:** Flagship  
 **Status:** In Progress
 
-A local retrieval-augmented generation application for document-based question answering.
+A local retrieval-augmented generation prototype focused on document ingestion, semantic retrieval, reranking, evidence inspection, and retrieval-quality evaluation before answer generation.
 
 Current capabilities include:
 
 - PDF, DOCX, and TXT ingestion
 - document chunking
-- local embeddings
+- local sentence-transformer embeddings
 - ChromaDB vector storage
-- semantic retrieval
-- keyword and proximity-aware retrieval experiments
-- cross-encoder reranking
-- source metadata and citations
-- grounding behavior
-- insufficient-evidence handling
+- semantic candidate retrieval
+- keyword and proximity-aware reranking experiments
+- local cross-encoder reranking
+- source, page, and chunk metadata
 - controlled retrieval-quality testing
+- documented retrieval and chunk-boundary failure modes
 
 The project is also used to evaluate:
 
 - retrieval relevance
 - evidence completeness
-- grounding quality
 - reranking effectiveness
-- chunk-boundary failure modes
-- latency
-- cost
-- launch-readiness trade-offs
+- chunk-boundary and cross-page failure modes
+- retrieval metrics and evaluation methodology
+- latency and cost trade-offs
+- requirements for adding a future grounded answer-generation layer
 
 ---
 
@@ -323,6 +352,8 @@ Current capabilities include:
 - duplicate prevention
 - reusable decision functions
 - required-field validation
+- business-value validation
+- layered input validation
 - fail-fast control flow
 
 ---
