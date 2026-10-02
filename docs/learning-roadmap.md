@@ -1,8 +1,8 @@
-# AI/ML Product Learning Roadmap
+# AI Product Learning Roadmap
 
 ## Product Vision
 
-Build an **AI/ML Product Portfolio** that demonstrates the ability to identify valuable AI/ML opportunities, understand the underlying technology, evaluate technical approaches, and make evidence-based product decisions.
+Build an **AI Product Portfolio** that demonstrates the ability to identify valuable AI opportunities, understand the underlying technology, evaluate technical approaches, and make evidence-based product decisions.
 
 The portfolio is designed to show that I can operate across product, engineering, data, and business contexts without positioning myself as a ML engineer or AI researcher.
 
@@ -181,7 +181,7 @@ The objective is to answer:
 
 ---
 
-## Theme 3 — ML Product Judgment
+## Theme 3 — ML Foundations for AI Product Judgment
 
 Understand predictive ML sufficiently to determine when it creates product value.
 
@@ -285,7 +285,7 @@ The roadmap should produce measurable improvement across four capability levels.
 
 ## Product Discovery Outcome
 
-Demonstrate the ability to identify and frame valuable AI/ML product opportunities.
+Demonstrate the ability to identify and frame valuable AI product opportunities.
 
 Evidence should include:
 
@@ -299,7 +299,7 @@ Evidence should include:
 
 ## Technical Fluency Outcome
 
-Demonstrate enough technical capability to understand and prototype AI/ML product behavior.
+Demonstrate enough technical capability to understand and prototype AI product behavior.
 
 Evidence should include:
 
@@ -431,7 +431,7 @@ Where applicable, projects should evaluate:
 
 Portfolio work should be prioritized based on:
 
-1. **Product relevance** — Does the work strengthen AIML product judgment?
+1. **Product relevance** — Does the work strengthen AI product judgment?
 2. **Learning value** — Does it build a capability required by later projects?
 3. **Evidence value** — Will it produce something meaningful to discuss or demonstrate?
 4. **Technical dependency** — Is the capability required before more advanced work can proceed?
@@ -793,7 +793,7 @@ A concept is sufficiently learned when I can:
 
 # Definition of Portfolio Success
 
-The portfolio is successful when it demonstrates that I can move through the full AIML product decision process:
+The portfolio is successful when it demonstrates that I can move through the full AI product decision process:
 
 ```text
 Vision
