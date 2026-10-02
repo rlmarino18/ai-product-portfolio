@@ -215,3 +215,112 @@ Product & Architecture Trade-Offs
 Recommendation
         ↓
 Iteration
+```
+
+---
+
+# Featured Projects
+
+## 1. AI Workflow Opportunity & ROI Analyzer
+**Type:** Flagship  
+**Status:** Planned
+
+Evaluates operational workflows to determine where AI or automation may create measurable value.
+
+Focus areas include:
+
+- workflow discovery
+- AI opportunity identification
+- business-value estimation
+- implementation complexity
+- prioritization
+- ROI reasoning
+- recommendation quality
+
+---
+
+## 2. Document Q&A RAG Assistant
+**Type:** Flagship  
+**Status:** In Progress
+
+A local retrieval-augmented generation application for document-based question answering.
+
+Current capabilities include:
+
+- PDF, DOCX, and TXT ingestion
+- document chunking
+- local embeddings
+- ChromaDB vector storage
+- semantic retrieval
+- keyword and proximity-aware retrieval experiments
+- cross-encoder reranking
+- source metadata and citations
+- grounding behavior
+- insufficient-evidence handling
+- controlled retrieval-quality testing
+
+The project is also used to evaluate:
+
+- retrieval relevance
+- evidence completeness
+- grounding quality
+- reranking effectiveness
+- chunk-boundary failure modes
+- latency
+- cost
+- launch-readiness trade-offs
+
+---
+
+## 3. AI Experimentation & Model Selection Lab
+**Type:** Flagship  
+**Status:** Planned
+
+Demonstrates structured comparison of AI configurations using controlled evaluation rather than anecdotal testing.
+
+Focus areas include:
+
+- model comparison
+- prompt comparison
+- evaluation datasets
+- quality metrics
+- latency
+- cost
+- failure analysis
+- product recommendations
+
+---
+
+## 4. AI Support Triage System
+**Type:** Supporting  
+**Status:** In Progress
+
+Builds technical foundations through a support-ticket workflow that begins with deterministic business rules and progressively adds validation, data analysis, and later ML-assisted triage.
+
+Current capabilities include:
+
+- priority classification
+- SLA breach detection
+- escalation routing
+- duplicate prevention
+- reusable decision functions
+- required-field validation
+- fail-fast control flow
+
+---
+
+## 5. Agentic Workflow Guardrail Simulator
+**Type:** Supporting  
+**Status:** Planned
+
+Explores agentic workflow design with emphasis on safe autonomy and operational controls.
+
+Focus areas include:
+
+- tool use
+- permissions
+- escalation
+- human-in-the-loop review
+- failure containment
+- governance
+- observability
