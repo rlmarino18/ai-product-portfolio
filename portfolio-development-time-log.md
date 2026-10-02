@@ -27,9 +27,9 @@ Multiple sessions may be completed on the same day, and gaps between sessions do
 | Python | 4.33 |
 | Data Analysis | 0.0 |
 | Machine Learning | 0.0 |
-| Applied AI | 0.0 |
+| Applied AI | 1.0 |
 | AI Systems | 0.0 |
-| **Total Learning Time** | **4.33** |
+| **Total Learning Time** | **5.33** |
 
 > Learning-area hours represent the technical capability developed during portfolio work. Project hours are tracked separately below because the same session may simultaneously contribute to both technical learning and a featured project. These totals should not be added together.
 
@@ -40,11 +40,11 @@ Multiple sessions may be completed on the same day, and gaps between sessions do
 | Project | Status | Hours |
 |---|---|---:|
 | AI Workflow Opportunity & ROI Analyzer | Not Started | 0.0 |
-| Document Q&A RAG Assistant | In Progress | 2.50 |
+| Document Q&A RAG Assistant | In Progress | 3.50 |
 | Executive Brief Generator | In Progress | 44.50 |
 | AI Support Triage System | In Progress | 4.33 |
 | Agentic Workflow Guardrail Simulator | Not Started | 0.0 |
-| **Total Portfolio Project Time** |  | **51.33** |
+| **Total Portfolio Project Time** |  | **52.33** |
 
 > Portfolio project hours represent verified time invested in building, testing, evaluating, and documenting featured projects. Some projects began before the current structured session sequence; verified historical development time is included where an existing project time log is available.
 
@@ -687,6 +687,98 @@ means:
 - fail-fast logic prevents unnecessary downstream processing
 - validation improves reliability and makes workflow failures easier to control
 
+# Session 9 — RAG Migration, Evaluation & Portfolio Reconciliation
+
+**Date:** October 2, 2026  
+**Duration:** 1 hour  
+**Project:** Document Q&A RAG Assistant  
+**Learning Area:** Applied AI
+
+## Objective
+
+Reconcile an existing RAG prototype with its public portfolio narrative by inspecting the implemented retrieval architecture, evaluation evidence, current limitations, and development history.
+
+## Work Completed
+
+- Migrated and reviewed the existing Document Q&A RAG Assistant
+- Inspected the implemented retrieval pipeline
+- Verified local embedding and ChromaDB retrieval architecture
+- Reviewed semantic retrieval and reranking behavior
+- Reviewed the existing controlled five-question retrieval evaluation
+- Identified the documented 4/5 initial retrieval baseline
+- Distinguished implemented capabilities from planned answer-generation features
+- Documented cross-page and chunk-boundary retrieval failure modes
+- Reframed the project as a retrieval-first RAG prototype
+- Reconciled the README with the actual implementation state
+- Added a structured evaluation narrative
+- Documented current bottlenecks and production-readiness gaps
+
+## Technical Concepts
+
+- Retrieval-Augmented Generation
+- document ingestion
+- text chunking
+- embeddings
+- vector search
+- ChromaDB
+- semantic retrieval
+- candidate retrieval
+- reranking
+- cross-encoders
+- source attribution
+- retrieval evaluation
+- Recall@K
+- Precision@K
+- Mean Reciprocal Rank
+- grounding
+- chunk-boundary failure
+- cross-page context
+- regression testing
+
+## Product Capability Developed
+
+Strengthened the ability to evaluate an AI product based on what the system actually implements rather than what its intended architecture claims.
+
+The project now clearly separates:
+
+    Retrieval Layer
+        ↓
+    Evaluation
+        ↓
+    Evidence Quality
+        ↓
+    Future Generation Layer
+
+This creates a more defensible product-development sequence because answer generation is intentionally deferred until retrieval quality is sufficiently understood.
+
+## Product Decision / Insight
+
+RAG quality is not primarily an LLM problem.
+
+If the retrieval system supplies incomplete, irrelevant, or poorly ranked evidence, a stronger generation model cannot reliably recover information that never entered its context.
+
+For this project, retrieval evaluation therefore precedes answer-generation development.
+
+## Failure Modes / Edge Cases
+
+The review identified several unresolved retrieval risks:
+
+- relevant evidence split between chunks
+- logical sections spanning PDF pages
+- correct evidence appearing with excessive surrounding context
+- relevant chunks retrieved but ranked too low
+- heuristic evidence selection removing useful information
+- small evaluation sets creating misleading confidence in retrieval quality
+
+## Lessons Learned
+
+- implementation evidence should determine portfolio claims
+- retrieval and generation quality should be evaluated separately
+- a successful retrieval result is not equivalent to a successful RAG answer
+- small evaluation sets are useful for development but not sufficient for production validation
+- reranking can improve relevance without fixing incomplete underlying chunks
+- architecture documentation should clearly distinguish current capability from planned capability
+
 ---
 
 # Actual Time by Week
@@ -706,10 +798,11 @@ means:
 | Category | Hours |
 |---|---:|
 | Python / Technical Learning | 3.00 |
+| Applied AI / Technical Learning | 1.00 |
 | Product / Jira | 1.00 |
 | Dedicated Portfolio Build Block | 0.0 |
 | Weekly Assessment | 0.0 |
-| **Total Focused Time** | **4.00** |
+| **Total Focused Time** | **5.00** |
 
 > Portfolio project hours overlap with technical-learning hours and are therefore tracked separately rather than added again to the weekly total.
 
