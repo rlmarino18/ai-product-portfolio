@@ -24,12 +24,12 @@ Multiple sessions may be completed on the same day, and gaps between sessions do
 | Category | Hours |
 |---|---:|
 | Foundations | 0.0 |
-| Python | 4.83 |
+| Python | 5.33 |
 | Data Analysis | 0.0 |
 | Machine Learning | 0.0 |
 | Applied AI | 1.0 |
 | AI Systems | 0.0 |
-| **Total Learning Time** | **5.83** |
+| **Total Learning Time** | **6.33** |
 
 > Learning-area hours represent the technical capability developed during portfolio work. Project hours are tracked separately below because the same session may simultaneously contribute to both technical learning and a featured project. These totals should not be added together.
 
@@ -42,9 +42,9 @@ Multiple sessions may be completed on the same day, and gaps between sessions do
 | AI Workflow Opportunity & ROI Analyzer | Not Started | 0.0 |
 | Document Q&A RAG Assistant | In Progress | 3.50 |
 | Executive Brief Generator | In Progress | 44.50 |
-| AI Support Triage System | In Progress | 4.83 |
+| AI Support Triage System | In Progress | 5.33 |
 | Agentic Workflow Guardrail Simulator | Not Started | 0.0 |
-| **Total Portfolio Project Time** |  | **52.83** |
+| **Total Portfolio Project Time** |  | **53.33** |
 
 > Portfolio project hours represent verified time invested in building, testing, evaluating, and documenting featured projects. Some projects began before the current structured session sequence; verified historical development time is included where an existing project time log is available.
 
@@ -866,6 +866,93 @@ Testing exposed several data-quality risks:
 
 ---
 
+
+# Session 11 — Type Validation & Defensive Input Handling
+
+**Date:** October 3, 2026  
+**Duration:** 30 minutes  
+**Project:** AI Support Triage System  
+**Learning Area:** Python Foundations
+
+
+## Objective
+
+Add explicit data-type validation so malformed values are rejected before business-value comparisons or downstream decision logic can execute.
+
+## Work Completed
+
+- Added `T009` with an intentionally invalid priority type
+- Reproduced a `TypeError` caused by comparing a string priority against integers
+- Added `has_valid_types()` using `isinstance()`
+- Validated expected types for ticket ID, category, priority, age, and customer tier
+- Inserted type validation between required-field validation and value validation
+- Corrected validation-order bugs in the main processing loop
+- Confirmed distinct failure handling for missing fields, invalid values, and invalid data types
+- Verified invalid records no longer affect classification counts or escalation results
+
+## Technical Concepts
+
+- `isinstance()`
+- Python data types
+- type validation
+- `TypeError`
+- validation ordering
+- defensive programming
+- fail-fast control flow
+- separation of concerns
+- input contracts
+- downstream dependency protection
+
+## Product Capability Developed
+
+Expanded the support-triage validation pipeline from two layers to three:
+
+    Input
+      ↓
+    Required Fields Present?
+      ↓
+    Correct Data Types?
+      ↓
+    Values Valid?
+      ↓
+    Classification
+      ↓
+    SLA Evaluation
+      ↓
+    Escalation
+
+Each validation stage establishes a guarantee required by the next stage.
+
+## Product Decision / Insight
+
+Validation order is part of system design.
+
+A value-range check cannot safely execute until the system knows:
+
+1. the required field exists
+2. the field contains a compatible data type
+
+Type validation therefore protects both business logic and system reliability.
+
+## Failure Modes / Edge Cases
+
+- missing keys can cause `KeyError`
+- incompatible types can cause `TypeError`
+- correctly typed values can still violate business rules
+- incorrect validation ordering can allow malformed records downstream
+- calling the wrong validation function can make error messages misleading
+
+## Lessons Learned
+
+- structural validity, type validity, and business-value validity are separate concerns
+- `isinstance()` checks whether a value matches an expected Python type
+- validation layers should execute in dependency order
+- `continue` prevents rejected records from reaching downstream processing
+- classification should occur only after every validation layer passes
+- aggregate metrics should contain only successfully validated records
+
+---
+
 # Actual Time by Week
 
 ## Week Ending September 27, 2026
@@ -882,12 +969,12 @@ Testing exposed several data-quality risks:
 
 | Category | Hours |
 |---|---:|
-| Python / Technical Learning | 3.50 |
+| Python / Technical Learning | 4.00 |
 | Applied AI / Technical Learning | 1.00 |
 | Product / Jira | 1.00 |
 | Dedicated Portfolio Build Block | 0.0 |
 | Weekly Assessment | 0.0 |
-| **Total Focused Time** | **5.50** |
+| **Total Focused Time** | **6.00** |
 
 > Portfolio project hours overlap with technical-learning hours and are therefore tracked separately rather than added again to the weekly total.
 
