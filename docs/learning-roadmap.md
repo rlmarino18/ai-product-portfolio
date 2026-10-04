@@ -131,6 +131,175 @@ This problem is addressed primarily through the **Agentic Workflow Guardrail Sim
 
 The roadmap is organized around six strategic capability areas.
 
+
+# Capability Measurement & Theme Exit Criteria
+
+This roadmap measures progress by demonstrated capability rather than time alone.
+
+Target hours and session ranges are used as pacing guidance, but advancement between themes requires evidence that the underlying concepts can be applied, debugged, and connected to product decisions.
+
+Each theme uses four exit gates:
+
+1. **Concept Understanding** — explain the core concepts, terminology, and trade-offs accurately.
+2. **Practical Application** — apply the concepts in a working technical task or product artifact.
+3. **Debugging & Failure Analysis** — identify likely failure modes, diagnose problems, and reason through corrective action.
+4. **AI Product Judgment** — explain how the technical choice affects user value, quality, reliability, latency, cost, risk, adoption, or launch readiness.
+
+A theme is considered complete only when all four gates are demonstrated.
+
+## Theme Progression Framework
+
+| Theme | Target Hours | Approx. Sessions | Exit Evidence |
+|---|---:|---:|---|
+| Foundations | 4–6 | 8–12 | Use CLI, Git, JSON, APIs, and basic debugging with limited assistance |
+| Python Foundations | 8–10 | 16–20 | Build, modify, and refactor a small workflow while explaining logic and failure modes |
+| Data Analysis | 6–8 | 12–16 | Inspect, clean, aggregate, and explain operational data using Python and Pandas |
+| ML Foundations for AI Product | 8–10 | 16–20 | Train and evaluate a basic model and connect model metrics to product decisions |
+| Applied AI | 12–18 | 24–36 | Build and evaluate an LLM or RAG workflow, diagnose failures, and make product trade-offs |
+| AI Systems | 8–12 | 16–24 | Reason about APIs, deployment, latency, reliability, monitoring, and cost at product depth |
+| Integrated AI Product Capstone | 6–10 | 12–20 | Move from problem discovery through requirements, architecture, build, evaluation, and recommendation |
+
+These hour ranges are intentionally approximate. A theme may be completed earlier if capability is clearly demonstrated, or extended when additional repetition is required.
+
+## Theme Exit Gates
+
+### Foundations
+
+Exit criteria:
+
+- navigate and manipulate files using the command line
+- use Git branches, commits, merges, and basic repository workflows
+- understand JSON structure and common API request/response patterns
+- diagnose basic environment and command-line errors
+- explain how development tooling supports AI product delivery
+
+### Python Foundations
+
+Exit criteria:
+
+- work confidently with variables, strings, integers, Booleans, lists, and dictionaries
+- use conditionals, loops, membership checks, and indexing
+- create and reuse functions with parameters, arguments, return values, and type hints
+- implement structural, type, and business-value validation
+- use fail-fast control flow and defensive programming
+- handle common exceptions and basic file input/output
+- organize simple code across functions and modules
+- perform basic testing and debugging
+- explain how implementation decisions affect workflow reliability and product behavior
+
+**Python Exit Task**
+
+Given a support-workflow requirement, independently:
+
+1. add one new business rule
+2. add one new validation rule
+3. add one new operational metric
+4. add one failure-handling behavior
+5. validate the resulting workflow
+6. explain the product impact, trade-offs, and likely failure modes
+
+The Python theme is complete when this task can be performed with limited implementation guidance.
+
+### Data Analysis
+
+Exit criteria:
+
+- load and inspect structured datasets
+- clean missing, malformed, or inconsistent data
+- filter, group, aggregate, and summarize operational data
+- create simple visualizations when useful
+- identify data-quality limitations
+- translate analytical findings into product or operational recommendations
+- explain what additional data would be required before making a stronger decision
+
+### ML Foundations for AI Product
+
+Exit criteria:
+
+- explain supervised learning, features, labels, training, validation, and inference
+- build a basic classification workflow using scikit-learn
+- interpret confusion matrices, precision, recall, and F1 score
+- distinguish false-positive and false-negative costs
+- compare deterministic rules with ML-based approaches
+- perform basic error analysis
+- explain whether observed model quality is sufficient for a defined product use case
+
+The objective is not ML engineering specialization.
+
+The objective is enough technical depth to make informed product decisions about predictive systems.
+
+### Applied AI
+
+Exit criteria:
+
+- explain LLM application architecture at product depth
+- work with prompts, structured outputs, embeddings, retrieval, and RAG
+- understand tool calling and agentic workflow concepts
+- design and execute evaluation cases
+- analyze hallucination, grounding, retrieval, and workflow failures
+- compare model or prompt approaches using defined criteria
+- determine where human review should remain in the workflow
+- reason about quality, cost, latency, safety, and user experience
+- make an evidence-based recommendation about whether an AI capability should advance
+
+### AI Systems
+
+Exit criteria:
+
+- understand how AI capabilities are exposed through APIs
+- explain basic deployment architecture
+- reason about latency sources and cost drivers
+- understand monitoring, logging, and reliability concepts
+- identify operational and security risks
+- explain prototype-to-production gaps
+- reason about build-vs-buy and managed-service trade-offs
+- define product-level service expectations and operational metrics
+
+### Integrated AI Product Capstone
+
+Exit criteria:
+
+Demonstrate the ability to move through the full AI product decision process:
+
+    Problem Discovery
+            ↓
+    User / Workflow Understanding
+            ↓
+    Requirements
+            ↓
+    Baseline
+            ↓
+    Architecture
+            ↓
+    Prototype / Build
+            ↓
+    Evaluation
+            ↓
+    Failure Analysis
+            ↓
+    Product & Technical Trade-Offs
+            ↓
+    Recommendation
+            ↓
+    Iteration
+
+The capstone should demonstrate:
+
+- a clearly defined user or business problem
+- explicit product requirements
+- justified technical architecture
+- working implementation evidence
+- evaluation methodology
+- documented failure modes
+- success metrics
+- cost / latency / reliability considerations
+- human-in-the-loop or control decisions where relevant
+- a final product recommendation supported by evidence
+
+The purpose of this framework is to make capability progression observable and employer-legible rather than relying on course completion, certification count, or time invested alone.
+
+---
+
 ## Theme 1 — Technical Foundations
 
 Develop enough software fluency to understand and prototype product behavior.
