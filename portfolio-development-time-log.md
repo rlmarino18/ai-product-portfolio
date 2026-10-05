@@ -24,12 +24,12 @@ Multiple sessions may be completed on the same day, and gaps between sessions do
 | Category | Hours |
 |---|---:|
 | Foundations | 0.0 |
-| Python | 5.33 |
+| Python | 6.33 |
 | Data Analysis | 0.0 |
 | Machine Learning | 0.0 |
 | Applied AI | 1.0 |
 | AI Systems | 0.0 |
-| **Total Learning Time** | **6.33** |
+| **Total Learning Time** | **7.33** |
 
 > Learning-area hours represent the technical capability developed during portfolio work. Project hours are tracked separately below because the same session may simultaneously contribute to both technical learning and a featured project. These totals should not be added together.
 
@@ -42,9 +42,9 @@ Multiple sessions may be completed on the same day, and gaps between sessions do
 | AI Workflow Opportunity & ROI Analyzer | Not Started | 0.0 |
 | Document Q&A RAG Assistant | In Progress | 3.50 |
 | Executive Brief Generator | In Progress | 44.50 |
-| AI Support Triage System | In Progress | 5.33 |
+| AI Support Triage System | In Progress | 6.33 |
 | Agentic Workflow Guardrail Simulator | Not Started | 0.0 |
-| **Total Portfolio Project Time** |  | **53.33** |
+| **Total Portfolio Project Time** |  | **54.33** |
 
 > Portfolio project hours represent verified time invested in building, testing, evaluating, and documenting featured projects. Some projects began before the current structured session sequence; verified historical development time is included where an existing project time log is available.
 
@@ -950,6 +950,111 @@ Type validation therefore protects both business logic and system reliability.
 - `continue` prevents rejected records from reaching downstream processing
 - classification should occur only after every validation layer passes
 - aggregate metrics should contain only successfully validated records
+
+---
+
+
+# Session 12 — Exceptions & Controlled Error Handling
+
+**Date:** October 5, 2026  
+**Duration:** 1.0 hour  
+**Project:** AI Support Triage System  
+**Learning Area:** Python Foundations
+
+## Objective
+
+Understand how Python exception handling complements preventive input validation and use controlled failure handling to keep a ticket-processing workflow operational when unexpected runtime errors occur.
+
+## Work Completed
+
+- reproduced an unhandled `KeyError` using direct dictionary access
+- added a targeted `try / except KeyError` handler
+- captured the exception object using `as error`
+- compared direct dictionary access with `.get()` fallback behavior
+- integrated exception handling into the main ticket-processing loop
+- handled both `KeyError` and `TypeError`
+- debugged a `SyntaxError` caused by using `continue` outside a loop
+- corrected the exception handler's scope and placement
+- injected a controlled `TypeError` into T003 to validate the recovery path
+- verified the workflow continued processing subsequent tickets after the simulated failure
+- observed the effect of failed processing on aggregate classification metrics
+- removed the simulated failure and restored the expected baseline output
+
+## Technical Concepts
+
+- `try`
+- `except`
+- `KeyError`
+- `TypeError`
+- exception objects
+- `raise`
+- targeted exception handling
+- loop control with `continue`
+- dictionary access
+- defensive programming
+- graceful degradation
+- failure isolation
+- metric integrity
+
+## Product Capability Developed
+
+The triage workflow now separates preventive validation from runtime-failure containment.
+
+    Raw Ticket
+        ↓
+    Required-Field Validation
+        ↓
+    Type Validation
+        ↓
+    Business-Value Validation
+        ↓
+    Protected Processing
+        ↓
+    Classification + SLA Evaluation
+        ↓
+    Runtime Failure?
+       ↙       ↘
+     Yes        No
+      ↓          ↓
+    Handle     Continue
+    + Skip     Workflow
+        ↓
+    Metrics / Escalation
+
+Known malformed inputs are rejected before processing, while unexpected processing failures can be contained without terminating the entire workflow.
+
+## Product Decision / Insight
+
+Validation and exception handling solve different reliability problems.
+
+Validation prevents known invalid states from reaching downstream logic.
+
+Exception handling protects the application when a runtime failure still occurs despite preventive controls.
+
+A handled failure can preserve system availability while still changing downstream metrics. During controlled failure injection, T003 was excluded from classification results and the CRITICAL count changed from one to zero.
+
+This demonstrates that graceful degradation must be paired with observability and explicit policies for failed records.
+
+## Failure Modes / Edge Cases
+
+- direct dictionary access to a missing key can raise `KeyError`
+- incompatible operations can raise `TypeError`
+- broad exception handling can hide unrelated defects
+- `continue` cannot execute outside a loop
+- incorrect indentation can place exception handling outside its intended processing scope
+- failed records may silently distort aggregate metrics if failure counts are not tracked separately
+- exception handling can preserve availability without guaranteeing data completeness
+
+## Lessons Learned
+
+- validation should remain the primary defense against known bad input
+- exception handling is a secondary safety layer for runtime failures
+- specific exception classes are preferable to indiscriminate exception catching
+- `as error` provides access to the actual exception object
+- `continue` allows one failed record to be isolated without stopping the complete batch
+- controlled failure injection is useful for validating recovery behavior
+- successful error handling does not automatically mean downstream metrics remain representative
+- reliability design must account for both application continuity and data integrity
 
 ---
 

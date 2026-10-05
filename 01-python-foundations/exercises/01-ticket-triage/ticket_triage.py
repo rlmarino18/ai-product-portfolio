@@ -128,8 +128,13 @@ for ticket in tickets:
         print(ticket.get("id", "UNKNOWN"), "has invalid values")
         continue
 
-    result = classify_ticket(ticket)
-    sla_status = is_sla_breached(ticket)
+    try:
+        result = classify_ticket(ticket)
+        sla_status = is_sla_breached(ticket)
+
+    except (KeyError, TypeError) as error:
+        print(ticket.get("id", "UNKNOWN"), "processing error:", error)
+        continue
 
     counts[result] += 1
 
@@ -153,3 +158,8 @@ for ticket in tickets:
 print(counts)
 print("Escalation Queue:", escalation_queue)
 print("Escalation Count:", len(escalation_queue))
+
+test_ticket = {
+    "id": "T010",
+    "priority": 4
+}
