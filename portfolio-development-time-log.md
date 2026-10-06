@@ -1081,6 +1081,17 @@ This demonstrates that graceful degradation must be paired with observability an
 | Weekly Assessment | 0.0 |
 | **Total Focused Time** | **6.00** |
 
+
+## Week Ending October 11, 2026
+
+| Category | Hours |
+|---|---:|
+| Python / Technical Learning | 1.00 |
+| Product / Jira | 0.00 |
+| Dedicated Portfolio Build Block | 0.00 |
+| Weekly Assessment | 0.00 |
+| **Total Focused Time** | **1.00** |
+
 > Portfolio project hours overlap with technical-learning hours and are therefore tracked separately rather than added again to the weekly total.
 
 ---
