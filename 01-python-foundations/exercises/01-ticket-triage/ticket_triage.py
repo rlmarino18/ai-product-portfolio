@@ -1,3 +1,7 @@
+import json
+
+BASE_PATH = "01-python-foundations/exercises/01-ticket-triage"
+
 tickets = [
     {"id": "T001", "category": "billing", "priority": 4, "age_hours": 30, "customer_tier": "enterprise"},
     {"id": "T002", "category": "login", "priority": 2, "age_hours": 5, "customer_tier": "free"},
@@ -110,10 +114,48 @@ invalid_ticket = {
     "priority": 4
 },
 
-
-
-
 escalation_queue = []
+
+def process_ticket(ticket: dict) -> None:
+    if not has_required_fields(ticket):
+        print(ticket.get("id", "UNKNOWN"), "has missing required fields")
+        return
+
+    if not has_valid_types(ticket):
+        print(ticket.get("id", "UNKNOWN"), "has invalid data types")
+        return
+
+    if not has_valid_values(ticket):
+        print(ticket.get("id", "UNKNOWN"), "has invalid values")
+        return
+
+    try:
+        result = classify_ticket(ticket)
+        sla_status = is_sla_breached(ticket)
+    except (KeyError, TypeError) as error:
+        print(ticket.get("id", "UNKNOWN"), "processing error:", error)
+        return
+
+    print(
+        ticket["id"],
+        "->",
+        result,
+        "| SLA Breached:",
+        sla_status
+    )
+
+def load_tickets_from_json(file_path: str) -> list[dict]:
+    try:
+        with open(file_path, "r") as file:
+            return json.load(file)
+
+    except FileNotFoundError as error:
+        print("Ticket file not found:", error)
+        return []
+
+    except json.JSONDecodeError as error:
+        print("Invalid JSON:", error)
+        return []
 
 for ticket in tickets:
     if not has_required_fields(ticket):
@@ -163,3 +205,57 @@ test_ticket = {
     "id": "T010",
     "priority": 4
 }
+
+with open(
+    f"{BASE_PATH}/system_name.txt",
+    "r"
+) as file:
+    system_name = file.read().strip()
+
+print(system_name)
+
+with open(
+    f"{BASE_PATH}/run_summary.txt",
+    "w"
+) as file:
+    file.write("Escalation Count: ")
+    file.write(str(len(escalation_queue)))
+
+with open(
+    f"{BASE_PATH}/run_summary.txt",
+    "a"
+) as file:
+    file.write("\nEscalation Queue: ")
+    file.write(str(escalation_queue))
+    file.write("\n")
+
+with open(
+    f"{BASE_PATH}/sample_ticket.json",
+    "r"
+) as file:
+    sample_ticket = json.load(file)
+
+print(sample_ticket)
+print(sample_ticket["id"])
+
+output_ticket = {
+    "id": "T011",
+    "category": "technical",
+    "priority": 5,
+    "age_hours": 30,
+    "customer_tier": "enterprise"
+}
+
+with open(
+    f"{BASE_PATH}/output_ticket.json",
+    "w"
+) as file:
+    json.dump(output_ticket, file, indent=2)
+    file.write("\n")
+
+sample_tickets = load_tickets_from_json(
+    f"{BASE_PATH}/sample_tickets.json"
+)
+
+for ticket in sample_tickets:
+    process_ticket(ticket)

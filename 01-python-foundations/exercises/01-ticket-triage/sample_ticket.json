@@ -1,0 +1,7 @@
+{
+  "id": "T010",
+  "category": "billing",
+  "priority": 3,
+  "age_hours": 8,
+  "customer_tier": "pro"
+}

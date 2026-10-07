@@ -24,12 +24,12 @@ Multiple sessions may be completed on the same day, and gaps between sessions do
 | Category | Hours |
 |---|---:|
 | Foundations | 0.0 |
-| Python | 6.33 |
+| Python | 7.33 |
 | Data Analysis | 0.0 |
 | Machine Learning | 0.0 |
 | Applied AI | 1.0 |
 | AI Systems | 0.0 |
-| **Total Learning Time** | **7.33** |
+| **Total Learning Time** | **8.33** |
 
 > Learning-area hours represent the technical capability developed during portfolio work. Project hours are tracked separately below because the same session may simultaneously contribute to both technical learning and a featured project. These totals should not be added together.
 
@@ -42,9 +42,9 @@ Multiple sessions may be completed on the same day, and gaps between sessions do
 | AI Workflow Opportunity & ROI Analyzer | Not Started | 0.0 |
 | Document Q&A RAG Assistant | In Progress | 3.50 |
 | Executive Brief Generator | In Progress | 44.50 |
-| AI Support Triage System | In Progress | 6.33 |
+| AI Support Triage System | In Progress | 7.33 |
 | Agentic Workflow Guardrail Simulator | Not Started | 0.0 |
-| **Total Portfolio Project Time** |  | **54.33** |
+| **Total Portfolio Project Time** |  | **55.33** |
 
 > Portfolio project hours represent verified time invested in building, testing, evaluating, and documenting featured projects. Some projects began before the current structured session sequence; verified historical development time is included where an existing project time log is available.
 
@@ -1058,6 +1058,149 @@ This demonstrates that graceful degradation must be paired with observability an
 
 ---
 
+
+# Session 13 — File I/O & Persistent Data
+
+**Date:** October 7, 2026  
+**Duration:** 1.0 hour  
+**Project:** AI Support Triage System  
+**Learning Area:** Python Foundations
+
+## Objective
+
+Move the ticket-triage workflow beyond hard-coded in-memory data by introducing persistent file input/output, structured JSON ingestion, reusable file-loading logic, and controlled handling of external-data failures.
+
+## Work Completed
+
+- created and read an external text file using `open(..., "r")`
+- used `.read()` and `.strip()` to load and clean text content
+- wrote workflow results to a text file using `"w"` mode
+- appended additional results using `"a"` mode
+- used `with open(...)` context managers for automatic resource cleanup
+- created and loaded a single JSON ticket using `json.load()`
+- serialized a Python dictionary to JSON using `json.dump()`
+- formatted JSON output with `indent=2`
+- loaded a JSON array into a Python `list[dict]`
+- accessed nested list and dictionary values
+- routed JSON-loaded tickets through existing classification and SLA logic
+- reused existing required-field, type, and value validation for externally loaded records
+- created `process_ticket()` to establish a single reusable ticket-processing path
+- moved `import json` to the module import section
+- introduced `BASE_PATH` to centralize shared file-path configuration
+- handled missing input files with `FileNotFoundError`
+- handled malformed JSON with `json.JSONDecodeError`
+- tested both failure paths using controlled failure injection
+- restored valid input and confirmed normal behavior
+- extracted file-loading behavior into `load_tickets_from_json()`
+- added a `list[dict]` return type hint to the loader
+
+## Technical Concepts
+
+- file I/O
+- persistent data
+- `open()`
+- read mode (`"r"`)
+- write mode (`"w"`)
+- append mode (`"a"`)
+- context managers
+- `.read()`
+- `.write()`
+- `.strip()`
+- JSON
+- `json.load()`
+- `json.dump()`
+- serialization
+- deserialization
+- JSON arrays
+- nested data access
+- `list[dict]`
+- centralized configuration
+- file paths
+- `FileNotFoundError`
+- `JSONDecodeError`
+- graceful degradation
+- controlled failure testing
+- reusable ingestion functions
+- DRY
+- separation of concerns
+
+## Product Capability Developed
+
+The triage workflow can now consume externally stored structured data rather than depending entirely on records embedded directly in the Python source code.
+
+The ingestion architecture now follows:
+
+    External JSON File
+            ↓
+    load_tickets_from_json()
+            ↓
+    JSON Parsing
+            ↓
+    Python list[dict]
+            ↓
+    process_ticket()
+            ↓
+    Required-Field Validation
+            ↓
+    Type Validation
+            ↓
+    Value Validation
+            ↓
+    Classification + SLA Evaluation
+
+File ingestion and ticket processing are now separate responsibilities.
+
+`load_tickets_from_json()` owns external file access, JSON parsing, and file-related recovery behavior.
+
+`process_ticket()` owns ticket validation and business processing.
+
+This creates a cleaner boundary for replacing file-based input later with APIs, databases, queues, or uploaded files without rewriting the underlying ticket-processing logic.
+
+## Product Decision / Insight
+
+External inputs should not be trusted simply because they were successfully loaded.
+
+A production-oriented ingestion workflow must account for both:
+
+1. failures in the transport or storage layer, such as a missing file
+2. failures in the data representation layer, such as malformed JSON
+
+Successfully parsing a record also does not make that record business-valid. The existing validation pipeline must still run before automated decisions or metrics are produced.
+
+Separating ingestion from processing reduces coupling and makes future integration changes safer.
+
+## Failure Modes / Edge Cases
+
+- incorrect file paths can raise `FileNotFoundError`
+- a file may exist while containing malformed JSON
+- malformed JSON raises `json.JSONDecodeError`
+- direct list indexing after a failed load can create a secondary `IndexError`
+- `"w"` mode overwrites existing file contents
+- output files without a trailing newline can produce awkward terminal formatting
+- duplicated processing logic can cause the same ticket to be processed multiple times
+- repeated hard-coded paths increase maintenance risk
+- external data may parse successfully while still failing structural, type, or business-value validation
+
+## Lessons Learned
+
+- `r` reads existing data
+- `w` writes and replaces existing contents
+- `a` appends to existing contents
+- `with open(...)` automatically manages file cleanup
+- `.strip()` removes leading and trailing whitespace from strings
+- `json.load()` converts JSON file content into Python objects
+- `json.dump()` serializes Python objects into JSON
+- JSON arrays naturally map to Python lists
+- JSON objects naturally map to Python dictionaries
+- external records should pass through the same validation path as in-memory records
+- targeted exception handling can preserve workflow continuity during ingestion failures
+- controlled failure testing verifies recovery behavior rather than assuming it works
+- centralized paths reduce duplicated configuration
+- reusable loader and processing functions improve separation of concerns
+- DRY reduces the risk of inconsistent behavior across multiple ingestion paths
+
+---
+
 # Actual Time by Week
 
 ## Week Ending September 27, 2026
@@ -1086,11 +1229,11 @@ This demonstrates that graceful degradation must be paired with observability an
 
 | Category | Hours |
 |---|---:|
-| Python / Technical Learning | 1.00 |
+| Python / Technical Learning | 2.00 |
 | Product / Jira | 0.00 |
 | Dedicated Portfolio Build Block | 0.00 |
 | Weekly Assessment | 0.00 |
-| **Total Focused Time** | **1.00** |
+| **Total Focused Time** | **2.00** |
 
 > Portfolio project hours overlap with technical-learning hours and are therefore tracked separately rather than added again to the weekly total.
 
