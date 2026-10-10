@@ -1,61 +1,69 @@
-# AI Product Learning Roadmap
+# Business & Technology Learning Roadmap
 
-## Product Vision
+## Portfolio Vision
 
 Build a **Business & Technology Portfolio** that demonstrates the ability to identify valuable business problems, evaluate where technology can create measurable value, understand technical approaches, and make evidence-based business and product decisions.
 
-The portfolio is designed to show that I can operate across product, engineering, data, and business contexts without positioning myself as a ML engineer or AI researcher.
+The portfolio is designed to show that I can operate across business, operations, product, engineering, data, and technology contexts without positioning technical specialization as the end goal.
 
 The long-term capability being developed is:
 
-> Identify the right AI/ML problem, select an appropriate technical approach, validate it with evidence, understand its limitations, and determine whether it should be launched, iterated, simplified, or stopped.
+> Understand the business problem, identify the source of value, determine whether technology should be applied, select an appropriate approach, validate it with evidence, understand its limitations, and decide whether the solution should be launched, iterated, simplified, or stopped.
 
 ---
 
-# Target User
+# Target Audience
 
 The primary audience for this portfolio is:
 
 - Product Management teams
+- Business Operations teams
 - Applied AI and technology teams
+- Technology transformation teams
 - Product Strategy and technology transformation teams
 - Technical Product organizations
-- AI Technical Program Management teams
-- hiring managers evaluating technically fluent product talent
+- Technical Program Management teams
+- AI enablement and implementation teams
+- hiring managers evaluating candidates who can bridge business and technology
 
 The portfolio should provide evidence that I can:
 
+- identify meaningful business and customer problems
+- understand workflows, incentives, constraints, and operating context
 - translate business problems into product requirements
-- understand AI/ML architectures at product depth
+- understand technical architectures at practical product depth
 - prototype enough to test assumptions
-- evaluate models and AI systems
+- evaluate technical systems, including AI/ML systems
 - identify failure modes
-- reason about quality, cost, latency, risk, and human oversight
+- reason about quality, cost, latency, risk, adoption, operational impact, and human oversight
 - communicate effectively with technical and non-technical stakeholders
 
 ---
 
 # Core Problem Areas
 
-The portfolio is organized around five recurring AI product problems.
+The portfolio is organized around recurring business, product, and technology problems.
 
-## 1. Where Should AI Be Applied?
+## 1. Where Can the Business or Workflow Improve?
 
-Organizations often begin with AI capabilities rather than business problems.
+Organizations often begin with technology capabilities rather than clearly understanding the underlying business or workflow problem.
 
 The portfolio should demonstrate the ability to identify:
 
 - high-value workflows
-- weak AI opportunities
-- automation versus augmentation opportunities
+- information bottlenecks
+- decision delays
+- error-prone processes
+- weak technology opportunities
+- process redesign, automation, and augmentation opportunities
 - implementation risks
 - expected business value
 
-This problem is addressed primarily through the **AI Workflow Opportunity & ROI Analyzer**.
+This problem is addressed primarily through the **Workflow Opportunity & ROI Analyzer**.
 
 ---
 
-## 2. When Does ML Add Value?
+## 2. When Does Data or Machine Learning Add Value?
 
 Machine learning introduces additional complexity that is not always justified.
 
@@ -67,11 +75,11 @@ The portfolio should demonstrate the ability to:
 - analyze classification errors
 - determine when human review remains necessary
 
-This problem is addressed primarily through the **AI Support Triage System**.
+This problem is addressed primarily through the **Support Triage System**.
 
 ---
 
-## 3. Is a Generative AI Product Reliable Enough to Launch?
+## 3. Is a Generative AI System Reliable Enough to Use?
 
 A functioning LLM or RAG prototype does not automatically represent a launch-ready product.
 
@@ -90,9 +98,9 @@ This problem is addressed primarily through the **Document Q&A RAG Assistant**, 
 
 ---
 
-## 4. Which AI Configuration Should the Product Use?
+## 4. Which Technical Configuration Should Be Used?
 
-AI teams frequently have several technically viable choices.
+Teams frequently have several technically viable choices.
 
 The portfolio should demonstrate the ability to compare:
 
@@ -109,7 +117,7 @@ This problem is addressed primarily through the **Executive Brief Generator**, w
 
 ---
 
-## 5. Where Should AI Autonomy Stop?
+## 5. Where Should Automation or AI Autonomy Stop?
 
 Agentic systems introduce product risks beyond simple generation.
 
@@ -154,10 +162,10 @@ A theme is considered complete only when all four gates are demonstrated.
 | Foundations | 4–6 | 8–12 | Use CLI, Git, JSON, APIs, and basic debugging with limited assistance |
 | Python Foundations | 8–10 | 16–20 | Build, modify, and refactor a small workflow while explaining logic and failure modes |
 | Data Analysis | 6–8 | 12–16 | Inspect, clean, aggregate, and explain operational data using Python and Pandas |
-| ML Foundations for AI Product | 8–10 | 16–20 | Train and evaluate a basic model and connect model metrics to product decisions |
+| ML Foundations | 8–10 | 16–20 | Train and evaluate a basic model and connect model metrics to product decisions |
 | Applied AI | 12–18 | 24–36 | Build and evaluate an LLM or RAG workflow, diagnose failures, and make product trade-offs |
 | AI Systems | 8–12 | 16–24 | Reason about APIs, deployment, latency, reliability, monitoring, and cost at product depth |
-| Integrated AI Product Capstone | 6–10 | 12–20 | Move from problem discovery through requirements, architecture, build, evaluation, and recommendation |
+| Integrated Business & Technology Capstone | 6–10 | 12–20 | Move from problem discovery through requirements, architecture, build, evaluation, and recommendation |
 
 These hour ranges are intentionally approximate. A theme may be completed earlier if capability is clearly demonstrated, or extended when additional repetition is required.
 
@@ -212,7 +220,7 @@ Exit criteria:
 - translate analytical findings into product or operational recommendations
 - explain what additional data would be required before making a stronger decision
 
-### ML Foundations for AI Product
+### ML Foundations
 
 Exit criteria:
 
@@ -226,7 +234,7 @@ Exit criteria:
 
 The objective is not ML engineering specialization.
 
-The objective is enough technical depth to make informed product decisions about predictive systems.
+The objective is enough technical depth to make informed business and product decisions about predictive systems.
 
 ### Applied AI
 
@@ -255,11 +263,11 @@ Exit criteria:
 - reason about build-vs-buy and managed-service trade-offs
 - define product-level service expectations and operational metrics
 
-### Integrated AI Product Capstone
+### Integrated Business & Technology Capstone
 
 Exit criteria:
 
-Demonstrate the ability to move through the full AI product decision process:
+Demonstrate the ability to move through the full business and technology decision process:
 
     Problem Discovery
             ↓
@@ -277,7 +285,7 @@ Demonstrate the ability to move through the full AI product decision process:
             ↓
     Failure Analysis
             ↓
-    Product & Technical Trade-Offs
+    Business, Product & Technical Trade-Offs
             ↓
     Recommendation
             ↓
@@ -326,9 +334,9 @@ The objective is to independently understand:
 
 ---
 
-## Theme 2 — Data-Informed Product Decisions
+## Theme 2 — Data-Informed Business & Product Decisions
 
-Develop the ability to inspect and analyze the data underlying an AI/ML opportunity.
+Develop the ability to inspect and analyze the data underlying business, operational, and technology opportunities.
 
 Core areas:
 
@@ -379,7 +387,7 @@ The objective is to determine whether ML meaningfully improves the product.
 
 ---
 
-## Theme 4 — Applied AI Systems & Product Architecture
+## Theme 4 — Applied AI Systems
 
 Develop practical understanding of modern LLM-based product systems.
 
@@ -399,9 +407,9 @@ The objective is to understand when each architecture is appropriate and when si
 
 ---
 
-## Theme 5 — AI Systems & Production Readiness
+## Theme 5 — Technology Systems & Production Readiness
 
-Understand the requirements that emerge when an AI prototype becomes an operational product.
+Understand the requirements that emerge when a prototype becomes an operational system.
 
 Core areas:
 
@@ -452,9 +460,9 @@ Evaluation should influence product decisions throughout development rather than
 
 The roadmap should produce measurable improvement across four capability levels.
 
-## Product Discovery Outcome
+## Business & Opportunity Discovery Outcome
 
-Demonstrate the ability to identify and frame valuable AI product opportunities.
+Demonstrate the ability to identify and frame valuable business problems and technology-enabled opportunities.
 
 Evidence should include:
 
@@ -497,9 +505,9 @@ Evidence should include:
 
 ---
 
-## Product Decision Outcome
+## Business & Product Decision Outcome
 
-Demonstrate the ability to translate technical findings into clear product recommendations.
+Demonstrate the ability to translate technical findings into clear business and product recommendations.
 
 Recommendations should be able to conclude:
 
@@ -547,7 +555,7 @@ Progress is demonstrated through practical ability to:
 
 ---
 
-## Product Quality
+## Solution Quality
 
 Depending on the project, metrics may include:
 
@@ -587,8 +595,8 @@ Where applicable, projects should evaluate:
 
 | Initiative | Type | Strategic Purpose |
 |---|---|---|
-| AI Support Triage System | Supporting | Establish technical baseline and compare rules vs. ML |
-| AI Workflow Opportunity & ROI Analyzer | Flagship | Demonstrate AI opportunity discovery and prioritization |
+| Support Triage System | Supporting | Establish technical foundations and compare deterministic rules with data-driven approaches |
+| Workflow Opportunity & ROI Analyzer | Flagship | Demonstrate workflow diagnosis, technology-opportunity identification, prioritization, and ROI reasoning |
 | Document Q&A RAG Assistant | Flagship | Demonstrate retrieval quality, grounding, reranking, evidence evaluation, and launch-readiness decisions |
 | Executive Brief Generator | Flagship | Demonstrate AI workflow design, controlled evaluation, regression discipline, human-in-the-loop controls, and product promotion decisions |
 | Agentic Workflow Guardrail Simulator | Supporting | Demonstrate autonomy, governance, and human oversight |
@@ -600,7 +608,7 @@ Where applicable, projects should evaluate:
 
 Portfolio work should be prioritized based on:
 
-1. **Business and product relevance** — Does the work strengthen the ability to evaluate problems, technology choices, and measurable value?
+1. **Business relevance** — Does the work address a meaningful problem or improve understanding of value creation?
 2. **Learning value** — Does it build a capability required by later projects?
 3. **Evidence value** — Will it produce something meaningful to discuss or demonstrate?
 4. **Technical dependency** — Is the capability required before more advanced work can proceed?
@@ -611,7 +619,7 @@ A simple prioritization model is:
 
 ```text
 Priority =
-(Product Relevance × Learning Value × Evidence Value × Confidence)
+(Business Relevance × Capability Value × Evidence Value × Confidence)
 ÷ Effort
 ```
 
@@ -627,7 +635,7 @@ The important question is:
 
 The roadmap uses **Now / Next / Later** rather than fixed feature dates.
 
-## Now — Establish Technical & Product Baselines
+## Now — Establish Technical & Operating Foundations
 
 **Confidence: High**
 
@@ -641,13 +649,13 @@ Primary focus:
 - data structures
 - functions
 - debugging
-- AI Support Triage System
+- Support Triage System
 
 Primary outcomes:
 
 - establish core technical fluency
-- build a deterministic product baseline
-- connect technical learning directly to product decisions
+- build a deterministic workflow baseline
+- connect technical learning directly to operational and product decisions
 - establish repeatable GitHub and Jira workflows
 
 Primary learning questions:
@@ -658,7 +666,7 @@ Primary learning questions:
 
 ---
 
-## Next — Develop Data, ML & Product Evaluation Capability
+## Next — Develop Data, ML & Business Evaluation Capability
 
 **Confidence: Medium-High**
 
@@ -671,7 +679,7 @@ Primary focus:
 - simple ML
 - model evaluation
 - error analysis
-- AI Workflow Opportunity & ROI Analyzer
+- Workflow Opportunity & ROI Analyzer
 
 Primary outcomes:
 
@@ -679,18 +687,18 @@ Primary outcomes:
 - build simple ML baselines
 - understand model metrics
 - compare ML against deterministic approaches
-- make evidence-based AI opportunity recommendations
+- make evidence-based technology and business recommendations
 
 Primary learning questions:
 
 - What does the data actually show?
 - Does ML improve the product?
 - Which errors matter?
-- Where can AI create enough value to justify investment?
+- Where can technology create enough value to justify investment?
 
 ---
 
-## Later — Build & Evaluate Generative and Agentic AI Products
+## Later — Build & Evaluate Advanced AI Systems
 
 **Confidence: Medium**
 
@@ -780,7 +788,7 @@ Later projects should not bypass foundational understanding simply to produce mo
 
 Risk:
 
-Creating technically interesting projects without a meaningful product problem.
+Creating technically interesting projects without a meaningful business or user problem.
 
 Mitigation:
 
@@ -793,11 +801,11 @@ Every featured project begins with:
 
 ---
 
-## Using AI Where Simpler Logic Is Better
+## Using Technology Where Simpler Change Is Better
 
 Risk:
 
-Introducing ML or LLM complexity without proving that it adds value.
+Introducing software, ML, or LLM complexity without proving that it adds enough value.
 
 Mitigation:
 
@@ -817,7 +825,7 @@ Prioritize projects that can be defended technically and from a product perspect
 
 ---
 
-## Learning Tools Without Product Application
+## Learning Tools Without Business Application
 
 Risk:
 
@@ -825,7 +833,7 @@ Accumulating disconnected technical knowledge.
 
 Mitigation:
 
-Whenever practical, technical learning should contribute directly to an active project.
+Whenever practical, technical learning should contribute directly to a business problem, active project, or decision framework.
 
 ---
 
@@ -865,7 +873,7 @@ Every major initiative should explicitly test assumptions.
 
 Examples:
 
-## AI Support Triage System
+## Support Triage System
 
 Assumption:
 
@@ -877,7 +885,7 @@ Compare deterministic rules against a simple classifier using the same evaluatio
 
 ---
 
-### AI Workflow Opportunity & ROI Analyzer
+### Workflow Opportunity & ROI Analyzer
 
 Assumption:
 
@@ -962,7 +970,7 @@ A concept is sufficiently learned when I can:
 
 # Definition of Portfolio Success
 
-The portfolio is successful when it demonstrates that I can move through the full AI product decision process:
+The portfolio is successful when it demonstrates that I can move through the full business and technology decision process:
 
 ```text
 Vision
@@ -1006,8 +1014,8 @@ A completed project should be able to answer:
 14. What trade-offs were made?
 15. What does the evidence recommend?
 
-The final portfolio should therefore demonstrate more than the ability to build AI/ML systems.
+The final portfolio should therefore demonstrate more than the ability to build technical systems.
 
 It should demonstrate the ability to decide:
 
-> **what problem is worth solving, why AI/ML is appropriate, what outcome should change, how the solution should be evaluated, and what the evidence says should happen next.**
+> **what problem is worth solving, what value is at stake, whether technology is appropriate, which approach best fits the problem, how the solution should be evaluated, and what the evidence says should happen next.**
