@@ -39,10 +39,10 @@ Multiple sessions may be completed on the same day, and gaps between sessions do
 
 | Project | Status | Hours |
 |---|---|---:|
-| AI Workflow Opportunity & ROI Analyzer | Not Started | 0.0 |
+| Workflow Opportunity & ROI Analyzer | Not Started | 0.0 |
 | Document Q&A RAG Assistant | In Progress | 3.50 |
 | Executive Brief Generator | In Progress | 44.50 |
-| AI Support Triage System | In Progress | 7.33 |
+| Support Triage System | In Progress | 7.33 |
 | Agentic Workflow Guardrail Simulator | Not Started | 0.0 |
 | **Total Portfolio Project Time** |  | **55.33** |
 
@@ -60,7 +60,7 @@ Multiple sessions may be completed on the same day, and gaps between sessions do
 
 **Date:** September 27, 2026  
 **Area:** Python Foundations  
-**Project:** AI Support Triage System  
+**Project:** Support Triage System  
 **Duration:** 50 minutes
 
 **Concept Tags:** PCEP Core · Practical / Portfolio
@@ -111,7 +111,7 @@ This makes it possible to evaluate whether additional model complexity creates e
 
 **Date:** September 27, 2026  
 **Area:** Python Foundations  
-**Project:** AI Support Triage System  
+**Project:** Support Triage System  
 **Duration:** 30 minutes
 
 **Concept Tags:** PCEP Core · PCAP Foundation · Practical / Portfolio
@@ -170,7 +170,7 @@ Keeping these dimensions separate makes the system easier to reason about, modif
 
 **Date:** September 29, 2026  
 **Area:** Python Foundations  
-**Project:** AI Support Triage System  
+**Project:** Support Triage System  
 **Duration:** 30 minutes
 
 **Concept Tags:** PCEP Core · Practical / Portfolio
@@ -223,7 +223,7 @@ This provides a deterministic baseline that can later be compared against ML-ass
 
 **Date:** September 30, 2026  
 **Duration:** 30 minutes  
-**Project:** AI Support Triage System  
+**Project:** Support Triage System  
 **Learning Area:** Python Foundations
 
 ## Objective
@@ -280,7 +280,7 @@ Using `or` instead of `and` would significantly increase escalation volume by es
 
 **Date:** September 30, 2026  
 **Duration:** 30 minutes  
-**Project:** AI Support Triage System  
+**Project:** Support Triage System  
 **Learning Area:** Python Foundations
 
 ## Objective
@@ -353,7 +353,7 @@ Placing aggregate queue output inside the loop produces incomplete intermediate 
 
 **Date:** September 30, 2026  
 **Duration:** 30 minutes  
-**Project:** AI Support Triage System  
+**Project:** Support Triage System  
 **Learning Area:** Python Foundations
 
 ## Objective
@@ -427,7 +427,7 @@ Attempting to access a list position that does not exist can also produce an `In
 
 **Date:** September 30, 2026  
 **Duration:** 30 minutes  
-**Project:** AI Support Triage System  
+**Project:** Support Triage System  
 **Learning Area:** Python Foundations
 
 ## Objective
@@ -526,7 +526,7 @@ Here:
 
 **Date:** October 2, 2026  
 **Duration:** 30 minutes  
-**Project:** AI Support Triage System  
+**Project:** Support Triage System  
 **Learning Area:** Python Foundations
 
 ## Objective
@@ -786,7 +786,7 @@ The review identified several unresolved retrieval risks:
 
 **Date:** October 2, 2026  
 **Duration:** 30 minutes  
-**Project:** AI Support Triage System  
+**Project:** Support Triage System  
 **Learning Area:** Python Foundations
 
 ## Objective
@@ -871,7 +871,7 @@ Testing exposed several data-quality risks:
 
 **Date:** October 3, 2026  
 **Duration:** 30 minutes  
-**Project:** AI Support Triage System  
+**Project:** Support Triage System  
 **Learning Area:** Python Foundations
 
 
@@ -958,7 +958,7 @@ Type validation therefore protects both business logic and system reliability.
 
 **Date:** October 5, 2026  
 **Duration:** 1.0 hour  
-**Project:** AI Support Triage System  
+**Project:** Support Triage System  
 **Learning Area:** Python Foundations
 
 ## Objective
@@ -1063,7 +1063,7 @@ This demonstrates that graceful degradation must be paired with observability an
 
 **Date:** October 7, 2026  
 **Duration:** 1.0 hour  
-**Project:** AI Support Triage System  
+**Project:** Support Triage System  
 **Learning Area:** Python Foundations
 
 ## Objective

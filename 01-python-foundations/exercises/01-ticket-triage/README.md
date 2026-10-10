@@ -1,6 +1,6 @@
 # Ticket Triage — Python Foundations
 
-This exercise develops the deterministic decision logic used as the baseline for the AI Support Triage System.
+This exercise develops the deterministic decision logic used as the baseline for the Support Triage System.
 
 Technical concepts:
 - dictionaries
