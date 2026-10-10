@@ -1,4 +1,4 @@
-# AI Product Portfolio — Development & Time Log
+# Business & Technology Portfolio — Development & Time Log
 
 This log tracks time invested across technical learning, portfolio development, evaluation, documentation.
 

@@ -2,7 +2,7 @@
 
 ## Product Vision
 
-Build an **AI Product Portfolio** that demonstrates the ability to identify valuable AI opportunities, understand the underlying technology, evaluate technical approaches, and make evidence-based product decisions.
+Build a **Business & Technology Portfolio** that demonstrates the ability to identify valuable business problems, evaluate where technology can create measurable value, understand technical approaches, and make evidence-based business and product decisions.
 
 The portfolio is designed to show that I can operate across product, engineering, data, and business contexts without positioning myself as a ML engineer or AI researcher.
 
@@ -16,9 +16,9 @@ The long-term capability being developed is:
 
 The primary audience for this portfolio is:
 
-- AI Product Management teams
-- Applied AI Product teams
-- AI Product Strategy teams
+- Product Management teams
+- Applied AI and technology teams
+- Product Strategy and technology transformation teams
 - Technical Product organizations
 - AI Technical Program Management teams
 - hiring managers evaluating technically fluent product talent
@@ -143,7 +143,7 @@ Each theme uses four exit gates:
 1. **Concept Understanding** — explain the core concepts, terminology, and trade-offs accurately.
 2. **Practical Application** — apply the concepts in a working technical task or product artifact.
 3. **Debugging & Failure Analysis** — identify likely failure modes, diagnose problems, and reason through corrective action.
-4. **AI Product Judgment** — explain how the technical choice affects user value, quality, reliability, latency, cost, risk, adoption, or launch readiness.
+4. **Business & Product Judgment** — explain how the technical choice affects user value, business outcomes, quality, reliability, latency, cost, risk, adoption, or launch readiness.
 
 A theme is considered complete only when all four gates are demonstrated.
 
@@ -350,7 +350,7 @@ The objective is to answer:
 
 ---
 
-## Theme 3 — ML Foundations for AI Product Judgment
+## Theme 3 — ML Foundations for Business & Product Judgment
 
 Understand predictive ML sufficiently to determine when it creates product value.
 
@@ -379,7 +379,7 @@ The objective is to determine whether ML meaningfully improves the product.
 
 ---
 
-## Theme 4 — Applied AI Product Architecture
+## Theme 4 — Applied AI Systems & Product Architecture
 
 Develop practical understanding of modern LLM-based product systems.
 
@@ -600,7 +600,7 @@ Where applicable, projects should evaluate:
 
 Portfolio work should be prioritized based on:
 
-1. **Product relevance** — Does the work strengthen AI product judgment?
+1. **Business and product relevance** — Does the work strengthen the ability to evaluate problems, technology choices, and measurable value?
 2. **Learning value** — Does it build a capability required by later projects?
 3. **Evidence value** — Will it produce something meaningful to discuss or demonstrate?
 4. **Technical dependency** — Is the capability required before more advanced work can proceed?
