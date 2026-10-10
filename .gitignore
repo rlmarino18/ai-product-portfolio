@@ -25,3 +25,6 @@ venv/
 # Credentials
 credentials.json
 secrets.json
+01-python-foundations/exercises/01-ticket-triage/output_ticket.json
+01-python-foundations/exercises/01-ticket-triage/run_summary.txt
+*.pyc
