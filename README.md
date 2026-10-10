@@ -1,95 +1,132 @@
-# Ralph Marino — AI Product Portfolio
+# Ralph Marino | Business & Technology
 
-This portfolio demonstrates hands-on AI product judgment supported by technical fluency across Python, machine learning fundamentals, generative AI, retrieval-augmented generation, evaluation, APIs, agentic workflows, and AI system design.
+## Business judgment. Technology-enabled value.
 
-The objective is not to specialize as an ML engineer or pursue ML Product Management as a separate career track.
+I connect business problems, product thinking, and technology to improve how organizations operate and create value. My experience spans the Marine Corps, AWS, and Amazon; my current work explores applied AI.
 
-The objective is to develop the technical depth required to make strong AI product decisions: identifying valuable problems, translating business needs into product requirements, understanding AI system architecture, prototyping solutions, evaluating quality, identifying failure modes, reasoning about cost and latency, and determining whether an AI capability creates enough value to justify its complexity.
+This portfolio documents how I approach business problems, develop and evaluate technology-enabled solutions, and translate technical capabilities into operational and economic value.
 
-The portfolio is built around a central principle:
+The work is organized around three interconnected capabilities:
 
-> A technically functional AI system is not necessarily a good AI product.
+- **Business Improvement** — diagnosing workflows, improving operations, measuring performance, and identifying opportunities for value creation
+- **Product Development** — translating problems into requirements, prototypes, experiments, evaluation criteria, and usable solutions
+- **Applied Technology** — building enough technical depth across software, data, automation, and AI to understand capabilities, trade-offs, and implementation constraints
 
-Each project therefore emphasizes both **how the system works** and **why a particular product, architecture, or implementation decision should be made**.
+Technology is treated as a means to an end rather than the end itself.
+
+The central question across the portfolio is:
+
+> Does this solution create enough operational, customer, or economic value to justify its complexity?
 
 ---
 
 # What This Portfolio Is Designed to Prove
 
-This portfolio is designed to demonstrate the ability to operate at the intersection of product, engineering, data, and business.
+This portfolio is designed to demonstrate the ability to operate at the intersection of business, product, operations, and technology.
 
 Specifically, the work is intended to show that I can:
 
-- identify workflows and customer problems where AI may create measurable value
-- distinguish strong AI opportunities from weak or unnecessary ones
+- identify meaningful business and customer problems
+- understand workflows, incentives, constraints, and operating context
+- distinguish high-value opportunities from unnecessary complexity
 - translate business problems into product and technical requirements
-- understand AI and ML architecture at sufficient depth to make product decisions
+- evaluate where software, automation, analytics, AI, or process redesign may create value
 - build working prototypes to test assumptions
-- determine when deterministic logic, traditional ML, or generative AI is appropriate
-- evaluate models, prompts, retrieval systems, agents, and end-to-end workflows
-- define product and evaluation metrics before implementation
-- design experiments and evaluation datasets
-- analyze quality, latency, cost, reliability, safety, and failure modes
-- determine where human review and operational controls should remain
+- define success metrics before implementation
+- evaluate quality, cost, latency, reliability, usability, and operational risk
+- identify failure modes and determine where human judgment or controls should remain
 - communicate technical trade-offs to business stakeholders
-- communicate product requirements and priorities to technical teams
-- make evidence-based product recommendations rather than relying on model capability alone
+- communicate business priorities to technical teams
+- make evidence-based recommendations rather than technology-first decisions
+- connect product and technology decisions to measurable business outcomes
 
-The portfolio is not intended to demonstrate:
+The portfolio is not intended to prove:
 
-> “I can build the most sophisticated machine learning model.”
+> “I can use the newest technology.”
 
 It is intended to demonstrate:
 
-> “I can identify, understand, prototype, evaluate, and make disciplined product decisions around AI systems.”
+> “I can understand a business problem, evaluate possible solutions, apply technology intelligently, and determine whether the result creates meaningful value.”
 
 ---
 
 # Portfolio Thesis
 
-**AI Product judgment backed by hands-on technical fluency.**
+**Business judgment. Technology-enabled value.**
 
-Machine learning is included as a supporting technical discipline rather than the primary career focus.
+The portfolio is built around a simple operating principle:
 
-Understanding ML fundamentals helps answer product questions such as:
+> Start with the business problem, not the technology.
 
-- When is machine learning actually necessary?
-- When would deterministic rules be sufficient?
-- Which model errors matter to the customer or business?
-- What data is required to make the capability viable?
-- How should model quality be evaluated?
-- What trade-offs exist between accuracy, latency, cost, explainability, and operational complexity?
-- When is an AI capability reliable enough to launch?
+Software, analytics, automation, machine learning, and generative AI are treated as tools for improving how organizations operate and create value.
 
-The goal is therefore not ML specialization for its own sake.
+The objective is to develop the judgment and technical fluency required to answer questions such as:
 
-The goal is sufficient technical depth to make better AI product decisions.
+- What problem are we actually solving?
+- Who experiences the problem and how important is it?
+- What is the economic or operational value of solving it?
+- Is technology necessary?
+- Would process redesign or deterministic logic be sufficient?
+- If AI or ML is appropriate, what type of system is justified?
+- What data and infrastructure are required?
+- What failure modes matter most?
+- What trade-offs exist between quality, latency, cost, explainability, usability, and operational complexity?
+- How should the solution be evaluated?
+- Is the capability reliable and valuable enough to deploy?
+
+The objective is not technical specialization for its own sake.
+
+The objective is to understand technology deeply enough to make better business, product, and operating decisions.
 
 ---
 
 # Focus Areas
 
-- AI Product Management
-- Applied AI Product
-- AI Product Strategy
-- AI Product Discovery & Prioritization
-- AI Productization & Lifecycle
-- AI Evaluation & Experimentation
-- AI Workflow Design & Automation
-- Human-in-the-Loop AI
-- RAG & Knowledge Products
-- Agentic Product Design
-- AI Reliability & Governance
-- AI Systems & Product Architecture
-- Business Value, Adoption & Product Metrics
+## Business Improvement
+
+- Operational problem solving
+- Workflow analysis
+- Process improvement
+- Business-value identification
+- Metrics and performance management
+- Cost and efficiency analysis
+- Decision support
+- Organizational execution
+
+## Product Development
+
+- Problem discovery
+- User and workflow understanding
+- Requirements definition
+- Product prioritization
+- Prototype development
+- Experiment design
+- Product metrics
+- Evaluation
+- Launch readiness
+- Product and architecture trade-offs
+
+## Applied Technology
+
+- Python and software foundations
+- Data and analytics
+- Automation
+- Machine learning fundamentals
+- Generative AI
+- Retrieval-augmented generation
+- AI evaluation
+- Agentic workflows
+- APIs and system integration
+- Reliability, monitoring, and governance
+- Human-in-the-loop systems
 
 ---
 
 # Technical Scope
 
-The portfolio intentionally spans the technical domains required to understand, prototype, evaluate, and manage modern AI products.
+The portfolio intentionally spans technical domains that support better business, product, and operating decisions.
 
-Machine learning is treated as an important technical foundation rather than a separate portfolio identity. The objective is product-level technical fluency: enough depth to understand model behavior, evaluate trade-offs, communicate effectively with engineering and data teams, and make informed product decisions without attempting to reproduce ML-engineer-level specialization.
+Machine learning and AI are treated as important technical capabilities rather than the portfolio's primary identity. The objective is practical technical fluency: enough depth to understand system behavior, evaluate trade-offs, communicate effectively with engineering and data teams, prototype solutions, and make informed business and product decisions.
 
 ## Foundations
 
@@ -114,7 +151,7 @@ Pandas · NumPy · Data Cleaning · Data Validation · Exploratory Analysis · D
 
 ### Purpose
 
-Data quality and structure directly affect AI product quality.
+Data quality and structure directly affect technology-enabled product quality.
 
 This area develops the ability to:
 
@@ -127,13 +164,13 @@ This area develops the ability to:
 
 ---
 
-## Machine Learning Foundations for AI Product
+## Machine Learning Foundations
 
 scikit-learn · Feature Engineering · Classification · Training / Validation Concepts · Precision · Recall · F1 Score · Confusion Matrices · Error Analysis · Model Comparison
 
 ### Purpose
 
-Machine learning provides foundational knowledge for understanding how predictive AI systems behave and how their performance should influence product decisions.
+Machine learning provides foundational knowledge for understanding predictive systems, their limitations, and where they may create business or operational value.
 
 The goal is to understand:
 
@@ -145,7 +182,7 @@ The goal is to understand:
 - how to compare model performance against business and user requirements
 - when deterministic logic may outperform unnecessary ML complexity
 
-The objective is product fluency rather than ML engineering specialization.
+The objective is practical fluency rather than ML engineering specialization.
 
 ---
 
@@ -208,7 +245,7 @@ Requirements · Product Metrics · Experiment Design · Human Escalation · Tech
 
 ### Purpose
 
-This is where technical capability connects to product judgment.
+This is where technical capability connects to business and product judgment.
 
 The objective is to understand not only:
 
@@ -241,7 +278,7 @@ Evaluation
         ↓
 Failure Analysis
         ↓
-Product & Architecture Trade-Offs
+Business, Product & Architecture Trade-Offs
         ↓
 Recommendation
         ↓
@@ -320,16 +357,16 @@ The project is also used to evaluate:
 
 ---
 
-## 3. AI Workflow Opportunity & ROI Analyzer
+## 3. Workflow Opportunity & ROI Analyzer
 **Type:** Flagship  
 **Status:** Planned
 
-Evaluates operational workflows to determine where AI or automation may create measurable value.
+Evaluates operational workflows to determine where process improvement, automation, analytics, or AI may create measurable value.
 
 Focus areas include:
 
 - workflow discovery
-- AI opportunity identification
+- technology and automation opportunity identification
 - business-value estimation
 - implementation complexity
 - prioritization
@@ -338,11 +375,11 @@ Focus areas include:
 
 ---
 
-## 4. AI Support Triage System
+## 4. Support Triage System
 **Type:** Supporting  
 **Status:** In Progress
 
-Builds technical foundations through a support-ticket workflow that begins with deterministic business rules and progressively adds validation, data analysis, and later ML-assisted triage.
+A support-operations workflow that translates business rules into classification, SLA monitoring, escalation, validation, and automated testing, with later opportunities for data-driven and ML-assisted triage.
 
 Current capabilities include:
 
